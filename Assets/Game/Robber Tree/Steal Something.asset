@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Steal Something
   m_EditorClassIdentifier: 
   children:
-  - {fileID: 11400000, guid: 9d85c64e2a01d924897b64794f70c3f8, type: 2}
+  - {fileID: 11400000, guid: 85ac0bf181f62ad4f894359bd3e6aa14, type: 2}
   - {fileID: 11400000, guid: 4fe46666bd1fc194b9145789cad99ccf, type: 2}
   - {fileID: 11400000, guid: 69032cdf995d3b84cb9d4c745dfe3fda, type: 2}
   - {fileID: 11400000, guid: c4d42400d8f54204690aa9b630b9dc62, type: 2}

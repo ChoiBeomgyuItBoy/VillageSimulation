@@ -1,12 +1,11 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace ArtGallery.BehaviourTree
+namespace ArtGallery.BehaviourTree.Actions
 {
-    public class AIController : TreeController
+    public abstract class GoToDestination : ActionNode
     {
-        [SerializeField] float destinationTollerance = 5;
-        NavMeshAgent agent = null;
+        const float destinationTollerance = 5;
         ActionState state = ActionState.Idle;
 
         enum ActionState
@@ -15,9 +14,9 @@ namespace ArtGallery.BehaviourTree
             Working
         }
 
-        public Status GoTo(Vector3 destination)
+        protected Status GoTo(NavMeshAgent agent, Vector3 destination)
         {
-            float distanceToDestination = Vector3.Distance(destination, transform.position);
+            float distanceToDestination = Vector3.Distance(destination, agent.transform.position);
 
             if(state == ActionState.Idle)
             {
@@ -37,10 +36,5 @@ namespace ArtGallery.BehaviourTree
 
             return Status.Running;
         }
-
-        private void Awake()
-        {
-            agent = GetComponent<NavMeshAgent>();
-        }
-    }
+    }   
 }

@@ -10,9 +10,13 @@ namespace ArtGallery.BehaviourTree
 
         public Status Tick(TreeController controller)
         {
-            if(!started)
+            if(this.controller == null)
             {
                 this.controller = controller;
+            }
+
+            if(!started)
+            {
                 OnEnter();
                 started = true;
             }

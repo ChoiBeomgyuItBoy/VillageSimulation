@@ -17,6 +17,7 @@ namespace ArtGallery.UI
         void Start()
         {
             robberPurse.onPurseUpdated += RefreshUI;
+            RefreshUI();
         }
 
         void RefreshUI()

@@ -1,28 +1,24 @@
 using ArtGallery.Core;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace ArtGallery.BehaviourTree.Actions
 {
     [CreateAssetMenu(menuName = "Behaviour Tree/Actions/Go To Door")]
-    public class GoToDoor : ActionNode
+    public class GoToDoor : GoToDestination
     {
         [SerializeField] string doorName = "";
-        AIController aIController;
+        NavMeshAgent agent = null;
 
         protected override void OnEnter()
         {
-            aIController = controller as AIController;
+            agent = controller.GetComponent<NavMeshAgent>();
         }
 
         protected override Status OnTick()
         {
-            if(aIController == null)
-            {
-                return Status.Failure;
-            }
-            
             Door door = Door.GetWithName(doorName);
-            Status status = aIController.GoTo(door.transform.position);
+            Status status = GoTo(agent, door.transform.position);
 
             if(status == Status.Success)
             {

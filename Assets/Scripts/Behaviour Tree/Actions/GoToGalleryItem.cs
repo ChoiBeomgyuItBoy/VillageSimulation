@@ -1,28 +1,24 @@
 using ArtGallery.Core;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace ArtGallery.BehaviourTree.Actions
 {
     [CreateAssetMenu(menuName = "Behaviour Tree/Actions/Go To Gallery Item")]
-    public class GoToGalleryItem : ActionNode
+    public class GoToGalleryItem : GoToDestination
     {
         [SerializeField] string itemName = "";
         [SerializeField] bool addToBag = true;
         [SerializeField] bool clearBagIfSucceded = false;
-        AIController aIController;
+        NavMeshAgent agent = null;
 
         protected override void OnEnter()
         {
-            aIController = controller as AIController;
+            agent = controller.GetComponent<NavMeshAgent>();
         }
 
         protected override Status OnTick()
         {
-            if(aIController == null)
-            {
-                return Status.Failure;
-            }
-
             GalleryItem item = GalleryItem.GetWithName(itemName);
 
             if(!item.gameObject.activeSelf)
@@ -30,16 +26,16 @@ namespace ArtGallery.BehaviourTree.Actions
                 return Status.Failure;
             }
 
-            Status status = aIController.GoTo(item.transform.position);
+            Status status = GoTo(agent, item.transform.position);
 
             if(status == Status.Success && addToBag)
             {
-                aIController.GetComponent<Bag>().AddItem(item);
+                controller.GetComponent<Bag>().AddItem(item);
             }
 
             if(status == Status.Success && clearBagIfSucceded)
             {
-                aIController.GetComponent<Bag>().SellItems();
+                controller.GetComponent<Bag>().SellItems();
             }
 
             return status;

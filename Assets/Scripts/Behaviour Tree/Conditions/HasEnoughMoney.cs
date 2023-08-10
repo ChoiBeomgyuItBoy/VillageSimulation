@@ -11,7 +11,6 @@ namespace ArtGallery.BehaviourTree.Conditions
 
         protected override void OnEnter()
         {
-            if(controller == null) return;
             purse = controller.GetComponent<Purse>();
         }
 
@@ -24,10 +23,10 @@ namespace ArtGallery.BehaviourTree.Conditions
 
             if(purse.GetBalance() >= moneyThreshold)
             {
-                return Status.Failure;
+                return Status.Success;
             }
 
-            return Status.Success;
+            return Status.Failure;
         }
 
         protected override void OnExit() { }
