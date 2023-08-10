@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8de5ed752e1625b4aac749bf16491e87, type: 3}
   m_Name: Has 400$
   m_EditorClassIdentifier: 
-  moneyThreshold: 400
+  moneyThreshold: 300

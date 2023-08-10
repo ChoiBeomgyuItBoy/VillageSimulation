@@ -6,7 +6,7 @@ namespace ArtGallery.Core
     public class Purse : MonoBehaviour
     {
         [SerializeField] float startingBalance = 0;
-        float balance = 0;
+        [SerializeField] float balance = 0;
         public event Action onPurseUpdated;
 
         public float GetBalance()
@@ -23,6 +23,11 @@ namespace ArtGallery.Core
         void Start()
         {
             UpdateBalance(startingBalance);
+        }
+
+        void OnValidate()
+        {
+            onPurseUpdated?.Invoke();
         }
     }   
 }

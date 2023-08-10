@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
   m_Name: Open Door
   m_EditorClassIdentifier: 
+  priority: 0
   children:
-  - {fileID: 11400000, guid: f9645dde3db052447a3dfd0c6a15dc3b, type: 2}
   - {fileID: 11400000, guid: 641c28e8aa8de9a408f26dd6956fd067, type: 2}
+  - {fileID: 11400000, guid: f9645dde3db052447a3dfd0c6a15dc3b, type: 2}
+  selectByPriority: 0

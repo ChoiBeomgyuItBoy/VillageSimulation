@@ -5,11 +5,17 @@ namespace ArtGallery.BehaviourTree
     [CreateAssetMenu(menuName = "Behaviour Tree/Selector")]
     public class Selector : CompositeNode
     {
+        [SerializeField] bool selectByPriority = false;
         int currentChild = 0;
 
         protected override void OnEnter()
         {
             currentChild = 0;
+
+            if(selectByPriority)
+            {
+                SortChildren();
+            }
         }
 
         protected override Status OnTick()

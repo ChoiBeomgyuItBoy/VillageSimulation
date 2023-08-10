@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
-  m_Name: Go To Back Door
+  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
+  m_Name: Choose Item To Steal
   m_EditorClassIdentifier: 
   priority: 0
-  doorName: BackDoor
+  children:
+  - {fileID: 11400000, guid: 69032cdf995d3b84cb9d4c745dfe3fda, type: 2}
+  - {fileID: 11400000, guid: c4d42400d8f54204690aa9b630b9dc62, type: 2}
+  selectByPriority: 1

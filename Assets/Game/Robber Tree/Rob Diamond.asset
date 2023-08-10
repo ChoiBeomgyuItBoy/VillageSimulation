@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
   m_Name: Rob Diamond
   m_EditorClassIdentifier: 
+  priority: 2
   itemName: H3DDiamond
-  grabItem: 1
+  addToBag: 1
+  clearBagIfSucceded: 0

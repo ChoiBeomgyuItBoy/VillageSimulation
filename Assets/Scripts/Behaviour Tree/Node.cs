@@ -4,9 +4,15 @@ namespace ArtGallery.BehaviourTree
 {
     public abstract class Node : ScriptableObject
     {
+        [SerializeField] int priority = 0;
         protected TreeController controller;
         Status status = Status.Running;
         bool started = false;
+
+        public int GetPriority()
+        {
+            return priority;
+        }
 
         public Status Tick(TreeController controller)
         {

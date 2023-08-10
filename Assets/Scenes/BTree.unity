@@ -347,8 +347,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 1012175062}
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &45587509
 MonoBehaviour:
@@ -578,6 +578,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97196385}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &121992422
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 121992423}
+  - component: {fileID: 121992424}
+  m_Layer: 0
+  m_Name: Timer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &121992423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121992422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1012175062}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &121992424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121992422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4126d8d441119eb43afb80fd12ae7089, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeScale: 3
 --- !u!1 &133567712
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,7 +1516,7 @@ Transform:
   - {fileID: 919599690}
   - {fileID: 1017486705}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &415012740
 GameObject:
@@ -2148,6 +2193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingBalance: 0
+  balance: 0
 --- !u!114 &642336166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3340,8 +3386,10 @@ Transform:
   - {fileID: 524558656}
   - {fileID: 1026001947}
   - {fileID: 1671578827}
+  - {fileID: 121992423}
+  - {fileID: 45587508}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1017486704 stripped
 GameObject:
@@ -3684,7 +3732,7 @@ Transform:
   m_Children:
   - {fileID: 642336163}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1088711495
 GameObject:
@@ -5998,7 +6046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb4d67666d55a6448a2ba2ecd44a9f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isLocked: 1
+  isLocked: 0
 --- !u!4 &1796479289 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a5028766c6c2448878d200bb33de1f59, type: 3}
@@ -6016,7 +6064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47fd8f7e0d60296418c6160006d89239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 200
+  price: 400
 --- !u!1 &1904932022
 GameObject:
   m_ObjectHideFlags: 0
@@ -6132,7 +6180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47fd8f7e0d60296418c6160006d89239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  price: 200
+  price: 100
 --- !u!1 &1922895633
 GameObject:
   m_ObjectHideFlags: 0
