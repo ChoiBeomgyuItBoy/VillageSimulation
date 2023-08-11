@@ -1,11 +1,15 @@
 using UnityEditor;
 using UnityEditor.Callbacks;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace ArtGallery.BehaviourTree.Editor
 {
     public class BehaviourTreeEditor : EditorWindow
     {
+        BehaviourTreeView treeView = null;
+        InspectorView inspectorView = null;
+
         [MenuItem("Window/Behaviour Tree Editor")] 
         public static void ShowEditorWindow()
         {
@@ -26,6 +30,16 @@ namespace ArtGallery.BehaviourTree.Editor
             return false;
         }
 
+        private void OnSelectionChange()
+        {
+            BehaviourTree tree = Selection.activeObject as BehaviourTree;
+
+            if(tree != null)
+            {
+                treeView.PopulateView(tree);
+            }
+        }
+
         private void CreateGUI()
         {
             VisualElement root = rootVisualElement;
@@ -43,6 +57,11 @@ namespace ArtGallery.BehaviourTree.Editor
             );
 
             root.styleSheets.Add(styleSheet);
+
+            treeView = root.Q<BehaviourTreeView>();
+            inspectorView = root.Q<InspectorView>();
+
+            OnSelectionChange();
         }
     }   
 }

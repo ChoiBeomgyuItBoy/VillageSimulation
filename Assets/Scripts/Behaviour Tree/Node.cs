@@ -5,9 +5,32 @@ namespace ArtGallery.BehaviourTree
     public abstract class Node : ScriptableObject
     {
         [SerializeField] int priority = 0;
-        protected TreeController controller;
+        string uniqueID = "";
+        Vector2 position = Vector2.zero;
         Status status = Status.Running;
         bool started = false;
+
+        protected TreeController controller;
+
+        public void SetPosition(Vector2 position)
+        {
+            this.position = position;
+        }
+
+        public Vector2 GetPosition()
+        {
+            return position;
+        }
+
+        public void SetUniqueID(string uniqueID)
+        {
+            this.uniqueID = uniqueID;
+        }
+
+        public string GetUniqueID()
+        {
+            return uniqueID;
+        }
 
         public int GetPriority()
         {
