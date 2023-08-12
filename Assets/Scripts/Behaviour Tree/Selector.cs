@@ -5,16 +5,28 @@ namespace ArtGallery.BehaviourTree
 {
     public class Selector : CompositeNode
     {
-        [SerializeField] bool selectByPriority = false;
+        [SerializeField] SelectionType selectionType = SelectionType.Order;
         int currentChild = 0;
+
+        enum SelectionType
+        {
+            Order,
+            Priority,
+            Random
+        }
 
         protected override void OnEnter()
         {
             currentChild = 0;
 
-            if(selectByPriority)
+            switch(selectionType)
             {
-                SortChildren();
+                case SelectionType.Priority:
+                    SortChildren();
+                    break;
+                case SelectionType.Random:
+                    base.ShuffleChildren();
+                    break;
             }
         }
 

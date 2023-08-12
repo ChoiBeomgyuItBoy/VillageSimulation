@@ -7,18 +7,32 @@ namespace ArtGallery.BehaviourTree.Actions
     public class GoToGalleryItem : GoToDestination
     {
         [SerializeField] string itemName = "";
+        [SerializeField] bool randomItem = false;
         [SerializeField] bool addToBag = true;
         [SerializeField] bool clearBagIfSucceded = false;
         NavMeshAgent agent = null;
+        GalleryItem item = null;
 
         protected override void OnEnter()
         {
             agent = controller.GetComponent<NavMeshAgent>();
+
+            if(randomItem)
+            {
+                item = GalleryItem.GetRandom();
+            }
+            else
+            {
+                item = GalleryItem.GetWithName(itemName);
+            }
         }
 
         protected override Status OnTick()
         {
-            GalleryItem item = GalleryItem.GetWithName(itemName);
+            if(item == null)
+            {
+                return Status.Failure;
+            }
 
             if(!item.gameObject.activeSelf)
             {

@@ -32,6 +32,25 @@ namespace ArtGallery.BehaviourTree
             Sort(0, children.Count - 1);
         }
 
+        protected void ShuffleChildren()
+        {
+            Shuffle();
+        }
+
+        private void Shuffle()
+        {
+            int current = children.Count;
+
+            while(children.Count > 1)
+            {
+                current--;
+                int randomIndex = new System.Random().Next(current + 1);
+                Node randomNode = children[randomIndex];
+                children[randomIndex] = children[current];
+                children[current] = randomNode;
+            }
+        }
+
         private void Sort(int low, int high)
         {
             if (low < high)

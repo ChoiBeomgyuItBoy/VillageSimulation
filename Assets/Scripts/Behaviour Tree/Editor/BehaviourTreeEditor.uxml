@@ -1,15 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
     <Style src="project://database/Assets/Scripts/Behaviour%20Tree/Editor/BehaviourTreeEditor.uss?fileID=7433441132597879392&amp;guid=27c4c3f0e09d6af4e9ddc5741e89cfa0&amp;type=3#BehaviourTreeEditor" />
-    <uie:Toolbar>
-        <uie:ToolbarMenu tabindex="-1" display-tooltip-when-elided="true" text="Assets" />
-    </uie:Toolbar>
-    <ArtGallery.BehaviourTree.Editor.SplitView fixed-pane-initial-dimension="200">
-        <ui:VisualElement name="left-panel" style="width: 60px;">
-            <ui:Label tabindex="-1" text="Node Data" display-tooltip-when-elided="true" style="-unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgb(32, 32, 32);" />
-            <ArtGallery.BehaviourTree.Editor.InspectorView />
+    <uie:Toolbar style="height: 21px;" />
+    <ArtGallery.BehaviourTree.Editor.SplitView fixed-pane-initial-dimension="309">
+        <ui:VisualElement name="left-panel" style="width: 60px; background-color: rgba(56, 56, 56, 255); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+            <ui:Label tabindex="-1" text="Node Data" display-tooltip-when-elided="true" style="border-bottom-color: rgba(0, 0, 0, 255); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 20px; -unity-text-align: upper-left; font-size: 14px; -unity-font-style: normal; background-color: rgba(60, 60, 60, 255); color: rgba(194, 194, 194, 255);" />
+            <ArtGallery.BehaviourTree.Editor.InspectorView name="InspectorView" style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" />
         </ui:VisualElement>
         <ui:VisualElement name="right-panel" style="width: 498px;">
-            <ui:Label tabindex="-1" text="Tree View" display-tooltip-when-elided="true" style="background-color: rgb(32, 32, 32);" />
             <ArtGallery.BehaviourTree.Editor.BehaviourTreeView focusable="true" style="flex-grow: 1; left: initial; top: initial; right: initial; bottom: initial;" />
         </ui:VisualElement>
     </ArtGallery.BehaviourTree.Editor.SplitView>

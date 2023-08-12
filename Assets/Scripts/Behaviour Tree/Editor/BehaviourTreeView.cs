@@ -60,10 +60,20 @@ namespace ArtGallery.BehaviourTree.Editor
             DeleteElements(graphElements);
             graphViewChanged += OnGraphViewChanged;
 
+            if(tree.GetRoot() == null)
+            {
+                tree.SetRoot(tree.CreateNode(typeof(RootNode)) as RootNode);
+                EditorUtility.SetDirty(tree);
+                AssetDatabase.SaveAssets();
+            }
+
             foreach(var node in tree.GetNodes())
             {
                 CreateNodeView(node);
+            }
 
+            foreach(var node in tree.GetNodes())
+            {
                 foreach(var child in tree.GetChildren(node))
                 {
                     CreateEdges(node, child);
@@ -79,7 +89,7 @@ namespace ArtGallery.BehaviourTree.Editor
 
         private void CreateNodeView(Node node)
         {
-            NodeView nodeView = new NodeView(node, tree);
+            NodeView nodeView = new NodeView(node, tree, this);
             nodeView.onNodeSelected = onNodeSelected;
             AddElement(nodeView);
         }
@@ -93,9 +103,6 @@ namespace ArtGallery.BehaviourTree.Editor
         {
             NodeView parentView = GetNodeView(parent);
             NodeView childView = GetNodeView(child);
-
-            if(parentView == null || childView == null) return;
-
             Edge edge = parentView.ConnectTo(childView);
             AddElement(edge);
         }

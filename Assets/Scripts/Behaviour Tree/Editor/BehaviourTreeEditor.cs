@@ -1,6 +1,5 @@
 using UnityEditor;
 using UnityEditor.Callbacks;
-using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace ArtGallery.BehaviourTree.Editor

@@ -7,17 +7,19 @@ namespace ArtGallery.BehaviourTree.Editor
 {
     public class NodeView : UnityEditor.Experimental.GraphView.Node
     {
-        BehaviourTree tree = null;
         Node node = null;
+        BehaviourTree tree = null;
+        BehaviourTreeView treeView = null;
         Port inputPort = null;
         Port outputPort = null;
 
         public Action<NodeView> onNodeSelected;
 
-        public NodeView(Node node, BehaviourTree tree)
+        public NodeView(Node node, BehaviourTree tree, BehaviourTreeView treeView)
         {
-            this.tree = tree;
             this.node = node;
+            this.tree = tree;
+            this.treeView = treeView;
             this.title = node.name;
             this.viewDataKey = node.GetUniqueID();
             style.left = node.GetPosition().x;
@@ -28,6 +30,7 @@ namespace ArtGallery.BehaviourTree.Editor
 
         public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
         {
+            if(node is RootNode) return;
             evt.menu.AppendAction("Delete", (a) => DeleteNode());
         }
 
@@ -54,13 +57,29 @@ namespace ArtGallery.BehaviourTree.Editor
 
         private void DeleteNode()
         {
+            DisconnectPorts(inputContainer);
+            DisconnectPorts(outputContainer);
             tree.DeleteNode(node);
             this.RemoveFromHierarchy();
         }
 
+        private void DisconnectPorts(VisualElement container)
+        {
+            foreach(Port port in container.Children())
+            {
+                if(!port.connected) continue;
+
+                treeView.DeleteElements(port.connections);
+            }
+        }
+
         private void CreateOutputPorts()
         {
-            if(node is DecoratorNode)
+            if(node is RootNode)
+            {
+                outputPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(Node));
+            }
+            else if(node is DecoratorNode)
             {
                 outputPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(Node));
             }
@@ -78,6 +97,8 @@ namespace ArtGallery.BehaviourTree.Editor
 
         private void CreateInputPort()
         {
+            if(node is RootNode) return;
+
             inputPort = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single, typeof(Node));
 
             if(inputPort != null)
