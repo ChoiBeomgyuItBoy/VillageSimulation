@@ -5,12 +5,12 @@
     </uie:Toolbar>
     <ArtGallery.BehaviourTree.Editor.SplitView fixed-pane-initial-dimension="200">
         <ui:VisualElement name="left-panel" style="width: 60px;">
+            <ui:Label tabindex="-1" text="Node Data" display-tooltip-when-elided="true" style="-unity-background-image-tint-color: rgb(255, 255, 255); background-color: rgb(32, 32, 32);" />
             <ArtGallery.BehaviourTree.Editor.InspectorView />
-            <ui:Label tabindex="-1" text="Inspector" display-tooltip-when-elided="true" style="-unity-background-image-tint-color: rgba(255, 255, 255, 255); background-color: rgba(32, 32, 32, 255);" />
         </ui:VisualElement>
         <ui:VisualElement name="right-panel" style="width: 498px;">
-            <ui:Label tabindex="-1" text="Tree View" display-tooltip-when-elided="true" style="background-color: rgba(32, 32, 32, 255);" />
-            <ArtGallery.BehaviourTree.Editor.BehaviourTreeView focusable="true" style="flex-grow: 1;" />
+            <ui:Label tabindex="-1" text="Tree View" display-tooltip-when-elided="true" style="background-color: rgb(32, 32, 32);" />
+            <ArtGallery.BehaviourTree.Editor.BehaviourTreeView focusable="true" style="flex-grow: 1; left: initial; top: initial; right: initial; bottom: initial;" />
         </ui:VisualElement>
     </ArtGallery.BehaviourTree.Editor.SplitView>
 </ui:UXML>

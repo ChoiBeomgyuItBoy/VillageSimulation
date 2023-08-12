@@ -3,7 +3,6 @@ using UnityEngine;
 
 namespace ArtGallery.BehaviourTree.Conditions
 {
-    [CreateAssetMenu(menuName = "Behaviour Tree/Conditions/Has Enough Money")]
     public class HasEnoughMoney : ActionNode
     {
         [SerializeField] float moneyThreshold = 500;

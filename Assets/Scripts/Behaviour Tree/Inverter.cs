@@ -2,7 +2,6 @@ using UnityEngine;
 
 namespace ArtGallery.BehaviourTree
 {
-    [CreateAssetMenu(menuName = "Behaviour Tree/Inverter")]
     public class Inverter : DecoratorNode
     {
         protected override void OnEnter() { }

@@ -1,8 +1,8 @@
+using System.Linq;
 using UnityEngine;
 
 namespace ArtGallery.BehaviourTree
 {
-    [CreateAssetMenu(menuName = "Behaviour Tree/Sequence")]
     public class Sequence : CompositeNode
     {
         int currentChild = 0;
@@ -27,7 +27,7 @@ namespace ArtGallery.BehaviourTree
                     break;
             }
 
-            return currentChild == GetChildCount() ? Status.Success : Status.Running;
+            return currentChild == GetChildren().Count() ? Status.Success : Status.Running;
         }
 
         protected override void OnExit() { }

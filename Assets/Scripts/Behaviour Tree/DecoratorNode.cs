@@ -6,9 +6,14 @@ namespace ArtGallery.BehaviourTree
     {
         [SerializeField] Node child;
 
-        protected Node GetChild()
+        public Node GetChild()
         {
             return child;
+        }
+
+        public void SetChild(Node child)
+        {
+            this.child = child;
         }
     }
 }

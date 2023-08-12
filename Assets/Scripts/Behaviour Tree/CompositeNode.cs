@@ -7,9 +7,19 @@ namespace ArtGallery.BehaviourTree
     {
         [SerializeField] List<Node> children = new List<Node>();
 
-        protected int GetChildCount()
+        public IEnumerable<Node> GetChildren()
         {
-            return children.Count;
+            return children;
+        }
+
+        public void AddChild(Node child)
+        {
+            children.Add(child);
+        }
+
+        public void RemoveChild(Node child)
+        {
+            children.Remove(child);
         }
 
         protected Node GetChild(int index)
@@ -19,7 +29,7 @@ namespace ArtGallery.BehaviourTree
 
         protected void SortChildren()
         {
-            Sort(0, GetChildCount() - 1);
+            Sort(0, children.Count - 1);
         }
 
         private void Sort(int low, int high)

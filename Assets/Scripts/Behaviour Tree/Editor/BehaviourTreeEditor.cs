@@ -40,6 +40,11 @@ namespace ArtGallery.BehaviourTree.Editor
             }
         }
 
+        private void OnNodeSelectionChanged(NodeView nodeView)
+        {
+            inspectorView.UpdateSelection(nodeView);
+        }
+
         private void CreateGUI()
         {
             VisualElement root = rootVisualElement;
@@ -60,6 +65,7 @@ namespace ArtGallery.BehaviourTree.Editor
 
             treeView = root.Q<BehaviourTreeView>();
             inspectorView = root.Q<InspectorView>();
+            treeView.onNodeSelected += OnNodeSelectionChanged;
 
             OnSelectionChange();
         }

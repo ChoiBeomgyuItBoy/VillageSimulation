@@ -5,8 +5,8 @@ namespace ArtGallery.BehaviourTree
     public abstract class Node : ScriptableObject
     {
         [SerializeField] int priority = 0;
-        string uniqueID = "";
-        Vector2 position = Vector2.zero;
+        [SerializeField] string uniqueID = "";
+        [SerializeField] Vector2 position = Vector2.zero;
         Status status = Status.Running;
         bool started = false;
 

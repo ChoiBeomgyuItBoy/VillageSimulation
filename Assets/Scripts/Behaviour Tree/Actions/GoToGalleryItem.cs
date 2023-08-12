@@ -4,7 +4,6 @@ using UnityEngine.AI;
 
 namespace ArtGallery.BehaviourTree.Actions
 {
-    [CreateAssetMenu(menuName = "Behaviour Tree/Actions/Go To Gallery Item")]
     public class GoToGalleryItem : GoToDestination
     {
         [SerializeField] string itemName = "";

@@ -1,8 +1,8 @@
+using System.Linq;
 using UnityEngine;
 
 namespace ArtGallery.BehaviourTree
 {
-    [CreateAssetMenu(menuName = "Behaviour Tree/Selector")]
     public class Selector : CompositeNode
     {
         [SerializeField] bool selectByPriority = false;
@@ -33,7 +33,7 @@ namespace ArtGallery.BehaviourTree
                     break;
             }
 
-            return currentChild == GetChildCount() ? Status.Failure : Status.Running;
+            return currentChild == GetChildren().Count() ? Status.Failure : Status.Running;
         }
 
         protected override void OnExit() { }

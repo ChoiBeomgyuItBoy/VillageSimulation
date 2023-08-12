@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace ArtGallery.BehaviourTree
 {
-    [CreateAssetMenu(menuName = "Behaviour Tree/ New Behaviour Tree")]
+    [CreateAssetMenu(menuName = "New Behaviour Tree")]
     public class BehaviourTree : ScriptableObject
     {
         [SerializeField] Node rootNode = null;
-        List<Node> nodes = new List<Node>();
+        [SerializeField] List<Node> nodes = new List<Node>();
 
         public Status Tick(TreeController controller)
         {
@@ -39,6 +39,60 @@ namespace ArtGallery.BehaviourTree
             nodes.Remove(node);
             AssetDatabase.RemoveObjectFromAsset(node);
             AssetDatabase.SaveAssets();
+        }
+
+        public void AddChild(Node parent, Node child)
+        {
+            DecoratorNode decorator = parent as DecoratorNode;
+
+            if(decorator != null)
+            {
+                decorator.SetChild(child);
+            }
+
+            CompositeNode composite = parent as CompositeNode;
+
+            if(composite != null)
+            {
+                composite.AddChild(child);
+            }
+        }
+
+        public void RemoveChild(Node parent, Node child)
+        {
+            DecoratorNode decorator = parent as DecoratorNode;
+
+            if(decorator != null)
+            {
+                decorator.SetChild(null);
+            }
+
+            CompositeNode composite = parent as CompositeNode;
+
+            if(composite != null)
+            {
+                composite.RemoveChild(child);
+            }
+        }
+
+        public IEnumerable<Node> GetChildren(Node parent)
+        {
+            DecoratorNode decorator = parent as DecoratorNode;
+
+            if(decorator != null)
+            {
+                yield return decorator.GetChild();
+            }
+
+            CompositeNode composite = parent as CompositeNode;
+
+            if(composite != null)
+            {
+                foreach(var node in composite.GetChildren())
+                {
+                    yield return node;
+                }
+            }
         }
     }
 }
