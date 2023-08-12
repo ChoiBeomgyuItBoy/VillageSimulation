@@ -15,5 +15,12 @@ namespace ArtGallery.BehaviourTree
         {
             this.child = child;
         }
+
+        public override Node Clone()
+        {
+            DecoratorNode node = Instantiate(this);
+            node.SetChild(child.Clone());
+            return node;
+        }
     }
 }

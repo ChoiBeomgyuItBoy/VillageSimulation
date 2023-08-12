@@ -22,6 +22,13 @@ namespace ArtGallery.BehaviourTree
             children.Remove(child);
         }
 
+        public override Node Clone()
+        {
+            CompositeNode node = Instantiate(this);
+            node.children = children.ConvertAll(child => child.Clone());
+            return node;
+        }
+
         protected Node GetChild(int index)
         {
             return children[index];
@@ -41,7 +48,7 @@ namespace ArtGallery.BehaviourTree
         {
             int current = children.Count;
 
-            while(children.Count > 1)
+            while(current > 1)
             {
                 current--;
                 int randomIndex = new System.Random().Next(current + 1);

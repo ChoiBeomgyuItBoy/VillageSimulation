@@ -125,5 +125,12 @@ namespace ArtGallery.BehaviourTree
                 }
             }
         }
+
+        public BehaviourTree Clone()
+        {
+            BehaviourTree tree = Instantiate(this);
+            tree.rootNode = tree.rootNode.Clone() as RootNode;
+            return tree;
+        }
     }
 }

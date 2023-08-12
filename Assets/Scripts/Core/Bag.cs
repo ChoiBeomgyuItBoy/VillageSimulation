@@ -5,7 +5,13 @@ namespace ArtGallery.Core
 {
     public class Bag : MonoBehaviour
     {
+        [SerializeField] GameObject deposit = null;
         List<GalleryItem> items = new List<GalleryItem>();
+
+        public Vector3 GetDepositLocation()
+        {
+            return deposit.transform.position;
+        }
 
         public void AddItem(GalleryItem item)
         {

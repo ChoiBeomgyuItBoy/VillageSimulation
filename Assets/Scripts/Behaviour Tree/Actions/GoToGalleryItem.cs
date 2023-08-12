@@ -9,7 +9,6 @@ namespace ArtGallery.BehaviourTree.Actions
         [SerializeField] string itemName = "";
         [SerializeField] bool randomItem = false;
         [SerializeField] bool addToBag = true;
-        [SerializeField] bool clearBagIfSucceded = false;
         NavMeshAgent agent = null;
         GalleryItem item = null;
 
@@ -44,11 +43,6 @@ namespace ArtGallery.BehaviourTree.Actions
             if(status == Status.Success && addToBag)
             {
                 controller.GetComponent<Bag>().AddItem(item);
-            }
-
-            if(status == Status.Success && clearBagIfSucceded)
-            {
-                controller.GetComponent<Bag>().SellItems();
             }
 
             return status;

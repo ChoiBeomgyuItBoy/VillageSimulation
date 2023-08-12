@@ -6,6 +6,11 @@ namespace ArtGallery.BehaviourTree
     {
         [SerializeField] BehaviourTree tree = null;
 
+        void Start()
+        {
+            tree = tree.Clone();
+        }
+
         void Update()
         {
             tree.Tick(this);

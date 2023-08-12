@@ -61,6 +61,11 @@ namespace ArtGallery.BehaviourTree
             return status;
         }
 
+        public virtual Node Clone()
+        {
+            return Instantiate(this);
+        }
+
         protected abstract void OnEnter();
         protected abstract Status OnTick();
         protected abstract void OnExit();

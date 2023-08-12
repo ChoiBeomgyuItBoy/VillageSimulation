@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-4086319225492821212
+--- !u!114 &-8576502252280156765
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: GoToDoor
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: 3bfe4e08a116e4f40840370b3ae71671
-  position: {x: 602, y: 220}
-  doorName: FrontDoor
---- !u!114 &-3881370894539762219
+  uniqueID: 6d3a236c4f4dc0940b7f9cb1fbc460fe
+  position: {x: 170, y: 449}
+  doorName: BackDoor
+--- !u!114 &-2774793482204049895
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25,33 +25,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
-  m_Name: GoToGalleryItem
+  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
+  m_Name: Selector
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: 5d6308198d03de543960a6fbe182ad38
-  position: {x: 460, y: 583}
-  itemName: GetawayVan
-  addToBag: 0
-  clearBagIfSucceded: 1
---- !u!114 &-2178278819544457665
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
-  m_Name: GoToGalleryItem
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: b678424d7c523554e88dd577f508c0d8
-  position: {x: 602, y: 506}
-  itemName: MonaLisa
-  addToBag: 1
-  clearBagIfSucceded: 0
+  uniqueID: 4794cb49b5367b8468ac099bbe340063
+  position: {x: 496, y: 293}
+  children: []
+  selectionType: 0
 --- !u!114 &-1573958950646931305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,12 +47,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 031ee762d5472064dac38f8cf62564f8
-  position: {x: 296.15, y: 348}
+  position: {x: 225, y: 107}
   children:
   - {fileID: 6279520617109306827}
-  - {fileID: 2814683060640902388}
-  - {fileID: 3574536273935641434}
-  - {fileID: -3881370894539762219}
+  - {fileID: 5432686765818458918}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,13 +69,33 @@ MonoBehaviour:
   - {fileID: -1573958950646931305}
   - {fileID: 6279520617109306827}
   - {fileID: 4530504035963245064}
-  - {fileID: 2814683060640902388}
-  - {fileID: -4086319225492821212}
-  - {fileID: 7857898070924938105}
-  - {fileID: 3574536273935641434}
-  - {fileID: 2711325558035955488}
-  - {fileID: -2178278819544457665}
-  - {fileID: -3881370894539762219}
+  - {fileID: 3383659742182666965}
+  - {fileID: -8576502252280156765}
+  - {fileID: 5432686765818458918}
+  - {fileID: 2338359930537347322}
+  - {fileID: -2774793482204049895}
+  - {fileID: 5843261113192264493}
+  - {fileID: 5738918709356855470}
+  - {fileID: 303247312471939733}
+  - {fileID: 8527582045642146412}
+--- !u!114 &303247312471939733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
+  m_Name: GoToGalleryItem
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 6e431212d5ae59e4f97e33907b88afa8
+  position: {x: 699, y: 448}
+  itemName: 
+  randomItem: 0
+  addToBag: 1
 --- !u!114 &1910369796622767823
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,9 +110,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 0f7c41506028e8644acbbfc1c8b3ece9
-  position: {x: 168.7, y: 348.00006}
+  position: {x: 228.75002, y: 19.000013}
   child: {fileID: -1573958950646931305}
---- !u!114 &2711325558035955488
+--- !u!114 &2338359930537347322
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,16 +121,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
-  m_Name: GoToGalleryItem
+  m_Script: {fileID: 11500000, guid: d67bfff153222bd40bb16e5d35c392c4, type: 3}
+  m_Name: ClearBag
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: feb6ad4893a1a5640820f1709826c064
-  position: {x: 602, y: 405.5}
-  itemName: H3DDiamond
-  addToBag: 1
-  clearBagIfSucceded: 0
---- !u!114 &2814683060640902388
+  uniqueID: 75f7efec7f64dd944b46872c629cdb2c
+  position: {x: 737, y: 309}
+--- !u!114 &3383659742182666965
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,35 +136,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
-  m_Name: Selector
+  m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
+  m_Name: GoToDoor
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: 916e8cca50b6f724686c0a5848dcab76
-  position: {x: 471.00006, y: 271}
-  children:
-  - {fileID: -4086319225492821212}
-  - {fileID: 7857898070924938105}
-  selectByPriority: 0
---- !u!114 &3574536273935641434
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
-  m_Name: Selector
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: 0cb92e3d9188d574696209c0d155911f
-  position: {x: 471, y: 443.60004}
-  children:
-  - {fileID: 2711325558035955488}
-  - {fileID: -2178278819544457665}
-  selectByPriority: 0
+  uniqueID: ad169683a29c52c40baf8f156db52802
+  position: {x: 11, y: 449}
+  doorName: FrontDoor
 --- !u!114 &4530504035963245064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,8 +157,63 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 35e39146f7dbdea4cb607ab57e26f93d
-  position: {x: 619, y: 116}
-  moneyThreshold: 500
+  position: {x: -191, y: 441}
+  moneyThreshold: 1300
+--- !u!114 &5432686765818458918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 624e3f23c02212846a3859dd97d36ed5
+  position: {x: 87.00015, y: 300.70004}
+  children:
+  - {fileID: 3383659742182666965}
+  - {fileID: -8576502252280156765}
+  selectionType: 0
+--- !u!114 &5738918709356855470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
+  m_Name: GoToGalleryItem
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: a6a6a551635b3b545a15599d1aa66e00
+  position: {x: 541.00006, y: 449}
+  itemName: 
+  randomItem: 0
+  addToBag: 1
+--- !u!114 &5843261113192264493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
+  m_Name: GoToGalleryItem
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 164c9306883ecd54197e48d43396a4a1
+  position: {x: 383, y: 449}
+  itemName: 
+  randomItem: 0
+  addToBag: 1
 --- !u!114 &6279520617109306827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,9 +228,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 31e60453dd3481445913db031be088f9
-  position: {x: 474, y: 116}
+  position: {x: -147.19992, y: 303.00003}
   child: {fileID: 4530504035963245064}
---- !u!114 &7857898070924938105
+--- !u!114 &8527582045642146412
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,10 +239,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
-  m_Name: GoToDoor
+  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
+  m_Name: GoToGalleryItem
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: d1086f55431bb224695834c62448dfea
-  position: {x: 602, y: 309.5}
-  doorName: BackDoor
+  uniqueID: 1e411ac519a90814f8fc779f3eb1ea28
+  position: {x: 0, y: 0}
+  itemName: 
+  randomItem: 0
+  addToBag: 1

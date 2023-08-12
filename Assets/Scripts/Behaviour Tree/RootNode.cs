@@ -1,3 +1,4 @@
+using Microsoft.Unity.VisualStudio.Editor;
 using UnityEngine;
 
 namespace ArtGallery.BehaviourTree
@@ -14,6 +15,13 @@ namespace ArtGallery.BehaviourTree
         public Node GetChild()
         {
             return child;
+        }
+
+        public override Node Clone()
+        {
+            RootNode node = Instantiate(this);
+            node.SetChild(child.Clone());
+            return node;
         }
 
         protected override void OnEnter() { }
