@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Assets/Scripts/Behaviour%20Tree/Editor/NodeViewStyle.uss?fileID=7433441132597879392&amp;guid=d651112775bd96842b7788e93bc5322c&amp;type=3#NodeViewStyle" />
+    <ui:VisualElement name="node-border" style="background-color: rgb(56, 56, 56); border-left-color: rgb(37, 37, 37); border-right-color: rgb(37, 37, 37); border-top-color: rgb(37, 37, 37); border-bottom-color: rgb(37, 37, 37); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;">
+        <ui:VisualElement name="contents">
+            <ui:VisualElement name="top">
+                <ui:VisualElement name="input" />
+                <ui:VisualElement name="divider" class="vertical" style="min-height: 1px;" />
+                <ui:VisualElement name="title" style="font-size: 14px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+                    <ui:Label name="title-label" text="Sequence" class="unity-text-element unity-label" />
+                    <ui:VisualElement name="title-button-container">
+                        <ui:VisualElement name="collapse-button">
+                            <ui:VisualElement name="icon" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Label tabindex="-1" text="This is a description" display-tooltip-when-elided="true" name="description" style="font-size: 10px;" />
+                <ui:VisualElement name="divider" class="horizontal" />
+                <ui:VisualElement name="output" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="selection-border" picking-mode="Ignore" />
+</ui:UXML>

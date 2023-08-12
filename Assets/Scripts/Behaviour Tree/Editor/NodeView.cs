@@ -15,7 +15,8 @@ namespace ArtGallery.BehaviourTree.Editor
 
         public Action<NodeView> onNodeSelected;
 
-        public NodeView(Node node, BehaviourTree tree, BehaviourTreeView treeView)
+        public NodeView(Node node, BehaviourTree tree, BehaviourTreeView treeView) 
+                         : base("Assets/Scripts/Behaviour Tree/Editor/NodeView.uxml")
         {
             this.node = node;
             this.tree = tree;
@@ -26,6 +27,7 @@ namespace ArtGallery.BehaviourTree.Editor
             style.top = node.GetPosition().y;
             CreateInputPort();
             CreateOutputPorts();
+            SetupClasses();
         }
 
         public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
@@ -77,20 +79,21 @@ namespace ArtGallery.BehaviourTree.Editor
         {
             if(node is RootNode)
             {
-                outputPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(Node));
+                outputPort = InstantiatePort(Orientation.Vertical, Direction.Output, Port.Capacity.Single, typeof(Node));
             }
             else if(node is DecoratorNode)
             {
-                outputPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(Node));
+                outputPort = InstantiatePort(Orientation.Vertical, Direction.Output, Port.Capacity.Single, typeof(Node));
             }
             else if(node is CompositeNode)
             {
-                outputPort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Multi, typeof(Node));
+                outputPort = InstantiatePort(Orientation.Vertical, Direction.Output, Port.Capacity.Multi, typeof(Node));
             }
 
             if(outputPort != null)
             {
                 outputPort.portName = "";
+                outputPort.style.flexDirection = FlexDirection.ColumnReverse;
                 outputContainer.Add(outputPort);
             }
         }
@@ -99,12 +102,33 @@ namespace ArtGallery.BehaviourTree.Editor
         {
             if(node is RootNode) return;
 
-            inputPort = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Single, typeof(Node));
+            inputPort = InstantiatePort(Orientation.Vertical, Direction.Input, Port.Capacity.Single, typeof(Node));
 
             if(inputPort != null)
             {
                 inputPort.portName = "";
+                inputPort.style.flexDirection = FlexDirection.Column;
                 inputContainer.Add(inputPort);
+            }
+        }
+
+        private void SetupClasses()
+        {
+            if(node is RootNode)
+            {
+                AddToClassList("root");
+            }
+            else if(node is ActionNode)
+            {
+                AddToClassList("action");
+            }
+            else if(node is DecoratorNode)
+            {
+                AddToClassList("decorator");
+            }
+            else if(node is CompositeNode)
+            {
+                AddToClassList("composite");
             }
         }
     }

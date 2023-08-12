@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -35,7 +34,7 @@ namespace ArtGallery.Core
             {
                 BuildLookup();
             }
-            
+
             List<string> names = new List<string>(itemLookup.Keys);
             return names[new System.Random().Next(itemLookup.Count)];
         }
