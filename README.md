@@ -6,7 +6,7 @@
 - Runtime tree state visualization.
 - Clean & reusable design for any project.
 ## Tools overview:
-  ![image](https://github.com/ChoiBeomgyuItBoy/ArtGallerySimulator/assets/113314204/662d3ce7-7c16-4605-8730-33fcecf4a68f)
+  ![image](https://github.com/ChoiBeomgyuItBoy/ArtGallerySimulator/assets/113314204/195cf160-2aad-4538-a6a7-48aec5d0dd87)
 ## Gameplay Overview:
 -...
 ## Play Test:
