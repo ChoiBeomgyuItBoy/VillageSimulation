@@ -1,5 +1,7 @@
 using System;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -16,18 +18,24 @@ namespace ArtGallery.BehaviourTree.Editor
         public Action<NodeView> onNodeSelected;
 
         public NodeView(Node node, BehaviourTree tree, BehaviourTreeView treeView) 
-                         : base("Assets/Scripts/Behaviour Tree/Editor/NodeView.uxml")
+        : base("Assets/Scripts/Behaviour Tree/Editor/NodeView.uxml")
         {
             this.node = node;
             this.tree = tree;
             this.treeView = treeView;
-            this.title = node.name;
+            this.title = $"[{node.name}]";
             this.viewDataKey = node.GetUniqueID();
+
             style.left = node.GetPosition().x;
             style.top = node.GetPosition().y;
+
             CreateInputPort();
             CreateOutputPorts();
             SetupClasses();
+
+            Label descriptionLabel = this.Q<Label>("description");
+            descriptionLabel.bindingPath = "description";
+            descriptionLabel.Bind(new SerializedObject(node));
         }
 
         public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
@@ -44,7 +52,44 @@ namespace ArtGallery.BehaviourTree.Editor
         public override void SetPosition(Rect newPos)
         {
             base.SetPosition(newPos);
+            Undo.RecordObject(node, "(Behaviour Tree) Moved node");
             node.SetPosition(new Vector2(newPos.x, newPos.y));
+            EditorUtility.SetDirty(node);
+        }
+
+        public void SortChildren()
+        {
+            CompositeNode composite = node as CompositeNode;
+
+            if(composite != null)
+            {
+                composite.SortChildrenByHorizontalPosition();
+            }
+        }
+
+        public void UpdateState()
+        {
+            RemoveFromClassList("running");
+            RemoveFromClassList("success");
+            RemoveFromClassList("failure");
+
+            if(!Application.isPlaying) return;
+
+            switch (node.GetStatus())
+            {
+                case Status.Running:
+                    if(node.Started())
+                    {
+                        AddToClassList("running");
+                    }
+                    break;
+                case Status.Success:
+                    AddToClassList("success");
+                    break;
+                case Status.Failure:
+                    AddToClassList("failure");
+                    break;
+            }
         }
 
         public Node GetNode()

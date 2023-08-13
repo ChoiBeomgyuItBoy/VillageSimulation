@@ -33,15 +33,28 @@ namespace ArtGallery.BehaviourTree.Editor
         {
             BehaviourTree tree = Selection.activeObject as BehaviourTree;
 
-            if(tree != null)
+            if(tree == null)
+            {
+                if(Selection.activeGameObject)
+                {
+                    TreeController controller = Selection.activeGameObject.GetComponent<TreeController>();
+
+                    if(controller != null)
+                    {
+                        tree = controller.GetBehaviourTree();
+                    }
+                }
+            }
+
+            if(tree != null && AssetDatabase.CanOpenAssetInEditor(tree.GetInstanceID()))
             {
                 treeView.PopulateView(tree);
             }
         }
 
-        private void OnNodeSelectionChanged(NodeView nodeView)
+        private void OnInspectorUpdate()
         {
-            inspectorView.UpdateSelection(nodeView);
+            treeView.UpdateNodeStates();
         }
 
         private void CreateGUI()
@@ -68,5 +81,10 @@ namespace ArtGallery.BehaviourTree.Editor
 
             OnSelectionChange();
         }
-    }   
+
+        private void OnNodeSelectionChanged(NodeView nodeView)
+        {
+            inspectorView.UpdateSelection(nodeView);
+        }
+    }
 }

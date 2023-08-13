@@ -22,11 +22,9 @@ namespace ArtGallery.BehaviourTree
             children.Remove(child);
         }
 
-        public override Node Clone()
+        public void SortChildrenByHorizontalPosition()
         {
-            CompositeNode node = Instantiate(this);
-            node.children = children.ConvertAll(child => child.Clone());
-            return node;
+            children.Sort(ComparePositions);
         }
 
         protected Node GetChild(int index)
@@ -34,14 +32,24 @@ namespace ArtGallery.BehaviourTree
             return children[index];
         }
 
-        protected void SortChildren()
+        protected void SorChildrenByPriority()
         {
-            Sort(0, children.Count - 1);
+            children.Sort(ComparePriorities);
         }
 
         protected void ShuffleChildren()
         {
             Shuffle();
+        }
+
+        private int ComparePositions(Node left, Node right)
+        {
+            return left.GetPosition().x < right.GetPosition().x ? -1 : 1;
+        }
+
+        private int ComparePriorities(Node x, Node y)
+        {
+            return x.GetPriority() < y.GetPriority() ? -1 : 1;
         }
 
         private void Shuffle()
@@ -56,43 +64,6 @@ namespace ArtGallery.BehaviourTree
                 children[randomIndex] = children[current];
                 children[current] = randomNode;
             }
-        }
-
-        private void Sort(int low, int high)
-        {
-            if (low < high)
-            {
-                int partitionIndex = Partition(low, high);
-                Sort(low, partitionIndex - 1);
-                Sort(partitionIndex + 1, high);
-            }
-        }
-
-        private int Partition(int low, int high)
-        {
-            Node pivot = children[high];
-
-            int lowIndex = (low - 1);
-
-            for (int j = low; j < high; j++)
-            {
-                if (children[j].GetPriority() <= pivot.GetPriority())
-                {
-                    lowIndex++;
-                    Switch(lowIndex, j);
-                }
-            }
-
-            Switch(lowIndex, high);
-
-            return lowIndex + 1;
-        }
-
-        private void Switch(int indexA, int indexB)
-        {
-            Node cache = children[indexA + 1];
-            children[indexA + 1] = children[indexB];
-            children[indexB] = cache;
         }
     }
 }

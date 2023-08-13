@@ -32,6 +32,8 @@ namespace ArtGallery.BehaviourTree.Editor
             );
 
             styleSheets.Add(styleSheet);
+
+            Undo.undoRedoPerformed += OnUndoRedo;
         }
 
         public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
@@ -77,6 +79,19 @@ namespace ArtGallery.BehaviourTree.Editor
                 foreach(var child in tree.GetChildren(node))
                 {
                     CreateEdges(node, child);
+                }
+            }
+        }
+
+        public void UpdateNodeStates()
+        {
+            foreach(var node in nodes)
+            {
+                NodeView nodeView = node as NodeView;
+
+                if(nodeView != null)
+                {
+                    nodeView.UpdateState();
                 }
             }
         }
@@ -138,6 +153,17 @@ namespace ArtGallery.BehaviourTree.Editor
                 }
             }
 
+            var movedElements = graphViewChange.movedElements;
+
+            if(movedElements != null)
+            {
+                foreach(var node in nodes)
+                {
+                    NodeView nodeView = node as NodeView;
+                    nodeView.SortChildren();
+                }
+            }
+
             return graphViewChange;
         }
 
@@ -154,6 +180,12 @@ namespace ArtGallery.BehaviourTree.Editor
 
                 evt.menu.AppendAction($"{typeName}/{concreteName}", (action) => CreateNode(type));
             }
+        }
+
+        private void OnUndoRedo()
+        {
+            PopulateView(tree);
+            AssetDatabase.SaveAssets();
         }
     }
 }

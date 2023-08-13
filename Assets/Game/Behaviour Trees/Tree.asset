@@ -1,0 +1,186 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7897388464187537484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de5ed752e1625b4aac749bf16491e87, type: 3}
+  m_Name: HasEnoughMoney
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 4010b26eae6bdfb429ddec52390d1cf8
+  position: {x: -156, y: 372}
+  description: 
+  moneyThreshold: 500
+--- !u!114 &-1047928025964329248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37110f1494c08b746bfdf9f71246a242, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: ef2d5349e72b5734f99b96b16b16d1ad
+  position: {x: 80, y: 10.360001}
+  description: 
+  child: {fileID: 2443650876622941798}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572ec67d91ae91446afefc4788241d7e, type: 3}
+  m_Name: Tree
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -1047928025964329248}
+  nodes:
+  - {fileID: -1047928025964329248}
+  - {fileID: 2443650876622941798}
+  - {fileID: 8368715857083429420}
+  - {fileID: -7897388464187537484}
+  - {fileID: 3335117131845683002}
+  - {fileID: 6395675581932362895}
+  - {fileID: 2077233445060952843}
+  - {fileID: 4220667274170111260}
+  - {fileID: 5611995865213115834}
+--- !u!114 &2077233445060952843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
+  m_Name: GoToDoor
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: a724b1e38f0148d42bce3ca95ea24d19
+  position: {x: 192, y: 379}
+  description: 
+  doorName: BackDoor
+--- !u!114 &2443650876622941798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 86499c60230778d49bab8bdff6e4ab7d
+  position: {x: 75, y: 100.32}
+  description: Steal Something
+  children:
+  - {fileID: 8368715857083429420}
+  - {fileID: 3335117131845683002}
+  - {fileID: 4220667274170111260}
+  - {fileID: 5611995865213115834}
+--- !u!114 &3335117131845683002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 52691c91cee64c24ebe3f6de7b6b982f
+  position: {x: 109.20006, y: 248.00002}
+  description: 
+  children:
+  - {fileID: 6395675581932362895}
+  - {fileID: 2077233445060952843}
+  selectionType: 0
+--- !u!114 &4220667274170111260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
+  m_Name: GoToGalleryItem
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: e7285857ef52b0c438124418b98ef164
+  position: {x: 297, y: 256}
+  description: 
+  itemName: 
+  randomItem: 1
+  addToBag: 1
+--- !u!114 &5611995865213115834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67bfff153222bd40bb16e5d35c392c4, type: 3}
+  m_Name: ClearBag
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 2c35a02ddaa5f4c49903f82f21101a47
+  position: {x: 487.22766, y: 255.99997}
+  description: 
+--- !u!114 &6395675581932362895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
+  m_Name: GoToDoor
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 9d690615b2aef1a4786704f76dc0555f
+  position: {x: 34, y: 380}
+  description: 
+  doorName: FrontDoor
+--- !u!114 &8368715857083429420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201abbf7d61ac04489eee2edf64a533c, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 200e12aa9bade2047911390d3ba9a014
+  position: {x: -124, y: 240}
+  description: 
+  child: {fileID: -7897388464187537484}

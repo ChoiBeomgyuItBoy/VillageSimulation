@@ -10,21 +10,13 @@ namespace ArtGallery.BehaviourTree
         Status status = Status.Running;
         bool started = false;
 
-        protected TreeController controller;
+        [TextArea] public string description  = "";
 
-        public void SetPosition(Vector2 position)
-        {
-            this.position = position;
-        }
+        protected TreeController controller;
 
         public Vector2 GetPosition()
         {
             return position;
-        }
-
-        public void SetUniqueID(string uniqueID)
-        {
-            this.uniqueID = uniqueID;
         }
 
         public string GetUniqueID()
@@ -35,6 +27,26 @@ namespace ArtGallery.BehaviourTree
         public int GetPriority()
         {
             return priority;
+        }
+
+        public Status GetStatus()
+        {
+            return status;
+        }
+
+        public bool Started()
+        {
+            return started;
+        }
+
+        public void SetPosition(Vector2 position)
+        {
+            this.position = position;
+        }
+        
+        public void SetUniqueID(string uniqueID)
+        {
+            this.uniqueID = uniqueID;
         }
 
         public Status Tick(TreeController controller)
@@ -59,11 +71,6 @@ namespace ArtGallery.BehaviourTree
             }
 
             return status;
-        }
-
-        public virtual Node Clone()
-        {
-            return Instantiate(this);
         }
 
         protected abstract void OnEnter();

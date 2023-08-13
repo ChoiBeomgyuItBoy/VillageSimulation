@@ -1569,6 +1569,7 @@ Transform:
   - {fileID: 1697981441}
   - {fileID: 1791870525}
   - {fileID: 919599690}
+  - {fileID: 1017486705}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2074,7 +2075,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 2
-    m_TransformParent: {fileID: 1835487041}
+    m_TransformParent: {fileID: 406099742}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 647a124cd5c1147a793fcacc25f6be1a, type: 3}
       propertyPath: m_RootOrder
@@ -3326,19 +3327,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 647a124cd5c1147a793fcacc25f6be1a, type: 3}
   m_PrefabInstance: {fileID: 631430678}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1017486706
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1017486704}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47fd8f7e0d60296418c6160006d89239, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  price: 200
 --- !u!1 &1020514924
 GameObject:
   m_ObjectHideFlags: 0
@@ -6099,7 +6087,6 @@ Transform:
   - {fileID: 425408388}
   - {fileID: 915494412}
   - {fileID: 1796479289}
-  - {fileID: 1017486705}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6992,6 +6979,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Robber
       objectReference: {fileID: 0}
+    - target: {fileID: 3747460178883425387, guid: 303b1cc45ef62fa4b91948ae7d3622ee, type: 3}
+      propertyPath: tree
+      value: 
+      objectReference: {fileID: 11400000, guid: bf9cf0af6c6683c43bcfbbcc5791a049, type: 2}
     - target: {fileID: 6824222776822325487, guid: 303b1cc45ef62fa4b91948ae7d3622ee, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -7036,6 +7027,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8790897101054295918, guid: 303b1cc45ef62fa4b91948ae7d3622ee, type: 3}
+      propertyPath: deposit
+      value: 
+      objectReference: {fileID: 1017486704}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 303b1cc45ef62fa4b91948ae7d3622ee, type: 3}

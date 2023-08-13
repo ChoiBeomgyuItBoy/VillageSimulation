@@ -5,13 +5,13 @@ namespace ArtGallery.BehaviourTree
 {
     public class Selector : CompositeNode
     {
-        [SerializeField] SelectionType selectionType = SelectionType.Order;
+        [SerializeField] SelectionType selectionType = SelectionType.FirstToBeSuccessful;
         int currentChild = 0;
 
         enum SelectionType
         {
-            Order,
-            Priority,
+            FirstToBeSuccessful,
+            ByPriority,
             Random
         }
 
@@ -21,8 +21,8 @@ namespace ArtGallery.BehaviourTree
 
             switch(selectionType)
             {
-                case SelectionType.Priority:
-                    SortChildren();
+                case SelectionType.ByPriority:
+                    SorChildrenByPriority();
                     break;
                 case SelectionType.Random:
                     base.ShuffleChildren();

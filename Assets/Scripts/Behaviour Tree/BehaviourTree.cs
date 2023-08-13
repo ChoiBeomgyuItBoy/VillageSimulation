@@ -31,14 +31,22 @@ namespace ArtGallery.BehaviourTree
             return nodes;
         }
 
+#if UNITY_EDITOR
         public Node CreateNode(Type type)
         {
             Node node = ScriptableObject.CreateInstance(type) as Node;
             node.name = type.Name;
             node.SetUniqueID(GUID.Generate().ToString());
+
+            Undo.RecordObject(this, "(Behaviour Tree) Created node");
             nodes.Add(node);
 
-            AssetDatabase.AddObjectToAsset(node, this);
+            if(!Application.isPlaying)
+            {
+                AssetDatabase.AddObjectToAsset(node, this);
+            }
+ 
+            Undo.RegisterCreatedObjectUndo(node, "(Behaviour Tree) Created node");
             AssetDatabase.SaveAssets();
 
             return node;
@@ -46,8 +54,9 @@ namespace ArtGallery.BehaviourTree
 
         public void DeleteNode(Node node)
         {
+            Undo.RecordObject(this, "(Behaviour Tree) Created node");
             nodes.Remove(node);
-            AssetDatabase.RemoveObjectFromAsset(node);
+            Undo.DestroyObjectImmediate(node);
             AssetDatabase.SaveAssets();
         }
 
@@ -57,21 +66,27 @@ namespace ArtGallery.BehaviourTree
 
             if(root != null)
             {
+                Undo.RecordObject(root, "(Behaviour Tree) Added child");
                 root.SetChild(child);
+                EditorUtility.SetDirty(root);
             }
 
             DecoratorNode decorator = parent as DecoratorNode;
 
             if(decorator != null)
             {
+                Undo.RecordObject(decorator, "(Behaviour Tree) Added child");
                 decorator.SetChild(child);
+                EditorUtility.SetDirty(decorator);
             }
 
             CompositeNode composite = parent as CompositeNode;
 
             if(composite != null)
             {
+                Undo.RecordObject(composite, "(Behaviour Tree) Added child");
                 composite.AddChild(child);
+                EditorUtility.SetDirty(composite);
             }
         }
 
@@ -81,21 +96,27 @@ namespace ArtGallery.BehaviourTree
 
             if(root != null)
             {
+                Undo.RecordObject(root, "(Behaviour Tree) Removed child");
                 root.SetChild(null);
+                EditorUtility.SetDirty(root);
             }
 
             DecoratorNode decorator = parent as DecoratorNode;
 
             if(decorator != null)
             {
+                Undo.RecordObject(decorator, "(Behaviour Tree) Removed child");
                 decorator.SetChild(null);
+                EditorUtility.SetDirty(decorator);
             }
 
             CompositeNode composite = parent as CompositeNode;
 
             if(composite != null)
             {
+                Undo.RecordObject(composite, "(Behaviour Tree) Removed child");
                 composite.RemoveChild(child);
+                EditorUtility.SetDirty(composite);
             }
         }
 
@@ -125,12 +146,6 @@ namespace ArtGallery.BehaviourTree
                 }
             }
         }
-
-        public BehaviourTree Clone()
-        {
-            BehaviourTree tree = Instantiate(this);
-            tree.rootNode = tree.rootNode.Clone() as RootNode;
-            return tree;
-        }
+#endif
     }
 }
