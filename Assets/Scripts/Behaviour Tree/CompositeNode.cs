@@ -32,7 +32,7 @@ namespace ArtGallery.BehaviourTree
             return children[index];
         }
 
-        protected void SorChildrenByPriority()
+        protected void SortChildrenByPriority()
         {
             children.Sort(ComparePriorities);
         }
@@ -49,7 +49,7 @@ namespace ArtGallery.BehaviourTree
 
         private int ComparePriorities(Node x, Node y)
         {
-            return x.GetPriority() < y.GetPriority() ? -1 : 1;
+            return x.GetPriority() < y.GetPriority() ? 1 : -1;
         }
 
         private void Shuffle()

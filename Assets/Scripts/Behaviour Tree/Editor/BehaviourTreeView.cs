@@ -107,6 +107,7 @@ namespace ArtGallery.BehaviourTree.Editor
         {
             Node node = tree.CreateNode(type);
             CreateNodeView(node);
+            GetNodeView(node).SetPosition(new Rect(position.x, position.y, 0, 0));
         }
 
         private void CreateNodeView(Node node)
@@ -177,6 +178,7 @@ namespace ArtGallery.BehaviourTree.Editor
         private void AddToContextMenu<T>(ContextualMenuPopulateEvent evt)
         {
             var types = TypeCache.GetTypesDerivedFrom<T>();
+            Vector2 mousePosition = viewTransform.matrix.inverse.MultiplyPoint(evt.localMousePosition);
 
             foreach(var type in types)
             {
@@ -185,9 +187,7 @@ namespace ArtGallery.BehaviourTree.Editor
                 string typeName = Regex.Replace(typeof(T).Name, @"([a-z])([A-Z0-9])", "$1 $2");
                 string concreteName = Regex.Replace(type.Name, @"([a-z])([A-Z0-9])", "$1 $2");
 
-                Vector2 position = new Vector2(evt.mousePosition.x, evt.mousePosition.y);
-
-                evt.menu.AppendAction($"{typeName}/{concreteName}", (action) => CreateNode(type, position));
+                evt.menu.AppendAction($"{typeName}/{concreteName}", (action) => CreateNode(type, mousePosition));
             }
         }
 

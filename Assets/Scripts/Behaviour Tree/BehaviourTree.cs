@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics.Contracts;
 using UnityEditor;
 using UnityEngine;
 
@@ -68,11 +67,6 @@ namespace ArtGallery.BehaviourTree
             AssetDatabase.SaveAssets();
 
             return copy;
-        }
-
-        public void AddNode(Node node)
-        {
-            nodes.Add(node);
         }
 
         public void DeleteNode(Node node)

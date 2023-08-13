@@ -22,10 +22,10 @@ namespace ArtGallery.BehaviourTree
             switch(selectionType)
             {
                 case SelectionType.ByPriority:
-                    SorChildrenByPriority();
+                    SortChildrenByPriority();
                     break;
                 case SelectionType.Random:
-                    base.ShuffleChildren();
+                    ShuffleChildren();
                     break;
             }
         }

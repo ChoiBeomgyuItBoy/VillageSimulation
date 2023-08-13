@@ -1,0 +1,185 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5851005165778641447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
+  m_Name: GoToDoor
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 1d735e8f5527ada44b043624cf2958a9
+  position: {x: -183, y: 236}
+  description: Head to the back door
+  doorName: BackDoor
+--- !u!114 &-1550299828176279571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de5ed752e1625b4aac749bf16491e87, type: 3}
+  m_Name: HasEnoughMoney
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: b9f08275811a71844a49f06a565262f8
+  position: {x: -550.2502, y: 173.30002}
+  description: Enough money?
+  moneyThreshold: 500
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572ec67d91ae91446afefc4788241d7e, type: 3}
+  m_Name: Robber Behaviour
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 4566442516526290668}
+  nodes:
+  - {fileID: 4566442516526290668}
+  - {fileID: 7316752328452795799}
+  - {fileID: -1550299828176279571}
+  - {fileID: 3472889930268223539}
+  - {fileID: 7588795168115264193}
+  - {fileID: 6978662649359688397}
+  - {fileID: -5851005165778641447}
+  - {fileID: 1136191526325812299}
+  - {fileID: 2153537208670816421}
+--- !u!114 &1136191526325812299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
+  m_Name: GoToGalleryItem
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: f12f3bc8a026de74f8ef35d93590e0f1
+  position: {x: -3.2500153, y: 72.64999}
+  description: Pick random art piece
+  itemName: 
+  randomItem: 1
+  addToBag: 1
+--- !u!114 &2153537208670816421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67bfff153222bd40bb16e5d35c392c4, type: 3}
+  m_Name: ClearBag
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 783178f91a52c8a47b42bb2502af69d3
+  position: {x: 0, y: 0}
+  description: 
+--- !u!114 &3472889930268223539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: c66a0d132c21fa04e86de2cbe20f250c
+  position: {x: -301, y: -103}
+  description: Steal something from Art Gallery
+  children:
+  - {fileID: 7316752328452795799}
+  - {fileID: 7588795168115264193}
+  - {fileID: 1136191526325812299}
+--- !u!114 &4566442516526290668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37110f1494c08b746bfdf9f71246a242, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: b6b3873aab5a501459b216dbfbd24ca1
+  position: {x: -268, y: -220.80002}
+  description: 
+  child: {fileID: 0}
+--- !u!114 &6978662649359688397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
+  m_Name: GoToDoor
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 29f620f69ea8c6545af04f9402751db9
+  position: {x: -348.60004, y: 237}
+  description: Head to the front door
+  doorName: FrontDoor
+--- !u!114 &7316752328452795799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201abbf7d61ac04489eee2edf64a533c, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 9392da4cac009b34dab3436cf97af34e
+  position: {x: -549.3524, y: 54.677513}
+  description: Abort if enough money
+  child: {fileID: -1550299828176279571}
+--- !u!114 &7588795168115264193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 59778fdb13093cf4fbf7c1c912b40632
+  position: {x: -279, y: 54}
+  description: Find openned door
+  children:
+  - {fileID: 6978662649359688397}
+  - {fileID: -5851005165778641447}
+  selectionType: 0
