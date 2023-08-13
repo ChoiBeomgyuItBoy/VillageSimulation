@@ -42,6 +42,7 @@ namespace ArtGallery.BehaviourTree.Editor
         {
             if(node is RootNode) return;
             evt.menu.AppendAction("Delete", (a) => DeleteNode());
+            evt.menu.AppendAction("Duplicate", (a) => treeView.CreateNodeCopy(node));
         }
 
         public override void OnSelected()

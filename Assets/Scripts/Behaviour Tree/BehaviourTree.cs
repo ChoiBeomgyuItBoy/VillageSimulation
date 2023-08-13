@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.Contracts;
 using UnityEditor;
 using UnityEngine;
 
@@ -41,15 +42,37 @@ namespace ArtGallery.BehaviourTree
             Undo.RecordObject(this, "(Behaviour Tree) Created node");
             nodes.Add(node);
 
-            if(!Application.isPlaying)
-            {
-                AssetDatabase.AddObjectToAsset(node, this);
-            }
- 
+            AssetDatabase.AddObjectToAsset(node, this);
             Undo.RegisterCreatedObjectUndo(node, "(Behaviour Tree) Created node");
             AssetDatabase.SaveAssets();
 
             return node;
+        }
+
+        public Node CreateCopy(Node node)
+        {
+            Node copy = ScriptableObject.CreateInstance(node.GetType()) as Node;
+            copy.name = node.GetType().Name.ToString();
+            copy.description = node.description;
+            copy.SetPriority(node.GetPriority());
+            copy.SetUniqueID(GUID.Generate().ToString());
+
+            Vector2 offset = new Vector2(30,0);
+            copy.SetPosition(node.GetPosition() + offset);
+            
+            Undo.RecordObject(this, "(Behaviour Tree) Duplicated node");
+            nodes.Add(copy);
+
+            AssetDatabase.AddObjectToAsset(copy, this);
+            Undo.RegisterCreatedObjectUndo(copy, "(Behaviour Tree) Created node");
+            AssetDatabase.SaveAssets();
+
+            return copy;
+        }
+
+        public void AddNode(Node node)
+        {
+            nodes.Add(node);
         }
 
         public void DeleteNode(Node node)

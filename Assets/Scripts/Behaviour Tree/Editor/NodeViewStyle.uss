@@ -61,7 +61,7 @@
 }
 
 #title {
-    -unity-font-style: bold;
+    -unity-font-style: normal;
 }
 
 #divider {
@@ -108,4 +108,10 @@
 
 .failure #node-state {
     background-color: rgba(255, 0, 0, 255);
+}
+
+#description {
+    max-width: 200px;
+    font-size: 13px;
+    color: rgba(238, 226, 226, 255);
 }

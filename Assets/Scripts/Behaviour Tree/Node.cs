@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace ArtGallery.BehaviourTree
@@ -47,6 +48,11 @@ namespace ArtGallery.BehaviourTree
         public void SetUniqueID(string uniqueID)
         {
             this.uniqueID = uniqueID;
+        }
+
+        public void SetPriority(int priority)
+        {
+            this.priority = priority;
         }
 
         public Status Tick(TreeController controller)

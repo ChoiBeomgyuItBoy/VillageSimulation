@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
@@ -96,7 +97,13 @@ namespace ArtGallery.BehaviourTree.Editor
             }
         }
 
-        private void CreateNode(Type type)
+        public void CreateNodeCopy(Node node)
+        {
+            Node copy = tree.CreateCopy(node);
+            CreateNodeView(copy);
+        }
+
+        private void CreateNode(Type type, Vector2 position)
         {
             Node node = tree.CreateNode(type);
             CreateNodeView(node);
@@ -178,7 +185,9 @@ namespace ArtGallery.BehaviourTree.Editor
                 string typeName = Regex.Replace(typeof(T).Name, @"([a-z])([A-Z0-9])", "$1 $2");
                 string concreteName = Regex.Replace(type.Name, @"([a-z])([A-Z0-9])", "$1 $2");
 
-                evt.menu.AppendAction($"{typeName}/{concreteName}", (action) => CreateNode(type));
+                Vector2 position = new Vector2(evt.mousePosition.x, evt.mousePosition.y);
+
+                evt.menu.AppendAction($"{typeName}/{concreteName}", (action) => CreateNode(type, position));
             }
         }
 
