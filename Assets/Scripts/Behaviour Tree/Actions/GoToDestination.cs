@@ -8,10 +8,15 @@ namespace ArtGallery.BehaviourTree.Actions
         const float destinationTollerance = 5;
         ActionState state = ActionState.Idle;
 
-        enum ActionState
+        protected enum ActionState
         {
             Idle,
             Working
+        }
+
+        protected ActionState GetState()
+        {
+            return state;
         }
 
         protected Status GoTo(NavMeshAgent agent, Vector3 destination)

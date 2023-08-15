@@ -1,98 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-5851005165778641447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
-  m_Name: GoToDoor
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: 1d735e8f5527ada44b043624cf2958a9
-  position: {x: -183, y: 236}
-  description: Head to the back door
-  doorName: BackDoor
---- !u!114 &-1550299828176279571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8de5ed752e1625b4aac749bf16491e87, type: 3}
-  m_Name: HasEnoughMoney
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: b9f08275811a71844a49f06a565262f8
-  position: {x: -550.2502, y: 173.30002}
-  description: Enough money?
-  moneyThreshold: 500
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 572ec67d91ae91446afefc4788241d7e, type: 3}
-  m_Name: Robber Behaviour
-  m_EditorClassIdentifier: 
-  rootNode: {fileID: 4566442516526290668}
-  nodes:
-  - {fileID: 4566442516526290668}
-  - {fileID: 7316752328452795799}
-  - {fileID: -1550299828176279571}
-  - {fileID: 3472889930268223539}
-  - {fileID: 7588795168115264193}
-  - {fileID: 6978662649359688397}
-  - {fileID: -5851005165778641447}
-  - {fileID: 1136191526325812299}
-  - {fileID: 2153537208670816421}
---- !u!114 &1136191526325812299
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
-  m_Name: GoToGalleryItem
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: f12f3bc8a026de74f8ef35d93590e0f1
-  position: {x: -3.2500153, y: 72.64999}
-  description: Pick random art piece
-  itemName: 
-  randomItem: 1
-  addToBag: 1
---- !u!114 &2153537208670816421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67bfff153222bd40bb16e5d35c392c4, type: 3}
-  m_Name: ClearBag
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: 783178f91a52c8a47b42bb2502af69d3
-  position: {x: 0, y: 0}
-  description: 
---- !u!114 &3472889930268223539
+--- !u!114 &-7938603445394010392
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,14 +13,13 @@ MonoBehaviour:
   m_Name: Sequence
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: c66a0d132c21fa04e86de2cbe20f250c
-  position: {x: -301, y: -103}
-  description: Steal something from Art Gallery
+  uniqueID: 3440e7f5944c0784bac875f3bc43bc11
+  position: {x: 378.00015, y: 152.00005}
+  description: Try clear bag
   children:
-  - {fileID: 7316752328452795799}
-  - {fileID: 7588795168115264193}
-  - {fileID: 1136191526325812299}
---- !u!114 &4566442516526290668
+  - {fileID: 8876678720709678362}
+  - {fileID: 8254351244143643513}
+--- !u!114 &-7724046242137277856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,28 +32,11 @@ MonoBehaviour:
   m_Name: RootNode
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: b6b3873aab5a501459b216dbfbd24ca1
-  position: {x: -268, y: -220.80002}
+  uniqueID: 691acecae3684df48ae137b589111dbe
+  position: {x: 61.000004, y: -264.19202}
   description: 
-  child: {fileID: 0}
---- !u!114 &6978662649359688397
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
-  m_Name: GoToDoor
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: 29f620f69ea8c6545af04f9402751db9
-  position: {x: -348.60004, y: 237}
-  description: Head to the front door
-  doorName: FrontDoor
---- !u!114 &7316752328452795799
+  child: {fileID: 6263883295311512611}
+--- !u!114 &-5709452485045152434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,11 +49,231 @@ MonoBehaviour:
   m_Name: Inverter
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: 9392da4cac009b34dab3436cf97af34e
-  position: {x: -549.3524, y: 54.677513}
-  description: Abort if enough money
-  child: {fileID: -1550299828176279571}
---- !u!114 &7588795168115264193
+  uniqueID: a944651f4bd650744869931258b03c0e
+  position: {x: -895.28815, y: 153}
+  description: Invert money
+  child: {fileID: 4812238183135878365}
+--- !u!114 &-5481232375666831434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e00b46dda0f4e7418f35f5c20875e88, type: 3}
+  m_Name: CanSeeTarget
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 58d89255783ab514bb1a86acd03229cc
+  position: {x: -144, y: 447}
+  description: Can see cop?
+  viewDistance: 20
+  maxViewAngle: 90
+--- !u!114 &-2950148211256314728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 69a80ef168a1da643ae3ba0a64de61e3
+  position: {x: -590.9999, y: 153.00008}
+  description: Try find door
+  children:
+  - {fileID: 4348673136542961419}
+  - {fileID: 8784419869966488891}
+--- !u!114 &-1584793863501689258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e00b46dda0f4e7418f35f5c20875e88, type: 3}
+  m_Name: CanSeeTarget
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: e72c9bada2878064abb1db5208620f23
+  position: {x: -709.9999, y: 450.00006}
+  description: Can see cop?
+  viewDistance: 20
+  maxViewAngle: 90
+--- !u!114 &-101698325587891490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: b43a58ae7f738484f83b7f1708fa9c12
+  position: {x: -19.999939, y: 161.00008}
+  description: Try pick gallery item
+  children:
+  - {fileID: 9171091133815998422}
+  - {fileID: 5421093933008487217}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572ec67d91ae91446afefc4788241d7e, type: 3}
+  m_Name: Robber Behaviour
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -7724046242137277856}
+  nodes:
+  - {fileID: -7724046242137277856}
+  - {fileID: 6263883295311512611}
+  - {fileID: 6927666445814860295}
+  - {fileID: 4260222296732014994}
+  - {fileID: 8337221696994383582}
+  - {fileID: 3091520934405132631}
+  - {fileID: -5709452485045152434}
+  - {fileID: 4812238183135878365}
+  - {fileID: -2950148211256314728}
+  - {fileID: 4348673136542961419}
+  - {fileID: -1584793863501689258}
+  - {fileID: 8784419869966488891}
+  - {fileID: 8715098515298180231}
+  - {fileID: 8907403029632766799}
+  - {fileID: -101698325587891490}
+  - {fileID: 9171091133815998422}
+  - {fileID: -5481232375666831434}
+  - {fileID: 5421093933008487217}
+  - {fileID: -7938603445394010392}
+  - {fileID: 8876678720709678362}
+  - {fileID: 5849977127973058052}
+  - {fileID: 8254351244143643513}
+--- !u!114 &3091520934405132631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: a94eb16cd78045a4b890f7a6447e2626
+  position: {x: -128.09238, y: -33.67499}
+  description: Steal
+  children:
+  - {fileID: -5709452485045152434}
+  - {fileID: -2950148211256314728}
+  - {fileID: -101698325587891490}
+  - {fileID: -7938603445394010392}
+--- !u!114 &4260222296732014994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e00b46dda0f4e7418f35f5c20875e88, type: 3}
+  m_Name: CanSeeTarget
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: d726b532c0954b742af975d4f343265d
+  position: {x: 638.421, y: 121.00005}
+  description: Can see cop?
+  viewDistance: 20
+  maxViewAngle: 90
+--- !u!114 &4348673136542961419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201abbf7d61ac04489eee2edf64a533c, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 04ad91d3303396941b0c29b64781e174
+  position: {x: -661.9999, y: 318.0001}
+  description: Cant see cop
+  child: {fileID: -1584793863501689258}
+--- !u!114 &4812238183135878365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de5ed752e1625b4aac749bf16491e87, type: 3}
+  m_Name: HasEnoughMoney
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: f7d779b709083f243a750e7b35a4f5ab
+  position: {x: -941.2882, y: 283.00006}
+  description: Enough money?
+  moneyThreshold: 1200
+--- !u!114 &5421093933008487217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
+  m_Name: GoToGalleryItem
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: edf2a082e6751874ead80f306ea58d04
+  position: {x: 101.00009, y: 324.00006}
+  description: Pick random gallery item
+  itemName: 
+  randomItem: 1
+  addToBag: 1
+--- !u!114 &5849977127973058052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e00b46dda0f4e7418f35f5c20875e88, type: 3}
+  m_Name: CanSeeTarget
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 0aabd5f3bd4e1394486e13ecee09b66f
+  position: {x: 267.00006, y: 439.00003}
+  description: Can see cop?
+  viewDistance: 20
+  maxViewAngle: 90
+--- !u!114 &6263883295311512611
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,10 +286,150 @@ MonoBehaviour:
   m_Name: Selector
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: 59778fdb13093cf4fbf7c1c912b40632
-  position: {x: -279, y: 54}
-  description: Find openned door
+  uniqueID: fd0403c84911cb74dac98f40d371861f
+  position: {x: 51, y: -170}
+  description: Be thief
   children:
-  - {fileID: 6978662649359688397}
-  - {fileID: -5851005165778641447}
+  - {fileID: 3091520934405132631}
+  - {fileID: 6927666445814860295}
   selectionType: 0
+--- !u!114 &6927666445814860295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: b99435269b3e3ef49ac978b2ff78ec99
+  position: {x: 747.4208, y: -25.999968}
+  description: Run away
+  children:
+  - {fileID: 4260222296732014994}
+  - {fileID: 8337221696994383582}
+--- !u!114 &8254351244143643513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67bfff153222bd40bb16e5d35c392c4, type: 3}
+  m_Name: ClearBag
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 7439539f1145f3647a3ac444dfb6b3c6
+  position: {x: 528, y: 324.00006}
+  description: Go to van
+--- !u!114 &8337221696994383582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 174e271f9bd0424409dde398de1670a7, type: 3}
+  m_Name: FleeFromTarget
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 7df6ccc8d5b5a0e4398a8b44b81b1d1e
+  position: {x: 827.4209, y: 120.00002}
+  description: Flee from cop
+  distance: 10
+--- !u!114 &8715098515298180231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
+  m_Name: GoToDoor
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 923171ab2601cde4797d58de5f56ee2c
+  position: {x: -519.9999, y: 449.00003}
+  description: Go to front door
+  doorName: FrontDoor
+--- !u!114 &8784419869966488891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: ba2d61fcd9802d642aa7da79eb3c35eb
+  position: {x: -440.9999, y: 310.0001}
+  description: Find open door
+  children:
+  - {fileID: 8715098515298180231}
+  - {fileID: 8907403029632766799}
+  selectionType: 0
+--- !u!114 &8876678720709678362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201abbf7d61ac04489eee2edf64a533c, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: aa0bd44f7b0d5e242bc093316f623228
+  position: {x: 321, y: 324}
+  description: Cant see cop
+  child: {fileID: 5849977127973058052}
+--- !u!114 &8907403029632766799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
+  m_Name: GoToDoor
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: d24a42baee0f70a4596909543864bad6
+  position: {x: -339, y: 457}
+  description: Go to back door
+  doorName: BackDoor
+--- !u!114 &9171091133815998422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201abbf7d61ac04489eee2edf64a533c, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: c34ef4b0490d26a49a23a3df4eb227b5
+  position: {x: -117.999954, y: 316.0001}
+  description: Cant see cop
+  child: {fileID: -5481232375666831434}

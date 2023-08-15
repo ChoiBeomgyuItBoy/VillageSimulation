@@ -101,6 +101,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e44bddb24b97eb4685df30a3ece74ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deposit: {fileID: 0}
+--- !u!114 &7971704007840471264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326612705825367589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afcdaae057de4ad42bcd181591ef0de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!4 &6824222776822325487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5588370116875199577, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}

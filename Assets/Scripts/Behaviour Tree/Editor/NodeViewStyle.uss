@@ -99,19 +99,19 @@
 }
 
 .running #node-state {
-    background-color: rgba(212, 155, 37, 255);
+    background-color: rgb(212, 192, 37);
 }
 
 .success #node-state {
-    background-color: rgba(59, 211, 0, 0.5);
+    background-color: rgb(171, 245, 156);
 }
 
 .failure #node-state {
-    background-color: rgba(255, 0, 0, 255);
+    background-color: rgb(255, 42, 0);
 }
 
 #description {
     max-width: 200px;
     font-size: 13px;
-    color: rgba(238, 226, 226, 255);
+    color: rgb(238, 226, 226);
 }
