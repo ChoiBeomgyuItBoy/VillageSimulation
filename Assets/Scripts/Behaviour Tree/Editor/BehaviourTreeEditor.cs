@@ -85,6 +85,7 @@ namespace ArtGallery.BehaviourTree.Editor
         private void OnNodeSelectionChanged(NodeView nodeView)
         {
             inspectorView.UpdateSelection(nodeView);
+            Selection.activeObject = nodeView.GetNode();
         }
     }
 }

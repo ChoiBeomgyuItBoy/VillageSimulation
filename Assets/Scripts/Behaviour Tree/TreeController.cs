@@ -4,16 +4,19 @@ namespace ArtGallery.BehaviourTree
 {
     public class TreeController : MonoBehaviour
     {
-        [SerializeField] BehaviourTree tree = null;
+        [SerializeField] BehaviourTree[] trees = null;
 
         public BehaviourTree GetBehaviourTree()
         {
-            return tree;
+            return trees[0];
         }
 
         void Update()
         {
-            tree.Tick(this);
+            foreach(var tree in trees)
+            {
+                tree.Tick(this);
+            }
         }
 
     }

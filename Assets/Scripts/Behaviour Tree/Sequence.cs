@@ -5,6 +5,7 @@ namespace ArtGallery.BehaviourTree
 {
     public class Sequence : CompositeNode
     {
+        [SerializeField] BehaviourTree dependencyTree = null;
         int currentChild = 0;
 
         protected override void OnEnter()
@@ -14,6 +15,14 @@ namespace ArtGallery.BehaviourTree
 
         protected override Status OnTick()
         {
+            if(dependencyTree != null)
+            {
+                if(dependencyTree.Tick(controller) == Status.Failure)
+                {
+                    return Status.Failure;
+                }
+            }
+
             Status childStatus = GetChild(currentChild).Tick(controller);
 
             switch(childStatus)
