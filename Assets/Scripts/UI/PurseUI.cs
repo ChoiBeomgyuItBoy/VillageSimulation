@@ -6,23 +6,23 @@ namespace ArtGallery.UI
 {
     public class PurseUI : MonoBehaviour
     {
-        [SerializeField] TMP_Text balanceText = null;
-        Purse robberPurse = null;
+        [SerializeField] Purse purse = null;
+        TMP_Text balanceText = null;
 
         void Awake()
         {
-            robberPurse = GameObject.FindWithTag("Robber").GetComponent<Purse>();
+            balanceText = GetComponent<TMP_Text>();
         }
 
         void Start()
         {
-            robberPurse.onPurseUpdated += RefreshUI;
+            purse.onPurseUpdated += RefreshUI;
             RefreshUI();
         }
 
         void RefreshUI()
         {
-            balanceText.text = $"Robber balance: ${robberPurse.GetBalance()}";
+            balanceText.text = $"${purse.GetBalance()}/{purse.GetMaxBalance()}";
         }
     }
 }

@@ -1,29 +1,29 @@
 using ArtGallery.Core;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace ArtGallery.BehaviourTree.Actions
 {
     public class GoToDoor : GoToDestination
     {
         [SerializeField] string doorName = "";
-        NavMeshAgent agent = null;
 
-        protected override void OnEnter()
-        {
-            agent = controller.GetComponent<NavMeshAgent>();
-        }
+        protected override void OnEnter() { }
 
         protected override Status OnTick()
         {
             Door door = Door.GetWithName(doorName);
-            Status status = GoTo(agent, door.transform.position);
+
+            if(door.Visited() && door.IsLocked())
+            {
+                return Status.Failure;
+            }
+
+            Status status = GoTo(door.transform.position);
 
             if(status == Status.Success)
             {
-                if(!door.IsLocked())
+                if(door.Open())
                 {
-                    door.Open();
                     return Status.Success;
                 }
 

@@ -1,11 +1,11 @@
+using ArtGallery.Movement;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace ArtGallery.BehaviourTree.Actions
 {
     public abstract class GoToDestination : ActionNode
     {
-        const float destinationTollerance = 5;
+        [SerializeField] [Range(0,1)] float speedFraction = 1;
         ActionState state = ActionState.Idle;
 
         protected enum ActionState
@@ -19,21 +19,21 @@ namespace ArtGallery.BehaviourTree.Actions
             return state;
         }
 
-        protected Status GoTo(NavMeshAgent agent, Vector3 destination)
+        protected Status GoTo(Vector3 destination, bool isPlayer = false)
         {
-            float distanceToDestination = Vector3.Distance(destination, agent.transform.position);
+            Mover mover = controller.GetComponent<Mover>();
 
             if(state == ActionState.Idle)
             {
-                agent.SetDestination(destination);
+                mover.MoveTo(destination, speedFraction, isPlayer);
                 state = ActionState.Working;
             }
-            else if(Vector3.Distance(agent.pathEndPosition, destination) >= destinationTollerance)
+            else if(!mover.CanGoTo(destination))
             {
                 state = ActionState.Idle;
                 return Status.Failure;
             }
-            else if(distanceToDestination < destinationTollerance)
+            else if(mover.AtDestination(destination))
             {
                 state = ActionState.Idle;
                 return Status.Success;

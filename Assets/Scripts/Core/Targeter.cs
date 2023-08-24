@@ -20,7 +20,7 @@ namespace ArtGallery.Core
             {
                 RaycastHit hit;
 
-                if(Physics.Raycast(transform.position, directionToTarget, out hit))
+                if(Physics.Raycast(transform.position, directionToTarget, out hit, distance))
                 {
                     if(hit.collider == target.GetComponent<Collider>()) return true;
                 }

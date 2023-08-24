@@ -26,6 +26,14 @@ namespace ArtGallery.Core
                 GetComponent<Purse>().UpdateBalance(item.GetPrice());
                 item.gameObject.SetActive(false);
             }
+
+            items.Clear();
+        }
+
+        public bool HasItems()
+        {
+            if(items == null) return false;
+            return items.Count > 0;
         }
     }
 }

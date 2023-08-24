@@ -1,11 +1,9 @@
 using ArtGallery.Core;
-using UnityEngine;
 
 namespace ArtGallery.BehaviourTree.Conditions
 {
     public class HasEnoughMoney : ActionNode
     {
-        [SerializeField] float moneyThreshold = 500;
         Purse purse = null;
 
         protected override void OnEnter()
@@ -20,7 +18,7 @@ namespace ArtGallery.BehaviourTree.Conditions
                 return Status.Failure;
             }
 
-            if(purse.GetBalance() >= moneyThreshold)
+            if(purse.GetBalance() >= purse.GetMaxBalance())
             {
                 return Status.Success;
             }

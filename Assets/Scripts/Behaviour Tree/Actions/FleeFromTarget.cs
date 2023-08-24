@@ -7,13 +7,11 @@ namespace ArtGallery.BehaviourTree.Actions
     public class FleeFromTarget : GoToDestination
     {
         [SerializeField] float distance = 10;
-        NavMeshAgent agent = null;
         Targeter targeter = null;
         Vector3 rememberedLocation = Vector3.zero;
 
         protected override void OnEnter()
         {
-            agent = controller.GetComponent<NavMeshAgent>();
             targeter = controller.GetComponent<Targeter>();
         }
 
@@ -27,7 +25,7 @@ namespace ArtGallery.BehaviourTree.Actions
                 rememberedLocation = fleeDirection;
             }
 
-            return GoTo(agent, rememberedLocation);
+            return GoTo(rememberedLocation);
         }
 
         protected override void OnExit() { }

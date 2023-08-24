@@ -9,13 +9,10 @@ namespace ArtGallery.BehaviourTree.Actions
         [SerializeField] string itemName = "";
         [SerializeField] bool randomItem = false;
         [SerializeField] bool addToBag = true;
-        NavMeshAgent agent = null;
         GalleryItem item = null;
 
         protected override void OnEnter()
         {
-            agent = controller.GetComponent<NavMeshAgent>();
-
             if(randomItem)
             {
                 item = GalleryItem.GetRandom();
@@ -38,7 +35,7 @@ namespace ArtGallery.BehaviourTree.Actions
                 return Status.Failure;
             }
 
-            Status status = GoTo(agent, item.transform.position);
+            Status status = GoTo(item.transform.position);
 
             if(status == Status.Success && addToBag)
             {

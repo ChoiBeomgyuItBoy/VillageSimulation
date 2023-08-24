@@ -10,7 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5588370116875199577}
   - component: {fileID: 9208165888527184917}
+  - component: {fileID: 5504470760150087242}
+  - component: {fileID: 3115362651016122240}
   - component: {fileID: 2826224662858068189}
+  - component: {fileID: 9189746993668116512}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -31,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &9208165888527184917
 NavMeshAgent:
@@ -42,9 +45,9 @@ NavMeshAgent:
   m_GameObject: {fileID: 94699067994759827}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.2
   m_Speed: 6
-  m_Acceleration: 8
+  m_Acceleration: 50
   avoidancePriority: 50
   m_AngularSpeed: 10000
   m_StoppingDistance: 0
@@ -52,9 +55,43 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 1
+  m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!136 &5504470760150087242
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94699067994759827}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.2
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!95 &3115362651016122240
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94699067994759827}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: d288a0e4a2d923b46898986e979da643, type: 3}
+  m_Controller: {fileID: 9100000, guid: 16175e3b165a898409e0271c8e64e819, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &2826224662858068189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,4 +104,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e22b3cd7fe8c604482a26cd0d573335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tree: {fileID: 0}
+  trees: []
+--- !u!114 &9189746993668116512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94699067994759827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9f34139bfe94f4a97f20fd328a38cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 6

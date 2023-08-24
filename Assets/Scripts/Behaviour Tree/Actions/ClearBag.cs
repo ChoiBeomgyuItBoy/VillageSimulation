@@ -1,26 +1,36 @@
 using ArtGallery.Core;
-using UnityEngine.AI;
 
 namespace ArtGallery.BehaviourTree.Actions
 {
     public class ClearBag : GoToDestination
     {
-        NavMeshAgent agent = null;
         Bag bag = null;
 
         protected override void OnEnter()
         {
-            agent = controller.GetComponent<NavMeshAgent>();
             bag = controller.GetComponent<Bag>();
         }
 
         protected override Status OnTick()
         {
-            Status status = GoTo(agent, bag.GetDepositLocation());
+            if(!bag.HasItems())
+            {
+                return Status.Failure;
+            }
+
+            Status status = GoTo(bag.GetDepositLocation());
 
             if(status == Status.Success)
             {
-                controller.GetComponent<Bag>().SellItems();
+                if(bag.HasItems())
+                {
+                    bag.SellItems();
+                    return Status.Success;
+                }
+                else
+                {
+                    return Status.Failure;
+                }
             }
 
             return status;
