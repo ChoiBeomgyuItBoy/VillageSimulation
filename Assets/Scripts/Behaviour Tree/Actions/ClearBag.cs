@@ -13,11 +13,6 @@ namespace ArtGallery.BehaviourTree.Actions
 
         protected override Status OnTick()
         {
-            if(!bag.HasItems())
-            {
-                return Status.Failure;
-            }
-
             Status status = GoTo(bag.GetDepositLocation());
 
             if(status == Status.Success)

@@ -11,6 +11,11 @@ namespace ArtGallery.BehaviourTree
             return tree;
         }
 
+        void Start()
+        {
+            tree = tree.Clone();
+        }
+
         void Update()
         {
             tree.Tick(this);

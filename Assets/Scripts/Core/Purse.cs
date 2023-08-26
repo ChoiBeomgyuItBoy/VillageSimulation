@@ -5,14 +5,14 @@ namespace ArtGallery.Core
 {
     public class Purse : MonoBehaviour
     {
-        [SerializeField] float startingBalance = 0;
-        [SerializeField] float maxbalance = 1200;
+        [SerializeField] [Range(0, 1200)] float startingBalance = 0;
+        [SerializeField] float maxBalance = 1200;
         float balance = 0;
         public event Action onPurseUpdated;
 
         public float GetMaxBalance()
         {
-            return maxbalance;
+            return maxBalance;
         }
 
         public float GetBalance()
@@ -22,7 +22,7 @@ namespace ArtGallery.Core
 
         public void UpdateBalance(float amount)
         {
-            if(balance >= maxbalance) return;
+            if(balance >= maxBalance) return;
             balance += amount;
             onPurseUpdated?.Invoke();
         }

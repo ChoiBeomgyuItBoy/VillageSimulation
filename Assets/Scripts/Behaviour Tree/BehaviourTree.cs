@@ -41,7 +41,11 @@ namespace ArtGallery.BehaviourTree
             Undo.RecordObject(this, "(Behaviour Tree) Created node");
             nodes.Add(node);
 
-            AssetDatabase.AddObjectToAsset(node, this);
+            if(!Application.isPlaying)
+            {
+                AssetDatabase.AddObjectToAsset(node, this);
+            }
+
             Undo.RegisterCreatedObjectUndo(node, "(Behaviour Tree) Created node");
             AssetDatabase.SaveAssets();
 
@@ -161,6 +165,25 @@ namespace ArtGallery.BehaviourTree
                 {
                     yield return node;
                 }
+            }
+        }
+
+        public BehaviourTree Clone()
+        {
+            BehaviourTree tree = Instantiate(this);
+            tree.rootNode = tree.rootNode.Clone() as RootNode;
+            tree.nodes = new List<Node>();
+            Traverse(tree.rootNode, (node) => tree.nodes.Add(node));
+            return tree;
+        }
+
+        private void Traverse(Node node, Action<Node> visiter)
+        {
+            if(node != null)
+            {
+                visiter.Invoke(node);
+                List<Node> nodes = new List<Node>(GetChildren(node));
+                nodes.ForEach((node) => Traverse(node, visiter));
             }
         }
 #endif

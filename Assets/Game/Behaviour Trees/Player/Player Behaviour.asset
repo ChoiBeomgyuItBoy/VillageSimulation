@@ -14,10 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 6b623560edbe9864a83be948ecf0b92d
-  position: {x: 0, y: 0}
-  description: 
+  position: {x: 225, y: 188}
+  description: Locomotion
   speedFraction: 1
-  isPlayer: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,6 +47,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 58da07d603b53eb4e87e9cdc7072ab1a
-  position: {x: 268, y: 75.4}
+  position: {x: 276, y: 82}
   description: 
-  child: {fileID: 0}
+  child: {fileID: -2515258942358649072}

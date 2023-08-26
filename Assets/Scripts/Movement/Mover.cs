@@ -10,7 +10,7 @@ namespace ArtGallery.Movement
         NavMeshAgent agent = null;
         Animator animator = null;
 
-        const float destinationTollerance = 5;
+        const float destinationTollerance = 3;
 
         public void MoveTo(Vector3 destination, float speedFraction, bool isPlayer = false)
         {

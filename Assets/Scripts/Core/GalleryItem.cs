@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace ArtGallery.Core
@@ -7,6 +8,7 @@ namespace ArtGallery.Core
     public class GalleryItem : MonoBehaviour
     {
         [SerializeField] float price = 200;
+        [SerializeField] float interestLevel = 40;
         static Dictionary<string, GalleryItem> itemLookup = null;
 
         public static GalleryItem GetWithName(string name)
@@ -36,9 +38,9 @@ namespace ArtGallery.Core
                 BuildLookup();
             }
 
-            List<string> names = new List<string>(itemLookup.Keys);
+            List<string> names = new List<string>(itemLookup.Keys.Where((name) => itemLookup[name].gameObject.activeSelf));
 
-            return names[new System.Random().Next(itemLookup.Count)];
+            return names[new System.Random().Next(names.Count)];
         }
 
         private static void BuildLookup()
@@ -54,6 +56,11 @@ namespace ArtGallery.Core
         public float GetPrice()
         {
             return price;
+        }
+
+        public float GetInterestLevel()
+        {
+            return interestLevel;
         }
     }
 }

@@ -27,6 +27,13 @@ namespace ArtGallery.BehaviourTree
             children.Sort(ComparePositions);
         }
 
+        public override Node Clone()
+        {
+            CompositeNode node = Instantiate(this);
+            node.children = children.ConvertAll((children) => children.Clone());
+            return node;
+        }
+
         protected Node GetChild(int index)
         {
             return children[index];

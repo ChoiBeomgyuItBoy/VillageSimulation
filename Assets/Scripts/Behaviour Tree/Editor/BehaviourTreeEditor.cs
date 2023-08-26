@@ -1,5 +1,7 @@
+using System;
 using UnityEditor;
 using UnityEditor.Callbacks;
+using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace ArtGallery.BehaviourTree.Editor
@@ -46,9 +48,19 @@ namespace ArtGallery.BehaviourTree.Editor
                 }
             }
 
-            if(tree != null && AssetDatabase.CanOpenAssetInEditor(tree.GetInstanceID()))
+            if(Application.isPlaying)
             {
-                treeView.PopulateView(tree);
+                if(tree != null)
+                {
+                    treeView.PopulateView(tree);
+                }
+            }
+            else
+            {
+                if(tree != null && AssetDatabase.CanOpenAssetInEditor(tree.GetInstanceID()))
+                {
+                    treeView.PopulateView(tree);
+                }
             }
         }
 
@@ -82,10 +94,36 @@ namespace ArtGallery.BehaviourTree.Editor
             OnSelectionChange();
         }
 
+        private void OnEnable()
+        {
+            EditorApplication.playModeStateChanged -= OnPlayModeStateChanged;
+            EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
+        }
+
+        private void OnDisable()
+        {
+            EditorApplication.playModeStateChanged -= OnPlayModeStateChanged;
+        }
+
+        private void OnPlayModeStateChanged(PlayModeStateChange change)
+        {
+            switch (change)
+            {
+                case PlayModeStateChange.EnteredEditMode:
+                    OnSelectionChange();
+                    break;
+                case PlayModeStateChange.ExitingEditMode:
+                    break;
+                case PlayModeStateChange.EnteredPlayMode:
+                    break;
+                case PlayModeStateChange.ExitingPlayMode:
+                    break;
+            }
+        }
+
         private void OnNodeSelectionChanged(NodeView nodeView)
         {
             inspectorView.UpdateSelection(nodeView);
-            Selection.activeObject = nodeView.GetNode();
         }
     }
 }

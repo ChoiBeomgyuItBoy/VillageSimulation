@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace ArtGallery.BehaviourTree
@@ -14,6 +13,11 @@ namespace ArtGallery.BehaviourTree
         [TextArea] public string description  = "";
 
         protected TreeController controller;
+
+        public virtual Node Clone()
+        {
+            return Instantiate(this);
+        }
 
         public Vector2 GetPosition()
         {

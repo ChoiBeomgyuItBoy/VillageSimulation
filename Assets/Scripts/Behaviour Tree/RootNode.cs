@@ -16,6 +16,13 @@ namespace ArtGallery.BehaviourTree
             return child;
         }
 
+        public override Node Clone()
+        {
+            RootNode node = Instantiate(this);
+            node.child = child.Clone();
+            return node;
+        }
+
         protected override void OnEnter() { }
 
         protected override Status OnTick()

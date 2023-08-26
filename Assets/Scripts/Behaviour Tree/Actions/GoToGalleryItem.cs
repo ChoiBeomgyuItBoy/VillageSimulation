@@ -1,6 +1,5 @@
 using ArtGallery.Core;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace ArtGallery.BehaviourTree.Actions
 {
@@ -8,7 +7,8 @@ namespace ArtGallery.BehaviourTree.Actions
     {
         [SerializeField] string itemName = "";
         [SerializeField] bool randomItem = false;
-        [SerializeField] bool addToBag = true;
+        [SerializeField] bool addToBag = false;
+        [SerializeField] bool reduceBoredom = false;
         GalleryItem item = null;
 
         protected override void OnEnter()
@@ -40,6 +40,11 @@ namespace ArtGallery.BehaviourTree.Actions
             if(status == Status.Success && addToBag)
             {
                 controller.GetComponent<Bag>().AddItem(item);
+            }
+
+            if(status == Status.Success && reduceBoredom)
+            {
+                controller.GetComponent<Boredom>().ChangeBoredom(-item.GetInterestLevel());
             }
 
             return status;
