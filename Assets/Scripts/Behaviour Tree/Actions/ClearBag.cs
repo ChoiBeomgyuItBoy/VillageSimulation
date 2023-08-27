@@ -1,9 +1,11 @@
 using ArtGallery.Core;
+using UnityEngine;
 
 namespace ArtGallery.BehaviourTree.Actions
 {
     public class ClearBag : GoToDestination
     {
+        [SerializeField] bool depositItems = true;
         Bag bag = null;
 
         protected override void OnEnter()
@@ -17,14 +19,9 @@ namespace ArtGallery.BehaviourTree.Actions
 
             if(status == Status.Success)
             {
-                if(bag.HasItems())
+                if(depositItems && bag.HasItems())
                 {
                     bag.SellItems();
-                    return Status.Success;
-                }
-                else
-                {
-                    return Status.Failure;
                 }
             }
 

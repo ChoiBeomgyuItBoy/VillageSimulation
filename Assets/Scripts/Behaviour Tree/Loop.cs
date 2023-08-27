@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace ArtGallery.BehaviourTree
 {
-    public class Sequence : CompositeNode
+    public class Loop : CompositeNode
     {
         [SerializeField] BehaviourTree dependencyTree = null;
         BehaviourTree dependencyTreeClone = null;
@@ -25,7 +25,7 @@ namespace ArtGallery.BehaviourTree
 
                 if(dependencyTreeClone.Tick(controller) == Status.Failure)
                 {
-                    return Status.Failure;
+                    return Status.Success;
                 }
             }
 
@@ -42,9 +42,14 @@ namespace ArtGallery.BehaviourTree
                     break;
             }
 
-            return currentChild == GetChildren().Count() ? Status.Success : Status.Running;
+            if(currentChild == GetChildren().Count())
+            {
+                currentChild = 0;
+            }
+
+            return Status.Running;
         }
 
         protected override void OnExit() { }
-    }
+    }   
 }

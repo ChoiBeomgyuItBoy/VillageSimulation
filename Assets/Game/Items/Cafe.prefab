@@ -213,6 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 200
+  interestLevel: 50
 --- !u!1 &3844739353841932026
 GameObject:
   m_ObjectHideFlags: 0

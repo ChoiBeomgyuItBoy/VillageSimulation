@@ -59,6 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 200
+  interestLevel: 200
 --- !u!1001 &3570665837659828415
 PrefabInstance:
   m_ObjectHideFlags: 0

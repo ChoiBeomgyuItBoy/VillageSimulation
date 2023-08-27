@@ -1,4 +1,3 @@
-using System;
 using UnityEditor;
 using UnityEditor.Callbacks;
 using UnityEngine;
@@ -59,6 +58,7 @@ namespace ArtGallery.BehaviourTree.Editor
             {
                 if(tree != null && AssetDatabase.CanOpenAssetInEditor(tree.GetInstanceID()))
                 {
+                    if(treeView == null) return;
                     treeView.PopulateView(tree);
                 }
             }

@@ -3,7 +3,7 @@
     <uie:Toolbar style="height: 21px;" />
     <ArtGallery.BehaviourTree.Editor.SplitView fixed-pane-initial-dimension="309">
         <ui:VisualElement name="left-panel" style="width: 60px; background-color: rgb(56, 56, 56); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
-            <ui:Label tabindex="-1" display-tooltip-when-elided="true" text="Node Data&#10;" style="border-bottom-color: rgb(0, 0, 0); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 20px; -unity-text-align: upper-left; font-size: 14px; -unity-font-style: normal; background-color: rgb(60, 60, 60); color: rgb(194, 194, 194);" />
+            <ui:Label tabindex="-1" display-tooltip-when-elided="true" text="Node Data&#10;" name="title" style="border-bottom-color: rgb(0, 0, 0); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; padding-left: 4px; padding-right: 4px; padding-top: 4px; padding-bottom: 20px; -unity-text-align: upper-left; font-size: 14px; -unity-font-style: normal; background-color: rgb(60, 60, 60); color: rgb(194, 194, 194);" />
             <ArtGallery.BehaviourTree.Editor.InspectorView name="InspectorView" style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px;" />
         </ui:VisualElement>
         <ui:VisualElement name="right-panel" style="width: 498px;">

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: cc0503079a33f3348af4ad9a95bfb93e
-  position: {x: 377.905, y: 346}
+  position: {x: 201.00003, y: 333.01196}
   description: Go to random item
   speedFraction: 1
   itemName: 
@@ -35,9 +35,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 4d247e56675f8414892aaed39a91d64e
-  position: {x: 712.9999, y: 190.99992}
+  position: {x: 337.96768, y: 191.00005}
   description: Go to cart
   speedFraction: 1
+  depositItems: 1
 --- !u!114 &-7724046242137277856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 40795eee31f0f114e9794f44fe93c587
-  position: {x: 196.86247, y: 347.99997}
+  position: {x: 19.999985, y: 335.0119}
   description: Go to random item
   speedFraction: 1
   itemName: 
@@ -128,11 +129,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 1c43d81862a14a245828670161631aa9
-  position: {x: 279, y: 197.00002}
+  position: {x: 102.00003, y: 184.01192}
   description: Select item
   children:
-  - {fileID: -9139602974527214403}
   - {fileID: -2839352455146020223}
+  - {fileID: -9139602974527214403}
   selectionType: 2
 --- !u!114 &11400000
 MonoBehaviour:
@@ -185,6 +186,7 @@ MonoBehaviour:
   - {fileID: -340037083134759375}
   - {fileID: -8868587593374536955}
   dependencyTree: {fileID: 11400000, guid: daff6889f33fefa4f8f0737535bb570a, type: 2}
+  loop: 0
 --- !u!114 &4260222296732014994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,9 +239,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: d1f1a290939a2924e8d77d9507a35fd5
-  position: {x: 147.99995, y: 5.0000286}
+  position: {x: 149, y: -2}
   description: Go to cart
   speedFraction: 1
+  depositItems: 0
 --- !u!114 &6927666445814860295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +263,7 @@ MonoBehaviour:
   - {fileID: 4260222296732014994}
   - {fileID: 8337221696994383582}
   dependencyTree: {fileID: 0}
+  loop: 0
 --- !u!114 &8337221696994383582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,8 +317,8 @@ MonoBehaviour:
   position: {x: -248.13754, y: 158.74248}
   description: Find open door
   children:
-  - {fileID: 8715098515298180231}
   - {fileID: 8907403029632766799}
+  - {fileID: 8715098515298180231}
   - {fileID: -2600219576249381448}
   selectionType: 1
 --- !u!114 &8907403029632766799

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 7a748cb9875a4794b828d3c3676e8949
-  position: {x: 323.99997, y: -251.31935}
+  position: {x: 403, y: -147.05296}
   description: 
-  child: {fileID: 1512189284639398470}
+  child: {fileID: 6570311764469117554}
 --- !u!114 &-1602363675650917227
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,7 +31,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 6ae79066e8500e9429fa3e977cb9bd9b
-  position: {x: 308.00003, y: 376}
+  position: {x: 293.0001, y: 526.1001}
   description: Go to random item
   speedFraction: 0.3
   itemName: 
@@ -52,9 +52,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: f5bc77db18b6cc84aba96d300d66108c
-  position: {x: 428, y: 238}
+  position: {x: 413.00012, y: 388.10007}
   description: See item
-  secondsToWait: 10
+  secondsToWait: 3
+--- !u!114 &-418089260974039031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e9e580a0a591d4986541d8dda17e60, type: 3}
+  m_Name: Loop
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 5f751c85ad9671e43960c244906d9672
+  position: {x: 326, y: 225}
+  description: Look at paintings
+  children:
+  - {fileID: 4358017789817730452}
+  - {fileID: -1204584182465230511}
+  dependencyTree: {fileID: 11400000, guid: d26491fa2967cd64f8bd5b66628a58ea, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77,9 +97,10 @@ MonoBehaviour:
   - {fileID: -1602363675650917227}
   - {fileID: 1202648398681196468}
   - {fileID: -1204584182465230511}
-  - {fileID: 5847813389968136251}
-  - {fileID: 1512189284639398470}
-  - {fileID: 7633822775451213494}
+  - {fileID: 8907828180578900750}
+  - {fileID: 6570311764469117554}
+  - {fileID: -418089260974039031}
+  - {fileID: 6988228332635867387}
 --- !u!114 &602739554291402011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,14 +115,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 6c065b2b6aeb8e94d805741eef15b260
-  position: {x: 149.99997, y: 63.64499}
+  position: {x: 334, y: 91.4}
   description: View art
   children:
+  - {fileID: 8907828180578900750}
   - {fileID: 690711495191255151}
-  - {fileID: 4358017789817730452}
-  - {fileID: -1204584182465230511}
+  - {fileID: -418089260974039031}
   - {fileID: 1202648398681196468}
-  dependencyTree: {fileID: 11400000, guid: d26491fa2967cd64f8bd5b66628a58ea, type: 2}
+  dependencyTree: {fileID: 0}
 --- !u!114 &690711495191255151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,7 +137,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 071c6cce61f6b9f49b269a6306f2de46
-  position: {x: 34, y: 225}
+  position: {x: 121, y: 241}
   description: Go to left door
   speedFraction: 0.5
   doorName: Left Door
@@ -134,29 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 783006c4b634af348a68ec4fb3179970
-  position: {x: 611.0828, y: 225}
+  position: {x: 499.99994, y: 241}
   description: 
-  speedFraction: 0.7
---- !u!114 &1512189284639398470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
-  m_Name: Selector
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: 9bee1a8441b60b944a9f9102f20d369d
-  position: {x: 316, y: -78.837494}
-  description: View art with fallback
-  children:
-  - {fileID: 602739554291402011}
-  - {fileID: 7633822775451213494}
-  selectionType: 0
+  speedFraction: 0.4
 --- !u!114 &1920992976102492274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -171,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: fb77253856a971b46bf065a32de5c903
-  position: {x: 128.00002, y: 368.16257}
+  position: {x: 120, y: 534}
   description: Go to random item
   speedFraction: 0.3
   itemName: 
@@ -192,14 +193,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 033371ab46541c849a861b9fd5d8c1a4
-  position: {x: 221, y: 217}
+  position: {x: 239, y: 371.99997}
   description: Choose item
   children:
   - {fileID: 1920992976102492274}
   - {fileID: -1602363675650917227}
-  - {fileID: 5847813389968136251}
+  - {fileID: 6988228332635867387}
   selectionType: 2
---- !u!114 &5847813389968136251
+--- !u!114 &6570311764469117554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 864a017fbe58b9944b76c7ccebb56dfa
+  position: {x: 405.00006, y: -41.935028}
+  description: Be villager
+  children:
+  - {fileID: 602739554291402011}
+  selectionType: 0
+--- !u!114 &6988228332635867387
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -212,15 +232,15 @@ MonoBehaviour:
   m_Name: GoToGalleryItem
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: 26cc0835b450eb74e934303eca6d6581
-  position: {x: 482, y: 384.00003}
+  uniqueID: 6387f411970ea7c48bd226cebf3d7665
+  position: {x: 468, y: 534}
   description: Go to random item
-  speedFraction: 0.3
+  speedFraction: 1
   itemName: 
   randomItem: 1
   addToBag: 0
   reduceBoredom: 1
---- !u!114 &7633822775451213494
+--- !u!114 &8907828180578900750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -229,11 +249,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d60f004ceeb13438f066fbaeed9a85, type: 3}
-  m_Name: GoToHome
+  m_Script: {fileID: 11500000, guid: 498f5ffd71aee0042aac94f20ccfc267, type: 3}
+  m_Name: IsBored
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: d7970eed8a833984a901ad789c4b0103
-  position: {x: 422.9583, y: 72}
+  uniqueID: 19c72c7f30684f5469c1c092feba66da
+  position: {x: -28.999987, y: 249}
   description: 
-  speedFraction: 1
+  boredomThreshold: 100
