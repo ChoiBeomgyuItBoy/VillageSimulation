@@ -6,8 +6,8 @@ namespace ArtGallery.BehaviourTree
     public class Loop : CompositeNode
     {
         [SerializeField] BehaviourTree dependencyTree = null;
-        BehaviourTree dependencyTreeClone = null;
         int currentChild = 0;
+        bool cloned = false;
 
         protected override void OnEnter()
         {
@@ -18,14 +18,15 @@ namespace ArtGallery.BehaviourTree
         {
             if(dependencyTree != null)
             {
-                if(dependencyTreeClone == null)
+                if(!cloned)
                 {
-                    dependencyTreeClone = dependencyTree.Clone();
-                }
+                    dependencyTree = dependencyTree.Clone();
+                    cloned = true;
+                }   
 
-                if(dependencyTreeClone.Tick(controller) == Status.Failure)
+                if(dependencyTree.Tick(controller) == Status.Failure)
                 {
-                    return Status.Success;
+                    return Status.Failure;
                 }
             }
 

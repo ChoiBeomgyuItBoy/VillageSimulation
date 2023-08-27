@@ -1,4 +1,4 @@
-using ArtGallery.Core;
+using ArtGallery.Inventories;
 using UnityEngine;
 
 namespace ArtGallery.BehaviourTree.Actions

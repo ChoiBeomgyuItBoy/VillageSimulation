@@ -1,3 +1,4 @@
+using ArtGallery.Inventories;
 using ArtGallery.Core;
 using UnityEngine;
 

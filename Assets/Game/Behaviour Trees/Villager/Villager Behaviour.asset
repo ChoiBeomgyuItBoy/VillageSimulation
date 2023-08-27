@@ -55,6 +55,23 @@ MonoBehaviour:
   position: {x: 413.00012, y: 388.10007}
   description: See item
   secondsToWait: 3
+--- !u!114 &-491415162411219034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d60f004ceeb13438f066fbaeed9a85, type: 3}
+  m_Name: GoToHome
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: d5d97ad1d16051b48acdd2647c2d2b91
+  position: {x: 569.0001, y: 123.00004}
+  description: 
+  speedFraction: 0.4
 --- !u!114 &-418089260974039031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,6 +118,7 @@ MonoBehaviour:
   - {fileID: 6570311764469117554}
   - {fileID: -418089260974039031}
   - {fileID: 6988228332635867387}
+  - {fileID: -491415162411219034}
 --- !u!114 &602739554291402011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,7 +140,7 @@ MonoBehaviour:
   - {fileID: 690711495191255151}
   - {fileID: -418089260974039031}
   - {fileID: 1202648398681196468}
-  dependencyTree: {fileID: 0}
+  dependencyTree: {fileID: 11400000, guid: 66b8f6e3cb6585f40927cd046c8bc362, type: 2}
 --- !u!114 &690711495191255151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,9 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 071c6cce61f6b9f49b269a6306f2de46
-  position: {x: 121, y: 241}
+  position: {x: 167.00006, y: 233}
   description: Go to left door
-  speedFraction: 0.5
+  speedFraction: 0.4
   doorName: Left Door
 --- !u!114 &1202648398681196468
 MonoBehaviour:
@@ -218,6 +236,7 @@ MonoBehaviour:
   description: Be villager
   children:
   - {fileID: 602739554291402011}
+  - {fileID: -491415162411219034}
   selectionType: 0
 --- !u!114 &6988228332635867387
 MonoBehaviour:
@@ -235,7 +254,7 @@ MonoBehaviour:
   uniqueID: 6387f411970ea7c48bd226cebf3d7665
   position: {x: 468, y: 534}
   description: Go to random item
-  speedFraction: 1
+  speedFraction: 0.3
   itemName: 
   randomItem: 1
   addToBag: 0
@@ -254,6 +273,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 19c72c7f30684f5469c1c092feba66da
-  position: {x: -28.999987, y: 249}
+  position: {x: 0.8725071, y: 233}
   description: 
   boredomThreshold: 100

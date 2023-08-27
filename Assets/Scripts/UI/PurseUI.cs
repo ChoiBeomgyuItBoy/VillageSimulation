@@ -1,4 +1,4 @@
-using ArtGallery.Core;
+using ArtGallery.Inventories;
 using TMPro;
 using UnityEngine;
 

@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7322216518877582644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37110f1494c08b746bfdf9f71246a242, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: e94e0b4599fae0f4f88c0358460c1d47
+  position: {x: -21, y: -38}
+  description: 
+  child: {fileID: -5321759864214440962}
+--- !u!114 &-5321759864214440962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d5e4b39f6b8edd4c8cf3e8f0edfb706, type: 3}
+  m_Name: IsTime
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 89226473278b43542b697014598c5798
+  position: {x: -24, y: 79.399994}
+  description: Is Gallery Open?
+  initialTime: 9
+  endTime: 19
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572ec67d91ae91446afefc4788241d7e, type: 3}
+  m_Name: Gallery Opened
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -7322216518877582644}
+  nodes:
+  - {fileID: -7322216518877582644}
+  - {fileID: -5321759864214440962}

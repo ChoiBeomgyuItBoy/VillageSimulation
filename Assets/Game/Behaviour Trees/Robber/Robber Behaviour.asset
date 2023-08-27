@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: cc0503079a33f3348af4ad9a95bfb93e
-  position: {x: 201.00003, y: 333.01196}
+  position: {x: 210.15012, y: 348}
   description: Go to random item
   speedFraction: 1
   itemName: 
@@ -56,6 +56,27 @@ MonoBehaviour:
   position: {x: 396, y: -384.85864}
   description: 
   child: {fileID: 6263883295311512611}
+--- !u!114 &-6948845477929186958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
+  m_Name: GoToGalleryItem
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 29fcf1049da7d614e9ab250612b9b5af
+  position: {x: 240.15012, y: 348}
+  description: Go to random item
+  speedFraction: 1
+  itemName: 
+  randomItem: 0
+  addToBag: 0
+  reduceBoredom: 0
 --- !u!114 &-2839352455146020223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -165,6 +186,7 @@ MonoBehaviour:
   - {fileID: -340037083134759375}
   - {fileID: -2839352455146020223}
   - {fileID: -9139602974527214403}
+  - {fileID: -6948845477929186958}
 --- !u!114 &3091520934405132631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +208,6 @@ MonoBehaviour:
   - {fileID: -340037083134759375}
   - {fileID: -8868587593374536955}
   dependencyTree: {fileID: 11400000, guid: daff6889f33fefa4f8f0737535bb570a, type: 2}
-  loop: 0
 --- !u!114 &4260222296732014994
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,7 +284,6 @@ MonoBehaviour:
   - {fileID: 4260222296732014994}
   - {fileID: 8337221696994383582}
   dependencyTree: {fileID: 0}
-  loop: 0
 --- !u!114 &8337221696994383582
 MonoBehaviour:
   m_ObjectHideFlags: 0

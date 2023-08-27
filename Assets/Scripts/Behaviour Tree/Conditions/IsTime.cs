@@ -5,7 +5,8 @@ namespace ArtGallery.BehaviourTree.Conditions
 {
     public class IsTime : ActionNode
     {
-        [SerializeField] [Range(0,24)] float time = 5;
+        [SerializeField] [Range(0,24)] float initialTime = 0;
+        [SerializeField] [Range(0,24)] float endTime = 24;
         Clock clock;
 
         protected override void OnEnter()
@@ -18,7 +19,7 @@ namespace ArtGallery.BehaviourTree.Conditions
 
         protected override Status OnTick()
         {
-            if(clock.GetCurrentTime() == time)
+            if(clock.GetCurrentTime() >= initialTime && clock.GetCurrentTime() <= endTime)
             {
                 return Status.Success;
             }
