@@ -12,12 +12,6 @@ namespace ArtGallery.BehaviourTree.Actions
         protected override Status OnTick()
         {
             Door door = Door.GetWithName(doorName);
-
-            if(door.Visited() && door.IsLocked())
-            {
-                return Status.Failure;
-            }
-
             Status status = GoTo(door.transform.position);
 
             if(status == Status.Success)
@@ -30,7 +24,7 @@ namespace ArtGallery.BehaviourTree.Actions
                 return Status.Failure;
             }
 
-            return status;
+            return Status.Running;
         }
 
         protected override void OnExit() { }

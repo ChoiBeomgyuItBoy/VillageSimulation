@@ -1,3 +1,4 @@
+using System;
 using ArtGallery.Inventories;
 using TMPro;
 using UnityEngine;
@@ -14,15 +15,14 @@ namespace ArtGallery.UI
             balanceText = GetComponent<TMP_Text>();
         }
 
-        void Start()
+        void Update()
         {
-            purse.onPurseUpdated += RefreshUI;
             RefreshUI();
         }
 
         void RefreshUI()
         {
-            balanceText.text = $"${purse.GetBalance()}/{purse.GetMaxBalance()}";
+            balanceText.text = $"${purse.GetBalance():N0}/${purse.GetMaxBalance():N0}";
         }
     }
 }

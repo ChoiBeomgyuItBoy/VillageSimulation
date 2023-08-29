@@ -31,10 +31,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 71a933acc49d02b468229814a597cf92
-  position: {x: -284.99994, y: 253.45001}
-  description: 
-  initialTime: 9
-  endTime: 19
+  position: {x: -286, y: 265}
+  description: Gallery Opened
+  initialTime: 6
+  endTime: 23
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: cfd1188a77ca11b43acea025aa332ec1
-  position: {x: -113, y: 122}
+  position: {x: -111, y: 139}
   description: Invert Money
   child: {fileID: 528610948271584994}
 --- !u!114 &528610948271584994
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 88ff9648582603a498fd4f97164ee423
-  position: {x: 63, y: 260}
+  position: {x: 75, y: 248}
   description: 
   viewDistance: 10
   maxViewAngle: 90
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 7dec656c93a905d45a9b79702e001528
-  position: {x: -293.45004, y: 130.00003}
+  position: {x: -277.00006, y: 130.99998}
   description: Gallery Closed
   child: {fileID: -5617021828950191095}
 --- !u!114 &3626149647331495384
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: a0319fac7623aec4eb42cd287fce69f3
-  position: {x: 72, y: 123}
+  position: {x: 88, y: 130}
   description: Cant see target
   child: {fileID: 1643439468111889728}
 --- !u!114 &5939207750346603376
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: b98ccff21815ed144880b423659069ea
-  position: {x: -29, y: -27}
+  position: {x: -24.000023, y: -20.150055}
   description: 
   children:
   - {fileID: 2130214242019516834}

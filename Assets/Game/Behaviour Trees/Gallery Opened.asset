@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: e94e0b4599fae0f4f88c0358460c1d47
-  position: {x: -21, y: -38}
+  position: {x: -16, y: -31}
   description: 
   child: {fileID: -5321759864214440962}
 --- !u!114 &-5321759864214440962

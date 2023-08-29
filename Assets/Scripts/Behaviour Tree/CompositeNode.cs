@@ -54,9 +54,9 @@ namespace ArtGallery.BehaviourTree
             return left.GetPosition().x < right.GetPosition().x ? -1 : 1;
         }
 
-        private int ComparePriorities(Node x, Node y)
+        private int ComparePriorities(Node left, Node right)
         {
-            return x.GetPriority() < y.GetPriority() ? 1 : -1;
+            return left.GetPriority() > right.GetPriority() ? -1 : 1;
         }
 
         private void Shuffle()

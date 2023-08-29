@@ -8,7 +8,6 @@ namespace ArtGallery.Core
     {
         [SerializeField] bool isLocked = false;
         static Dictionary<string, Door> doorLookup = null;
-        bool visited = false;
 
         public static Door GetWithName(string name)
         {
@@ -25,15 +24,8 @@ namespace ArtGallery.Core
             return doorLookup[name];
         }
 
-        public bool IsLocked()
-        {
-            return isLocked;
-        }
-
         public bool Open()
         {
-            visited = true;
-
             if(isLocked) 
             {
                 return false;
@@ -43,11 +35,6 @@ namespace ArtGallery.Core
                 GetComponent<NavMeshObstacle>().enabled = false;
                 return true;
             }
-        }
-
-        public bool Visited()
-        {
-            return visited;
         }
     }
 }

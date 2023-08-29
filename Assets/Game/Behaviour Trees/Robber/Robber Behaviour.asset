@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: cc0503079a33f3348af4ad9a95bfb93e
-  position: {x: 210.15012, y: 348}
+  position: {x: 417.1243, y: 364}
   description: Go to random item
   speedFraction: 1
   itemName: 
@@ -35,7 +35,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 4d247e56675f8414892aaed39a91d64e
-  position: {x: 337.96768, y: 191.00005}
+  position: {x: 545.12427, y: 207.00005}
   description: Go to cart
   speedFraction: 1
   depositItems: 1
@@ -70,12 +70,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 29fcf1049da7d614e9ab250612b9b5af
-  position: {x: 240.15012, y: 348}
+  position: {x: 583.1244, y: 364}
   description: Go to random item
   speedFraction: 1
   itemName: 
-  randomItem: 0
-  addToBag: 0
+  randomItem: 1
+  addToBag: 1
   reduceBoredom: 0
 --- !u!114 &-2839352455146020223
 MonoBehaviour:
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 40795eee31f0f114e9794f44fe93c587
-  position: {x: 19.999985, y: 335.0119}
+  position: {x: 253.1243, y: 362.00006}
   description: Go to random item
   speedFraction: 1
   itemName: 
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 1
   uniqueID: 9ad1eac7bd51866419af358860398f7d
-  position: {x: -161.13757, y: 337.7425}
+  position: {x: 46.1243, y: 354.00006}
   description: Go to left door
   speedFraction: 5
   doorName: Left Door
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 2195f4e9808bc8c4c96f3c64934ac6b1
-  position: {x: -16.932505, y: -156.31754}
+  position: {x: 190.12428, y: -139.99994}
   description: Steal with fallback
   children:
   - {fileID: 3091520934405132631}
@@ -150,11 +150,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 1c43d81862a14a245828670161631aa9
-  position: {x: 102.00003, y: 184.01192}
+  position: {x: 309.12433, y: 200.00006}
   description: Select item
   children:
   - {fileID: -2839352455146020223}
   - {fileID: -9139602974527214403}
+  - {fileID: -6948845477929186958}
   selectionType: 2
 --- !u!114 &11400000
 MonoBehaviour:
@@ -201,7 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: a94eb16cd78045a4b890f7a6447e2626
-  position: {x: -64.10337, y: -9.813109}
+  position: {x: 143.12428, y: 6.0000477}
   description: Steal
   children:
   - {fileID: 8784419869966488891}
@@ -260,7 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: d1f1a290939a2924e8d77d9507a35fd5
-  position: {x: 149, y: -2}
+  position: {x: 356.12433, y: 14.000053}
   description: Go to cart
   speedFraction: 1
   depositItems: 0
@@ -316,7 +317,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 9
   uniqueID: 923171ab2601cde4797d58de5f56ee2c
-  position: {x: -319.13757, y: 339.74246}
+  position: {x: -111.87567, y: 356.00006}
   description: Go to front door
   speedFraction: 5
   doorName: Front Door
@@ -334,7 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: ba2d61fcd9802d642aa7da79eb3c35eb
-  position: {x: -248.13754, y: 158.74248}
+  position: {x: -40.87561, y: 175.00002}
   description: Find open door
   children:
   - {fileID: 8907403029632766799}
@@ -355,7 +356,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 3
   uniqueID: d24a42baee0f70a4596909543864bad6
-  position: {x: -480.1376, y: 341.7425}
+  position: {x: -262.00003, y: 361.99994}
   description: Go to right door
   speedFraction: 5
   doorName: Right Door

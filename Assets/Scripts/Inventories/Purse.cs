@@ -7,8 +7,9 @@ namespace ArtGallery.Inventories
     {
         [SerializeField] [Range(0, 1200)] float startingBalance = 0;
         [SerializeField] float maxBalance = 1200;
+        [SerializeField] bool reduceMoneyWithTime = false;
+        [SerializeField] float moneyReduceRate = 0.1f;
         float balance = 0;
-        public event Action onPurseUpdated;
 
         public float GetMaxBalance()
         {
@@ -24,7 +25,6 @@ namespace ArtGallery.Inventories
         {
             if(balance >= maxBalance) return;
             balance += amount;
-            onPurseUpdated?.Invoke();
         }
 
         void Start()
@@ -32,9 +32,11 @@ namespace ArtGallery.Inventories
             UpdateBalance(startingBalance);
         }
 
-        void OnValidate()
+        void Update()
         {
-            onPurseUpdated?.Invoke();
+            if(!reduceMoneyWithTime) return;
+
+            balance = Mathf.Max(0, balance - Time.deltaTime * moneyReduceRate);
         }
     }   
 }
