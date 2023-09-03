@@ -24,9 +24,9 @@ namespace ArtGallery.BehaviourTree
                     cloned = true;
                 }   
 
-                if(dependencyTree.Tick(controller) == Status.Failure)
+                if(dependencyTree.Tick(controller) == Status.Success)
                 {
-                    return Status.Failure;
+                    return Status.Success;
                 }
             }
 

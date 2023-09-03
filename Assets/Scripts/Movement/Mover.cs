@@ -14,6 +14,7 @@ namespace ArtGallery.Movement
 
         public void MoveTo(Vector3 destination, float speedFraction, bool isPlayer = false)
         {
+            agent.isStopped = false;
             agent.destination = isPlayer? transform.position + destination : destination;
             agent.speed = maxSpeed * Mathf.Clamp01(speedFraction);
         }
@@ -26,6 +27,11 @@ namespace ArtGallery.Movement
         public bool CanGoTo(Vector3 destination)
         {
             return Vector3.Distance(agent.pathEndPosition, destination) < destinationTollerance;
+        }
+
+        public void Cancel()
+        {
+            agent.isStopped = true;
         }
 
         void Awake()

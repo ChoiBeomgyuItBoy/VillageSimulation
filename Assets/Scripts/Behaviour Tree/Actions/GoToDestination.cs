@@ -30,6 +30,7 @@ namespace ArtGallery.BehaviourTree.Actions
             }
             else if(!mover.CanGoTo(destination))
             {
+                mover.Cancel();
                 state = ActionState.Idle;
                 return Status.Failure;
             }

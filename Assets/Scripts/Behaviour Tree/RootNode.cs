@@ -27,6 +27,11 @@ namespace ArtGallery.BehaviourTree
 
         protected override Status OnTick()
         {
+            if(child == null)
+            {
+                return Status.Failure;
+            }
+            
             return child.Tick(controller);
         }
 

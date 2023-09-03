@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3115362651016122240}
   - component: {fileID: 2826224662858068189}
   - component: {fileID: 9189746993668116512}
+  - component: {fileID: 6602937630123890163}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -34,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &9208165888527184917
 NavMeshAgent:
@@ -104,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e22b3cd7fe8c604482a26cd0d573335, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trees: []
+  tree: {fileID: 0}
 --- !u!114 &9189746993668116512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,3 +119,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 6
+--- !u!114 &6602937630123890163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 94699067994759827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb0a3dd9b216b05409535d19eec9399d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  home: {fileID: 0}

@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6496281387461058566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6d60f004ceeb13438f066fbaeed9a85, type: 3}
+  m_Name: GoToHome
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: a2135ff7784a33043b8340d2bf53cb81
+  position: {x: 158, y: 165}
+  description: 
+  speedFraction: 1
+--- !u!114 &-1314608542005152294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3669c10b893f3154e8d8a73725865644, type: 3}
+  m_Name: GoToPatron
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: c067e3b9c76749e4da120ced628782ef
+  position: {x: -89, y: 173}
+  description: 
+  speedFraction: 0.5
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572ec67d91ae91446afefc4788241d7e, type: 3}
+  m_Name: Ticket Seller Behaviour
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 7483635315583503377}
+  nodes:
+  - {fileID: 7483635315583503377}
+  - {fileID: 5393753295549118282}
+  - {fileID: -1314608542005152294}
+  - {fileID: -6496281387461058566}
+--- !u!114 &5393753295549118282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 27fccb049a93e0146850a064589a516e
+  position: {x: 16, y: 9}
+  description: 
+  children:
+  - {fileID: -1314608542005152294}
+  - {fileID: -6496281387461058566}
+  selectionType: 0
+--- !u!114 &7483635315583503377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37110f1494c08b746bfdf9f71246a242, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 7a287492f9d834d4b92a0f344e457dcb
+  position: {x: 15, y: -95}
+  description: 
+  child: {fileID: 5393753295549118282}

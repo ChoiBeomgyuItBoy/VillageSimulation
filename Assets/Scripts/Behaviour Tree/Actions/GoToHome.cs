@@ -14,9 +14,7 @@ namespace ArtGallery.BehaviourTree.Actions
 
         protected override Status OnTick()
         {
-            Status status = GoTo(homeLocation);
-
-            return status;
+            return GoTo(homeLocation);
         }
 
         protected override void OnExit() { }

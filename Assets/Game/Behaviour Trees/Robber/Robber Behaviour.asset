@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: cc0503079a33f3348af4ad9a95bfb93e
-  position: {x: 417.1243, y: 364}
+  position: {x: 419, y: 370}
   description: Go to random item
   speedFraction: 1
   itemName: 
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 29fcf1049da7d614e9ab250612b9b5af
-  position: {x: 583.1244, y: 364}
+  position: {x: 583, y: 361}
   description: Go to random item
   speedFraction: 1
   itemName: 
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 1
   uniqueID: 9ad1eac7bd51866419af358860398f7d
-  position: {x: 46.1243, y: 354.00006}
+  position: {x: 58.40001, y: 395.00003}
   description: Go to left door
   speedFraction: 5
   doorName: Left Door
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: d726b532c0954b742af975d4f343265d
-  position: {x: 697.00006, y: 24.00001}
+  position: {x: 622.7967, y: 40}
   description: Can see cop?
   viewDistance: 10
   maxViewAngle: 90
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: fd0403c84911cb74dac98f40d371861f
-  position: {x: 388, y: -295.032}
+  position: {x: 392, y: -278}
   description: Be thief
   children:
   - {fileID: -538517803607832928}
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: b99435269b3e3ef49ac978b2ff78ec99
-  position: {x: 759, y: -147.99998}
+  position: {x: 684.79663, y: -132.00002}
   description: Run away
   children:
   - {fileID: 4260222296732014994}
@@ -299,7 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 7df6ccc8d5b5a0e4398a8b44b81b1d1e
-  position: {x: 863, y: 24.00001}
+  position: {x: 788.79663, y: 40}
   description: Flee from cop
   speedFraction: 5
   distance: 10
@@ -315,9 +315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
   m_Name: GoToDoor
   m_EditorClassIdentifier: 
-  priority: 9
+  priority: 2
   uniqueID: 923171ab2601cde4797d58de5f56ee2c
-  position: {x: -111.87567, y: 356.00006}
+  position: {x: -94.99999, y: 395.0001}
   description: Go to front door
   speedFraction: 5
   doorName: Front Door
@@ -341,7 +341,7 @@ MonoBehaviour:
   - {fileID: 8907403029632766799}
   - {fileID: 8715098515298180231}
   - {fileID: -2600219576249381448}
-  selectionType: 1
+  selectionType: 2
 --- !u!114 &8907403029632766799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -354,9 +354,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
   m_Name: GoToDoor
   m_EditorClassIdentifier: 
-  priority: 3
+  priority: 5
   uniqueID: d24a42baee0f70a4596909543864bad6
-  position: {x: -262.00003, y: 361.99994}
+  position: {x: -245, y: 394}
   description: Go to right door
   speedFraction: 5
   doorName: Right Door

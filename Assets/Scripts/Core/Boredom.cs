@@ -10,7 +10,6 @@ namespace ArtGallery.Core
         const float boredomIncreaseRate = 2f;
         float boredom = 0;
 
-
         public float GetBoredom()
         {
             return boredom;
