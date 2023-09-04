@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: cc0503079a33f3348af4ad9a95bfb93e
-  position: {x: 419, y: 370}
+  position: {x: 406.3, y: 364.50006}
   description: Go to random item
   speedFraction: 1
   itemName: 
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 29fcf1049da7d614e9ab250612b9b5af
-  position: {x: 583, y: 361}
+  position: {x: 572.0001, y: 373}
   description: Go to random item
   speedFraction: 1
   itemName: 
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 1
   uniqueID: 9ad1eac7bd51866419af358860398f7d
-  position: {x: 58.40001, y: 395.00003}
+  position: {x: 60.449986, y: 403.00003}
   description: Go to left door
   speedFraction: 5
   doorName: Left Door
@@ -130,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 2195f4e9808bc8c4c96f3c64934ac6b1
-  position: {x: 190.12428, y: -139.99994}
+  position: {x: 206.00005, y: -123.99999}
   description: Steal with fallback
   children:
   - {fileID: 3091520934405132631}
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: d726b532c0954b742af975d4f343265d
-  position: {x: 622.7967, y: 40}
+  position: {x: 632, y: 38}
   description: Can see cop?
   viewDistance: 10
   maxViewAngle: 90
@@ -261,7 +261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: d1f1a290939a2924e8d77d9507a35fd5
-  position: {x: 356.12433, y: 14.000053}
+  position: {x: 372, y: 14.000005}
   description: Go to cart
   speedFraction: 1
   depositItems: 0
@@ -279,7 +279,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: b99435269b3e3ef49ac978b2ff78ec99
-  position: {x: 684.79663, y: -132.00002}
+  position: {x: 658.1651, y: -132.00002}
   description: Run away
   children:
   - {fileID: 4260222296732014994}

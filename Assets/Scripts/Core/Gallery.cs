@@ -57,6 +57,7 @@ namespace ArtGallery.Core
             }
 
             patrons.Clear();
+            patronsRecord.Clear();
         }
     }
 }

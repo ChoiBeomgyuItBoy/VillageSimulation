@@ -31,8 +31,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 71a933acc49d02b468229814a597cf92
-  position: {x: -286, y: 265}
-  description: Gallery Opened
+  position: {x: -311.44995, y: 269.4501}
+  description: Robbing Time
   initialTime: 6
   endTime: 23
 --- !u!114 &11400000
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: ff0353b4d54d02b46b844de0a7d254ea
-  position: {x: -121, y: 257.32}
+  position: {x: -120.00002, y: 273}
   description: Has got money
 --- !u!114 &1643439468111889728
 MonoBehaviour:
@@ -104,7 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 88ff9648582603a498fd4f97164ee423
-  position: {x: 75, y: 248}
+  position: {x: 68.00006, y: 277.00006}
   description: 
   viewDistance: 10
   maxViewAngle: 90
@@ -122,8 +122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 7dec656c93a905d45a9b79702e001528
-  position: {x: -277.00006, y: 130.99998}
-  description: Gallery Closed
+  position: {x: -278.00003, y: 138.00002}
+  description: Robbing Time
   child: {fileID: -5617021828950191095}
 --- !u!114 &3626149647331495384
 MonoBehaviour:
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: a0319fac7623aec4eb42cd287fce69f3
-  position: {x: 88, y: 130}
+  position: {x: 76.000015, y: 146}
   description: Cant see target
   child: {fileID: 1643439468111889728}
 --- !u!114 &5939207750346603376

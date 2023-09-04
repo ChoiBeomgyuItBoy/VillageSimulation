@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 7a748cb9875a4794b828d3c3676e8949
-  position: {x: 403, y: -147.05296}
+  position: {x: 273.99997, y: -151.63217}
   description: 
   child: {fileID: 6570311764469117554}
 --- !u!114 &-6022667602400887190
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: f5bc77db18b6cc84aba96d300d66108c
-  position: {x: 429, y: 396}
+  position: {x: 427, y: 396}
   description: See item
   secondsToWait: 3
 --- !u!114 &-491415162411219034
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 5f751c85ad9671e43960c244906d9672
-  position: {x: 342, y: 241}
+  position: {x: 303.7125, y: 257}
   description: Look at paintings
   children:
   - {fileID: 4358017789817730452}
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 6c065b2b6aeb8e94d805741eef15b260
-  position: {x: 350, y: 123}
+  position: {x: 279, y: 123}
   description: View art
   children:
   - {fileID: 8907828180578900750}
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 033371ab46541c849a861b9fd5d8c1a4
-  position: {x: 248, y: 388}
+  position: {x: 253.00002, y: 392.00003}
   description: Choose item
   children:
   - {fileID: 1920992976102492274}
@@ -270,7 +270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 864a017fbe58b9944b76c7ccebb56dfa
-  position: {x: 411, y: -36}
+  position: {x: 279, y: -29.3225}
   description: Be villager
   children:
   - {fileID: 602739554291402011}
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 6387f411970ea7c48bd226cebf3d7665
-  position: {x: 429, y: 548}
+  position: {x: 437, y: 557}
   description: Go to random item
   speedFraction: 0.3
   itemName: 

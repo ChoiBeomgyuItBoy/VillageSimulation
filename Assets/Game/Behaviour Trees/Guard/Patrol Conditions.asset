@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-1627695162220497068
+--- !u!114 &-7060255206546521726
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13,28 +13,11 @@ MonoBehaviour:
   m_Name: Inverter
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: bef38057a6df65a49b5053163019184f
-  position: {x: -2, y: 129}
-  description: Not bored
-  child: {fileID: 6941143256694134699}
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 572ec67d91ae91446afefc4788241d7e, type: 3}
-  m_Name: While Bored
-  m_EditorClassIdentifier: 
-  rootNode: {fileID: 5078353961581937390}
-  nodes:
-  - {fileID: 5078353961581937390}
-  - {fileID: 6941143256694134699}
-  - {fileID: -1627695162220497068}
---- !u!114 &5078353961581937390
+  uniqueID: f9960b7dd9f2b454485307bf707b8480
+  position: {x: 16, y: 85}
+  description: Cant see robber
+  child: {fileID: 1062630970851453793}
+--- !u!114 &-6244238190542247207
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -47,11 +30,11 @@ MonoBehaviour:
   m_Name: RootNode
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: dcbac086d030d91409f26bfceee41a52
-  position: {x: 6, y: 19}
+  uniqueID: 7ec196894741f57469e86d522a3e2776
+  position: {x: 0, y: 0}
   description: 
-  child: {fileID: -1627695162220497068}
---- !u!114 &6941143256694134699
+  child: {fileID: -7060255206546521726}
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,11 +43,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 498f5ffd71aee0042aac94f20ccfc267, type: 3}
-  m_Name: IsBored
+  m_Script: {fileID: 11500000, guid: 572ec67d91ae91446afefc4788241d7e, type: 3}
+  m_Name: Patrol Conditions
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -6244238190542247207}
+  nodes:
+  - {fileID: -6244238190542247207}
+  - {fileID: 1062630970851453793}
+  - {fileID: -7060255206546521726}
+--- !u!114 &1062630970851453793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e00b46dda0f4e7418f35f5c20875e88, type: 3}
+  m_Name: CanSeeTarget
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: 1bc171cc705383b45907ec2966800f20
-  position: {x: 8, y: 246}
-  description: 
-  boredomThreshold: 100
+  uniqueID: a2d1a36557dc68243b5f369c0ab34645
+  position: {x: 8, y: 200}
+  description: Can see robber
+  viewDistance: 10
+  maxViewAngle: 90
