@@ -1,56 +1,42 @@
-using System.Linq;
 using UnityEngine;
 
 namespace ArtGallery.BehaviourTree
 {
-    public class Loop : CompositeNode
+    public class Loop : DecoratorNode
     {
-        [SerializeField] BehaviourTree dependencyTree = null;
-        int currentChild = 0;
+        [SerializeField] BehaviourTree breakCondition;
         bool cloned = false;
 
-        protected override void OnEnter()
-        {
-            currentChild = 0;
-        }
+        protected override void OnEnter() { } 
 
         protected override Status OnTick()
         {
-            if(dependencyTree != null)
+            if(breakCondition != null)
             {
-                if(!cloned)
-                {
-                    dependencyTree = dependencyTree.Clone();
-                    cloned = true;
-                }   
+                CloneTree();
 
-                if(dependencyTree.Tick(controller) == Status.Success)
+                Status treeStatus = breakCondition.Tick(controller);
+
+                if(treeStatus == Status.Failure)
                 {
                     return Status.Success;
                 }
             }
 
-            Status childStatus = GetChild(currentChild).Tick(controller);
-
-            switch(childStatus)
-            {
-                case Status.Running:
-                    return Status.Running;
-                case Status.Failure:
-                    return Status.Failure;
-                case Status.Success:
-                    currentChild++;
-                    break;
-            }
-
-            if(currentChild == GetChildren().Count())
-            {
-                currentChild = 0;
-            }
+            GetChild().Tick(controller);
 
             return Status.Running;
         }
 
         protected override void OnExit() { }
-    }   
+
+        private void CloneTree()
+        {
+            if(!cloned)
+            {
+                breakCondition = breakCondition.Clone();
+                cloned = true;
+            }  
+        }
+    }
 }

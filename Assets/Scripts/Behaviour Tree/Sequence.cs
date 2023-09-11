@@ -18,12 +18,11 @@ namespace ArtGallery.BehaviourTree
         {
             if(dependencyTree != null)
             {
-                if(!cloned)
-                {
-                    dependencyTree = dependencyTree.Clone();
-                    cloned = true;
-                }
-                if(dependencyTree.Tick(controller) == Status.Failure)
+                CloneTree();
+
+                Status treeStatus = dependencyTree.Tick(controller);
+
+                if(treeStatus == Status.Failure)
                 {
                     return Status.Failure;
                 }
@@ -46,5 +45,14 @@ namespace ArtGallery.BehaviourTree
         }
 
         protected override void OnExit() { }
+
+        private void CloneTree()
+        {
+            if(!cloned)
+            {
+                dependencyTree = dependencyTree.Clone();
+                cloned = true;
+            }  
+        }
     }
 }

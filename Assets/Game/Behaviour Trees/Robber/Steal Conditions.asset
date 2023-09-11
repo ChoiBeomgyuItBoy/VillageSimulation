@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 4bf9a6b36c864104ba97e5c1677b9591
-  position: {x: -19.000046, y: -144.39339}
+  position: {x: -54, y: -119}
   description: 
-  child: {fileID: 5939207750346603376}
+  child: {fileID: -5305898981397857849}
 --- !u!114 &-5617021828950191095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,10 +31,66 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 71a933acc49d02b468229814a597cf92
-  position: {x: -311.44995, y: 269.4501}
+  position: {x: -186, y: 234}
   description: Robbing Time
   initialTime: 6
   endTime: 23
+--- !u!114 &-5520278907968175534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201abbf7d61ac04489eee2edf64a533c, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 5173b69f85d8e5843b0c43e2dad838a1
+  position: {x: 234, y: 117}
+  description: Cant see cop
+  child: {fileID: -2053239743918371546}
+--- !u!114 &-5305898981397857849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 7720dfc0b72dd514dac746fc9eac6099
+  position: {x: -55, y: -34}
+  description: 
+  children:
+  - {fileID: 6079139647247559662}
+  - {fileID: 465474777046400751}
+  - {fileID: -5520278907968175534}
+  dependencyTree: {fileID: 0}
+--- !u!114 &-2053239743918371546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e00b46dda0f4e7418f35f5c20875e88, type: 3}
+  m_Name: CanSeeTarget
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 6bdc789fdf1bacd4096787db287c88df
+  position: {x: 228, y: 251}
+  description: Can see cop?
+  viewDistance: 10
+  maxViewAngle: 90
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,14 +106,14 @@ MonoBehaviour:
   rootNode: {fileID: -8787721795009357101}
   nodes:
   - {fileID: -8787721795009357101}
-  - {fileID: 511988833371579554}
   - {fileID: 528610948271584994}
-  - {fileID: 5939207750346603376}
-  - {fileID: 1643439468111889728}
-  - {fileID: 3626149647331495384}
-  - {fileID: 2130214242019516834}
   - {fileID: -5617021828950191095}
---- !u!114 &511988833371579554
+  - {fileID: -5305898981397857849}
+  - {fileID: 6079139647247559662}
+  - {fileID: 465474777046400751}
+  - {fileID: -5520278907968175534}
+  - {fileID: -2053239743918371546}
+--- !u!114 &465474777046400751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,9 +126,9 @@ MonoBehaviour:
   m_Name: Inverter
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: cfd1188a77ca11b43acea025aa332ec1
-  position: {x: -111, y: 139}
-  description: Invert Money
+  uniqueID: f8c3f5f183556f048a48076cfbd521a4
+  position: {x: 33, y: 117}
+  description: Not enough money
   child: {fileID: 528610948271584994}
 --- !u!114 &528610948271584994
 MonoBehaviour:
@@ -88,27 +144,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: ff0353b4d54d02b46b844de0a7d254ea
-  position: {x: -120.00002, y: 273}
+  position: {x: 32, y: 226}
   description: Has got money
---- !u!114 &1643439468111889728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e00b46dda0f4e7418f35f5c20875e88, type: 3}
-  m_Name: CanSeeTarget
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: 88ff9648582603a498fd4f97164ee423
-  position: {x: 68.00006, y: 277.00006}
-  description: 
-  viewDistance: 10
-  maxViewAngle: 90
---- !u!114 &2130214242019516834
+--- !u!114 &6079139647247559662
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -121,45 +159,7 @@ MonoBehaviour:
   m_Name: Inverter
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: 7dec656c93a905d45a9b79702e001528
-  position: {x: -278.00003, y: 138.00002}
-  description: Robbing Time
+  uniqueID: ecf5106f8d7bf194cb4a11cfbf0c868e
+  position: {x: -170, y: 114}
+  description: Not robbing time
   child: {fileID: -5617021828950191095}
---- !u!114 &3626149647331495384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 201abbf7d61ac04489eee2edf64a533c, type: 3}
-  m_Name: Inverter
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: a0319fac7623aec4eb42cd287fce69f3
-  position: {x: 76.000015, y: 146}
-  description: Cant see target
-  child: {fileID: 1643439468111889728}
---- !u!114 &5939207750346603376
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
-  m_Name: Sequence
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: b98ccff21815ed144880b423659069ea
-  position: {x: -24.000023, y: -20.150055}
-  description: 
-  children:
-  - {fileID: 2130214242019516834}
-  - {fileID: 511988833371579554}
-  - {fileID: 3626149647331495384}
-  dependencyTree: {fileID: 0}

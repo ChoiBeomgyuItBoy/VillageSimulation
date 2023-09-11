@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572ec67d91ae91446afefc4788241d7e, type: 3}
+  m_Name: Hasn't Ticket
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: 4119510230952594849}
+  nodes:
+  - {fileID: 4119510230952594849}
+  - {fileID: 5368941326854271139}
+  - {fileID: 6473702824692537187}
+--- !u!114 &4119510230952594849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37110f1494c08b746bfdf9f71246a242, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: f05963185f77b0546b842e24cab864d1
+  position: {x: 6, y: 12.199997}
+  description: 
+  child: {fileID: 6473702824692537187}
+--- !u!114 &5368941326854271139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b843f94e3409f74ab71c7149f4cd551, type: 3}
+  m_Name: HasTicket
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 3bbab77211c3df64cb85e40de13afd22
+  position: {x: -2, y: 262.52002}
+  description: 
+--- !u!114 &6473702824692537187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201abbf7d61ac04489eee2edf64a533c, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 8985163fd1c91974185b563b883ba3aa
+  position: {x: -10, y: 128}
+  description: 
+  child: {fileID: 5368941326854271139}

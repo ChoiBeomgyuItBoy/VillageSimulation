@@ -7,8 +7,9 @@ namespace ArtGallery.BehaviourTree.Editor
 {
     public class BehaviourTreeEditor : EditorWindow
     {
-        BehaviourTreeView treeView = null;
-        InspectorView inspectorView = null;
+        BehaviourTreeView treeView;
+        InspectorView inspectorView;
+        Label treeLabel;
 
         [MenuItem("Window/Behaviour Tree Editor")] 
         public static void ShowEditorWindow()
@@ -52,6 +53,7 @@ namespace ArtGallery.BehaviourTree.Editor
                 if(tree != null)
                 {
                     treeView.PopulateView(tree);
+                    treeLabel.text = tree.name;
                 }
             }
             else
@@ -60,6 +62,7 @@ namespace ArtGallery.BehaviourTree.Editor
                 {
                     if(treeView == null) return;
                     treeView.PopulateView(tree);
+                    treeLabel.text = tree.name;
                 }
             }
         }
@@ -89,6 +92,7 @@ namespace ArtGallery.BehaviourTree.Editor
 
             treeView = root.Q<BehaviourTreeView>();
             inspectorView = root.Q<InspectorView>();
+            treeLabel = root.Q<Label>();
             treeView.onNodeSelected += OnNodeSelectionChanged;
 
             OnSelectionChange();

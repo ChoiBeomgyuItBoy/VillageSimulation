@@ -15,6 +15,8 @@ namespace ArtGallery.BehaviourTree.Editor
             UnityEngine.Object.DestroyImmediate(editor);
             editor = UnityEditor.Editor.CreateEditor(nodeView.GetNode());
 
+            if(editor == null) return;
+
             IMGUIContainer container = new IMGUIContainer( () => 
             { 
                 if(editor.target)
