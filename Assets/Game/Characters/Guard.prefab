@@ -94,7 +94,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!1001 &478868753003365622
+--- !u!1001 &2426006592318898597
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -150,14 +150,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 9556142, guid: f9d38fed7b251cb4f9546516bfaa11c3, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: f9d38fed7b251cb4f9546516bfaa11c3, type: 3}
---- !u!4 &478868753003195604 stripped
+--- !u!4 &2426006592318761351 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 452642, guid: f9d38fed7b251cb4f9546516bfaa11c3, type: 3}
-  m_PrefabInstance: {fileID: 478868753003365622}
+  m_PrefabInstance: {fileID: 2426006592318898597}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8614077554689627328
 PrefabInstance:
@@ -219,10 +218,10 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5588370116875199577, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 478868753003195604}
+      addedObject: {fileID: 472646137251492765}
     - targetCorrespondingSourceObject: {fileID: 5588370116875199577, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 472646137251492765}
+      addedObject: {fileID: 2426006592318761351}
   m_SourcePrefab: {fileID: 100100000, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
 --- !u!4 &4181232605316903065 stripped
 Transform:
