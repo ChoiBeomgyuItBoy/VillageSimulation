@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4320415146546359919}
   - component: {fileID: 2598401815433629609}
   - component: {fileID: 4239259820796944123}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ GameObject:
   - component: {fileID: 5969144769273876518}
   - component: {fileID: 8384198564288327439}
   - component: {fileID: 6468167060451623637}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -189,7 +189,7 @@ GameObject:
   - component: {fileID: 6836774118276900349}
   - component: {fileID: 343108275398460030}
   - component: {fileID: 4663476158322085676}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Ticket UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ Transform:
   m_Children:
   - {fileID: 3485505304585651849}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &343108275398460030
 MonoBehaviour:

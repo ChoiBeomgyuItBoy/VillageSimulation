@@ -170,9 +170,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guard
       objectReference: {fileID: 0}
+    - target: {fileID: 2969756033004342525, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
+      propertyPath: outlineColor.b
+      value: 0.28235292
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969756033004342525, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
+      propertyPath: outlineColor.g
+      value: 0.8980392
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969756033004342525, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
+      propertyPath: outlineColor.r
+      value: 0.63860536
+      objectReference: {fileID: 0}
     - target: {fileID: 5588370116875199577, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5588370116875199577, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
       propertyPath: m_LocalPosition.x

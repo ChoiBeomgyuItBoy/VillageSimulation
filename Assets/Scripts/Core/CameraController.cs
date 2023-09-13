@@ -5,7 +5,6 @@ namespace ArtGallery.Core
     public class CameraController : MonoBehaviour
     {
         [SerializeField] float speed = 10;
-        [SerializeField] float rotationDamping = 10;
         [SerializeField] float rightRange = 50;
         [SerializeField] float forwardRange = 50;
         [SerializeField] float upRange = 50;
@@ -18,30 +17,16 @@ namespace ArtGallery.Core
             mainCamera = Camera.main.transform;
         }
 
+        void Start()
+        {
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
         void Update()
         {
             Move();
-            FaceMovementDirection();
             ClampPosition();
-        }
-
-        void Move()
-        {
-            controller.Move(GetMovementDirection() * speed * Time.deltaTime);
-        }
-
-        void FaceMovementDirection()
-        {
-            Vector3 rotationDirection = new Vector3(GetMovementDirection().x, 0, GetMovementDirection().z);
-
-            if(rotationDirection == Vector3.zero) return;
-
-            transform.rotation = Quaternion.Lerp
-            (
-                transform.rotation, 
-                Quaternion.LookRotation(rotationDirection),
-                Time.deltaTime * rotationDamping
-            );
         }
 
         void ClampPosition()
@@ -56,7 +41,7 @@ namespace ArtGallery.Core
             transform.position = clampedPosition;
         }
 
-        Vector3 GetMovementDirection()
+        void Move()
         {
             Vector3 right = (GetInputValue().x * mainCamera.right).normalized;
             right.y = 0;
@@ -68,7 +53,8 @@ namespace ArtGallery.Core
             up.x = 0;
             up.z = 0;
 
-            return right + up + forward;
+            Vector3 movementDirection = right + up + forward;
+            controller.Move(movementDirection * speed * Time.deltaTime);
         }
         
         Vector3 GetInputValue()

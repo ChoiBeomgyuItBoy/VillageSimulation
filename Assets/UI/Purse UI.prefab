@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3533735475334919160}
   - component: {fileID: 1679440972553242199}
   - component: {fileID: 3226717620670706008}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Purse UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}

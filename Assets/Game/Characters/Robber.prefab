@@ -20,6 +20,18 @@ PrefabInstance:
       propertyPath: tree
       value: 
       objectReference: {fileID: 11400000, guid: 57c124ee2494a484e9479f63593c25ab, type: 2}
+    - target: {fileID: 2969756033004342525, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
+      propertyPath: outlineColor.b
+      value: 0.15263441
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969756033004342525, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
+      propertyPath: outlineColor.g
+      value: 0.30493686
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969756033004342525, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
+      propertyPath: outlineColor.r
+      value: 0.6603774
+      objectReference: {fileID: 0}
     - target: {fileID: 5588370116875199577, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -93,7 +105,7 @@ MonoBehaviour:
   startingBalance: 0
   maxBalance: 1200
   reduceMoneyWithTime: 0
-  moneyReduceRate: 0.1
+  moneyReduceRate: 1
 --- !u!114 &7971704007840471264
 MonoBehaviour:
   m_ObjectHideFlags: 0
