@@ -72,6 +72,24 @@ MonoBehaviour:
   - {fileID: 5011393960696556334}
   - {fileID: 4793013338398849105}
   selectionType: 0
+--- !u!114 &-1338955011525527359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae0bd3712c4c684fbb66c5dd5f20603, type: 3}
+  m_Name: GoToLocation
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 3614bc914132da44ca242757e17abee5
+  position: {x: 466, y: 79}
+  description: Go to home
+  speedFraction: 1
+  location: 0
 --- !u!114 &-611490757758196053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,8 +152,8 @@ MonoBehaviour:
   - {fileID: 2559720928398016868}
   - {fileID: -611490757758196053}
   - {fileID: 8892523471439972254}
-  - {fileID: 8314297122231796654}
   - {fileID: 2744092823428511102}
+  - {fileID: -1338955011525527359}
 --- !u!114 &2559720928398016868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -230,23 +248,6 @@ MonoBehaviour:
   description: Can see robber?
   viewDistance: 20
   maxViewAngle: 90
---- !u!114 &8314297122231796654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d60f004ceeb13438f066fbaeed9a85, type: 3}
-  m_Name: GoToHome
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: c5ec78bf693e69d4593556bbd4d68a8c
-  position: {x: 464, y: 52.000015}
-  description: 
-  speedFraction: 1
 --- !u!114 &8892523471439972254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,5 +266,5 @@ MonoBehaviour:
   description: 
   children:
   - {fileID: -611490757758196053}
-  - {fileID: 8314297122231796654}
+  - {fileID: -1338955011525527359}
   selectionType: 0

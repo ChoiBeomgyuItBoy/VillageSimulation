@@ -1,0 +1,266 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7050284814532519105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351628d29260c524eb766f38080cc413, type: 3}
+  m_Name: PlayAnimation
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 3c1ae2506a33ebd42acf9689934a94f8
+  position: {x: 351.00195, y: 185}
+  description: Return to locomotion
+  animationName: Locomotion
+--- !u!114 &-6616074726213950359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37110f1494c08b746bfdf9f71246a242, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 312119620bb82624b921e701174257d3
+  position: {x: -33.999977, y: -234.64612}
+  description: 
+  child: {fileID: -706451846615315020}
+--- !u!114 &-5710643398200121589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8a96d571c70704eac64d65a93d8b0d, type: 3}
+  m_Name: WaitForSeconds
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: bd4ac2265a4e87a489f700a05dd3ed8d
+  position: {x: -783, y: 202}
+  description: 
+  secondsToWait: 5
+--- !u!114 &-3504145989352556562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2afbc2c6a7b99284dac9a3ca7b52ef9c, type: 3}
+  m_Name: StopMusic
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 0f5b02aab3e851e4499050adb48dd41e
+  position: {x: 192, y: 193}
+  description: 
+--- !u!114 &-3284338566968585200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 351628d29260c524eb766f38080cc413, type: 3}
+  m_Name: PlayAnimation
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 95f4791b54fafeb4f94e4bba190b2897
+  position: {x: -281.2525, y: 204.08348}
+  description: Play Guitar animation
+  animationName: Play Guitar
+--- !u!114 &-1357434151571954838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae0bd3712c4c684fbb66c5dd5f20603, type: 3}
+  m_Name: GoToLocation
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 7d13793de1285c44e87ef58a43d46463
+  position: {x: 523.002, y: 185}
+  description: Go to home
+  speedFraction: 1
+  location: 0
+--- !u!114 &-1265393813028811295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae0bd3712c4c684fbb66c5dd5f20603, type: 3}
+  m_Name: GoToLocation
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 2e194a8bdffd8044ca3cadd754846649
+  position: {x: -447.2525, y: 194.08353}
+  description: Go to play location
+  speedFraction: 0.5
+  location: 1
+--- !u!114 &-706451846615315020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: a784a137b41195d469544c806ee6f56e
+  position: {x: -41.999977, y: -125.12525}
+  description: Choose behaviour
+  children:
+  - {fileID: 7307633964917743983}
+  - {fileID: 689486642798224039}
+  selectionType: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572ec67d91ae91446afefc4788241d7e, type: 3}
+  m_Name: Musician Behaviour
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -6616074726213950359}
+  nodes:
+  - {fileID: -6616074726213950359}
+  - {fileID: -706451846615315020}
+  - {fileID: -1357434151571954838}
+  - {fileID: 7307633964917743983}
+  - {fileID: 5297427708212407557}
+  - {fileID: -1265393813028811295}
+  - {fileID: -3284338566968585200}
+  - {fileID: -7050284814532519105}
+  - {fileID: 689486642798224039}
+  - {fileID: 7618926489522259155}
+  - {fileID: -3504145989352556562}
+  - {fileID: 7161391675110240020}
+  - {fileID: -5710643398200121589}
+--- !u!114 &689486642798224039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: fb435076f911831438231931ac0da4ef
+  position: {x: 302.002, y: 40.999996}
+  description: Return to home
+  children:
+  - {fileID: -3504145989352556562}
+  - {fileID: -7050284814532519105}
+  - {fileID: -1357434151571954838}
+  dependencyTree: {fileID: 0}
+--- !u!114 &5297427708212407557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 498f5ffd71aee0042aac94f20ccfc267, type: 3}
+  m_Name: IsBored
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 412b814d046abc0448a213ff0de64a3f
+  position: {x: -617, y: 196}
+  description: 
+  boredomThreshold: 50
+--- !u!114 &7161391675110240020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e9e580a0a591d4986541d8dda17e60, type: 3}
+  m_Name: Loop
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 600725b50bd706447b8a051df3ecc1b1
+  position: {x: -107.00001, y: 212.00003}
+  description: While bored
+  child: {fileID: 7618926489522259155}
+  breakCondition: {fileID: 11400000, guid: d26491fa2967cd64f8bd5b66628a58ea, type: 2}
+--- !u!114 &7307633964917743983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: a7188d83fe82a9340a353f9b5cf39306
+  position: {x: -349.2525, y: 33.083515}
+  description: While gallery open
+  children:
+  - {fileID: -5710643398200121589}
+  - {fileID: 5297427708212407557}
+  - {fileID: -1265393813028811295}
+  - {fileID: -3284338566968585200}
+  - {fileID: 7161391675110240020}
+  dependencyTree: {fileID: 11400000, guid: 66b8f6e3cb6585f40927cd046c8bc362, type: 2}
+--- !u!114 &7618926489522259155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f630b19d90db3674bbf228d072aa937b, type: 3}
+  m_Name: PlayMusic
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 9d018407ce610e541b9e946b5b113275
+  position: {x: -99.00005, y: 347.05005}
+  description: 
+  musicIndex: 0
+  playRandom: 1

@@ -1,12 +1,10 @@
 using ArtGallery.Inventories;
-using UnityEngine;
 
 namespace ArtGallery.BehaviourTree.Actions
 {
     public class ClearBag : GoToDestination
     {
-        [SerializeField] bool depositItems = true;
-        Bag bag = null;
+        Bag bag;
 
         protected override void OnEnter()
         {
@@ -15,17 +13,13 @@ namespace ArtGallery.BehaviourTree.Actions
 
         protected override Status OnTick()
         {
-            Status status = GoTo(bag.GetDepositLocation());
-
-            if(status == Status.Success)
+            if(bag.HasItems())
             {
-                if(depositItems && bag.HasItems())
-                {
-                    bag.SellItems();
-                }
+                bag.SellItems();
+                return Status.Success;
             }
 
-            return status;
+            return Status.Failure;
         }
 
         protected override void OnExit() { }

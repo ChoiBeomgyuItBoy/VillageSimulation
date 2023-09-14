@@ -21,7 +21,7 @@ MonoBehaviour:
   randomItem: 1
   addToBag: 1
   reduceBoredom: 0
---- !u!114 &-8868587593374536955
+--- !u!114 &-7754813469563515974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30,15 +30,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67bfff153222bd40bb16e5d35c392c4, type: 3}
-  m_Name: ClearBag
+  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
+  m_Name: GoToGalleryItem
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: 4d247e56675f8414892aaed39a91d64e
-  position: {x: 516, y: 228.22504}
-  description: Go to cart
+  uniqueID: 6a6a1a3b329507347ad4cb33e5c09925
+  position: {x: 531, y: 381}
+  description: Go to random item
   speedFraction: 1
-  depositItems: 1
+  itemName: 
+  randomItem: 1
+  addToBag: 1
+  reduceBoredom: 0
 --- !u!114 &-7724046242137277856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,27 +56,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 691acecae3684df48ae137b589111dbe
-  position: {x: 878.6502, y: -751.84}
+  position: {x: 857, y: -701.04}
   description: 
   child: {fileID: 7178931523168642257}
---- !u!114 &-7088613616215201076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d67bfff153222bd40bb16e5d35c392c4, type: 3}
-  m_Name: ClearBag
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: bf9dffdffc0dda0468870df715a78291
-  position: {x: 848, y: -134}
-  description: Go to cart
-  speedFraction: 1
-  depositItems: 0
 --- !u!114 &-6948845477929186958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,7 +80,7 @@ MonoBehaviour:
   randomItem: 1
   addToBag: 1
   reduceBoredom: 0
---- !u!114 &-5861835958813089203
+--- !u!114 &-5622322374268263693
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,14 +89,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6d60f004ceeb13438f066fbaeed9a85, type: 3}
-  m_Name: GoToHome
+  m_Script: {fileID: 11500000, guid: 4ae0bd3712c4c684fbb66c5dd5f20603, type: 3}
+  m_Name: GoToLocation
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: fc9c4852c12908a4c92caa9eb3541cbe
-  position: {x: 974.6825, y: -416.5875}
-  description: 
+  uniqueID: 0e419787a6664f64393dfb04872fa5a0
+  position: {x: 979, y: -435}
+  description: Go to home
   speedFraction: 1
+  location: 0
+--- !u!114 &-4771290100615872081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae0bd3712c4c684fbb66c5dd5f20603, type: 3}
+  m_Name: GoToLocation
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 953aa94b209fded43b2c4f28fe47e92a
+  position: {x: 838.5501, y: -130.264}
+  description: Go to cart
+  speedFraction: 1
+  location: 1
 --- !u!114 &-3817050175642794382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,6 +173,23 @@ MonoBehaviour:
   description: Go to left door
   speedFraction: 5
   doorName: Left Door
+--- !u!114 &-1970752590921071163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d67bfff153222bd40bb16e5d35c392c4, type: 3}
+  m_Name: ClearBag
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 0636697db98fec54f9babbbf0981d830
+  position: {x: 659.0001, y: 229.00003}
+  description: 
+  speedFraction: 1
 --- !u!114 &-538517803607832928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +230,7 @@ MonoBehaviour:
   - {fileID: -2839352455146020223}
   - {fileID: -9139602974527214403}
   - {fileID: -6948845477929186958}
+  - {fileID: -7754813469563515974}
   selectionType: 2
 --- !u!114 &11400000
 MonoBehaviour:
@@ -233,17 +255,19 @@ MonoBehaviour:
   - {fileID: 8715098515298180231}
   - {fileID: 8907403029632766799}
   - {fileID: -2600219576249381448}
-  - {fileID: -8868587593374536955}
   - {fileID: -538517803607832928}
   - {fileID: -340037083134759375}
   - {fileID: -2839352455146020223}
   - {fileID: -9139602974527214403}
   - {fileID: -6948845477929186958}
   - {fileID: 3091405500895218980}
-  - {fileID: -7088613616215201076}
   - {fileID: -3817050175642794382}
-  - {fileID: -5861835958813089203}
   - {fileID: 7178931523168642257}
+  - {fileID: -5622322374268263693}
+  - {fileID: 6888968552723861523}
+  - {fileID: -4771290100615872081}
+  - {fileID: -1970752590921071163}
+  - {fileID: -7754813469563515974}
 --- !u!114 &3091405500895218980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -262,7 +286,7 @@ MonoBehaviour:
   description: Choose rob behaviour
   children:
   - {fileID: -538517803607832928}
-  - {fileID: -7088613616215201076}
+  - {fileID: -4771290100615872081}
   selectionType: 0
 --- !u!114 &3091520934405132631
 MonoBehaviour:
@@ -278,12 +302,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: a94eb16cd78045a4b890f7a6447e2626
-  position: {x: 207.5, y: 5}
+  position: {x: 171.5, y: 7.0999966}
   description: Steal if guard not on sight
   children:
   - {fileID: 8784419869966488891}
   - {fileID: -340037083134759375}
-  - {fileID: -8868587593374536955}
+  - {fileID: 6888968552723861523}
+  - {fileID: -1970752590921071163}
   dependencyTree: {fileID: 11400000, guid: daff6889f33fefa4f8f0737535bb570a, type: 2}
 --- !u!114 &4260222296732014994
 MonoBehaviour:
@@ -299,10 +324,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: d726b532c0954b742af975d4f343265d
-  position: {x: 624, y: 124}
+  position: {x: 746.0001, y: 128.65002}
   description: Can see cop?
   viewDistance: 20
   maxViewAngle: 90
+--- !u!114 &6888968552723861523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae0bd3712c4c684fbb66c5dd5f20603, type: 3}
+  m_Name: GoToLocation
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: fb707763c30c4434ca32a9a94d5ccf1c
+  position: {x: 487.70013, y: 229.00003}
+  description: Go to cart
+  speedFraction: 1
+  location: 1
 --- !u!114 &6927666445814860295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -317,7 +360,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: b99435269b3e3ef49ac978b2ff78ec99
-  position: {x: 711.00006, y: -25.053999}
+  position: {x: 835.3, y: -7.699995}
   description: Run away
   children:
   - {fileID: 4260222296732014994}
@@ -337,11 +380,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 6bc73c14e81591b48810f1451c245140
-  position: {x: 858, y: -604}
+  position: {x: 847, y: -596}
   description: 
   children:
   - {fileID: -3817050175642794382}
-  - {fileID: -5861835958813089203}
+  - {fileID: -5622322374268263693}
   dependencyTree: {fileID: 0}
 --- !u!114 &8337221696994383582
 MonoBehaviour:
@@ -357,7 +400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 7df6ccc8d5b5a0e4398a8b44b81b1d1e
-  position: {x: 809, y: 132}
+  position: {x: 926.0002, y: 136.99997}
   description: Flee from cop
   speedFraction: 5
   distance: 10

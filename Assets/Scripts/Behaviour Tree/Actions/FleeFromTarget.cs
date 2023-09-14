@@ -1,14 +1,13 @@
 using ArtGallery.Core;
 using UnityEngine;
-using UnityEngine.AI;
 
 namespace ArtGallery.BehaviourTree.Actions
 {
     public class FleeFromTarget : GoToDestination
     {
         [SerializeField] float distance = 10;
-        Targeter targeter = null;
-        Vector3 rememberedLocation = Vector3.zero;
+        Targeter targeter;
+        Vector3 rememberedLocation;
 
         protected override void OnEnter()
         {

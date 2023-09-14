@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 4bf9a6b36c864104ba97e5c1677b9591
-  position: {x: -54, y: -119}
+  position: {x: 40, y: -152}
   description: 
   child: {fileID: -5305898981397857849}
 --- !u!114 &-5617021828950191095
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 7720dfc0b72dd514dac746fc9eac6099
-  position: {x: -55, y: -34}
+  position: {x: 40, y: -52}
   description: 
   children:
   - {fileID: 6079139647247559662}
@@ -87,7 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 6bdc789fdf1bacd4096787db287c88df
-  position: {x: 228, y: 251}
+  position: {x: 222.20001, y: 234.00006}
   description: Can see cop?
   viewDistance: 10
   maxViewAngle: 90

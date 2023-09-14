@@ -49,4 +49,4 @@ MonoBehaviour:
   uniqueID: 1bc171cc705383b45907ec2966800f20
   position: {x: 14.000026, y: 170.0477}
   description: 
-  boredomThreshold: 100
+  boredomThreshold: 50

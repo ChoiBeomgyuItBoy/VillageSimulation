@@ -7,7 +7,7 @@ namespace ArtGallery.BehaviourTree.Conditions
     {
         [SerializeField] float viewDistance = 10;
         [SerializeField] float maxViewAngle = 90;
-        Targeter targeter = null;
+        Targeter targeter;
 
         protected override void OnEnter()
         {

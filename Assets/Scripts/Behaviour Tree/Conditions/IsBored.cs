@@ -1,4 +1,4 @@
-using ArtGallery.Core;
+using ArtGallery.Villagers;
 using UnityEngine;
 
 namespace ArtGallery.BehaviourTree.Conditions
@@ -6,7 +6,7 @@ namespace ArtGallery.BehaviourTree.Conditions
     public class IsBored : ActionNode
     {
         [SerializeField] float boredomThreshold = 100;
-        Boredom boredom = null;
+        Boredom boredom;
 
         protected override void OnEnter()
         {

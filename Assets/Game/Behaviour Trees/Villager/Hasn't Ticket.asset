@@ -64,6 +64,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 8985163fd1c91974185b563b883ba3aa
-  position: {x: -10, y: 128}
+  position: {x: 5.999988, y: 137.15001}
   description: 
   child: {fileID: 5368941326854271139}

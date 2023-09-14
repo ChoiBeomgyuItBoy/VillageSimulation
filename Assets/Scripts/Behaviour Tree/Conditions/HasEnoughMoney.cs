@@ -4,7 +4,7 @@ namespace ArtGallery.BehaviourTree.Conditions
 {
     public class HasEnoughMoney : ActionNode
     {
-        Purse purse = null;
+        Purse purse;
 
         protected override void OnEnter()
         {

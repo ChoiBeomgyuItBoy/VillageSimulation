@@ -1,4 +1,4 @@
-using ArtGallery.Core;
+using ArtGallery.Villagers;
 
 namespace ArtGallery.BehaviourTree.Conditions
 {

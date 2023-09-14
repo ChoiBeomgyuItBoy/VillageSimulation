@@ -1,5 +1,4 @@
-using ArtGallery.Core;
-using UnityEngine;
+using ArtGallery.Villagers;
 
 namespace ArtGallery.BehaviourTree.Conditions
 {

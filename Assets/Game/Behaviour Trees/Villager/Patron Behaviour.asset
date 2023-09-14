@@ -1,0 +1,316 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7051907194847821961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37110f1494c08b746bfdf9f71246a242, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 7a748cb9875a4794b828d3c3676e8949
+  position: {x: 384, y: -200.92}
+  description: 
+  child: {fileID: 6570311764469117554}
+--- !u!114 &-1804588540052812182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d81ddaf1d42fc84ab7c5145fd4c1b6b, type: 3}
+  m_Name: GetTicket
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 2801a120fc413ab4e91f145b49a00e73
+  position: {x: 114.00003, y: 478.85004}
+  description: 
+--- !u!114 &-1602363675650917227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
+  m_Name: GoToGalleryItem
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 6ae79066e8500e9429fa3e977cb9bd9b
+  position: {x: 282.00006, y: 768.85}
+  description: Go to random item
+  speedFraction: 0.3
+  itemName: 
+  randomItem: 1
+  addToBag: 0
+  reduceBoredom: 1
+--- !u!114 &-1204584182465230511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef8a96d571c70704eac64d65a93d8b0d, type: 3}
+  m_Name: WaitForSeconds
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: f5bc77db18b6cc84aba96d300d66108c
+  position: {x: 438.00006, y: 613.8501}
+  description: See item
+  secondsToWait: 3
+--- !u!114 &-324392542271169649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae0bd3712c4c684fbb66c5dd5f20603, type: 3}
+  m_Name: GoToLocation
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 4753152845c4090408546ca80ab11271
+  position: {x: 505, y: 111}
+  description: Go to home
+  speedFraction: 0.6
+  location: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572ec67d91ae91446afefc4788241d7e, type: 3}
+  m_Name: Patron Behaviour
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -7051907194847821961}
+  nodes:
+  - {fileID: -7051907194847821961}
+  - {fileID: 602739554291402011}
+  - {fileID: 690711495191255151}
+  - {fileID: 4358017789817730452}
+  - {fileID: 1920992976102492274}
+  - {fileID: -1602363675650917227}
+  - {fileID: -1204584182465230511}
+  - {fileID: 8907828180578900750}
+  - {fileID: 6570311764469117554}
+  - {fileID: 6988228332635867387}
+  - {fileID: 185889697940710467}
+  - {fileID: 7124494262829459337}
+  - {fileID: 960122489229251675}
+  - {fileID: -324392542271169649}
+  - {fileID: -1804588540052812182}
+--- !u!114 &185889697940710467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 49768aca5dc6cc34f97d6d505bb07ff1
+  position: {x: 331, y: 470.85004}
+  description: Select item
+  children:
+  - {fileID: 4358017789817730452}
+  - {fileID: -1204584182465230511}
+  dependencyTree: {fileID: 0}
+--- !u!114 &602739554291402011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
+  m_Name: Sequence
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 6c065b2b6aeb8e94d805741eef15b260
+  position: {x: 249, y: 103}
+  description: View art while gallery is open
+  children:
+  - {fileID: 8907828180578900750}
+  - {fileID: 690711495191255151}
+  - {fileID: 7124494262829459337}
+  - {fileID: 960122489229251675}
+  dependencyTree: {fileID: 11400000, guid: 66b8f6e3cb6585f40927cd046c8bc362, type: 2}
+--- !u!114 &690711495191255151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9199e589d48bf7743b442dc969eb1ee2, type: 3}
+  m_Name: GoToDoor
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 071c6cce61f6b9f49b269a6306f2de46
+  position: {x: -99.00001, y: 311.85}
+  description: Go to left door
+  speedFraction: 0.4
+  doorName: Left Door
+--- !u!114 &960122489229251675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e9e580a0a591d4986541d8dda17e60, type: 3}
+  m_Name: Loop
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: fbc0aa453ca95aa41b9f342cdf4b573b
+  position: {x: 339.00003, y: 331.85}
+  description: While bored
+  child: {fileID: 185889697940710467}
+  breakCondition: {fileID: 11400000, guid: d26491fa2967cd64f8bd5b66628a58ea, type: 2}
+--- !u!114 &1920992976102492274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
+  m_Name: GoToGalleryItem
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: fb77253856a971b46bf065a32de5c903
+  position: {x: 119.000046, y: 766.85}
+  description: Go to random item
+  speedFraction: 0.3
+  itemName: 
+  randomItem: 1
+  addToBag: 0
+  reduceBoredom: 1
+--- !u!114 &4358017789817730452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 033371ab46541c849a861b9fd5d8c1a4
+  position: {x: 264, y: 609.85}
+  description: Choose item
+  children:
+  - {fileID: 1920992976102492274}
+  - {fileID: -1602363675650917227}
+  - {fileID: 6988228332635867387}
+  selectionType: 2
+--- !u!114 &6570311764469117554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
+  m_Name: Selector
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 864a017fbe58b9944b76c7ccebb56dfa
+  position: {x: 383, y: -74}
+  description: Be villager
+  children:
+  - {fileID: 602739554291402011}
+  - {fileID: -324392542271169649}
+  selectionType: 0
+--- !u!114 &6988228332635867387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e167219751da340b5ea900aeea52ff, type: 3}
+  m_Name: GoToGalleryItem
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 6387f411970ea7c48bd226cebf3d7665
+  position: {x: 448.00003, y: 774.8501}
+  description: Go to random item
+  speedFraction: 0.3
+  itemName: 
+  randomItem: 1
+  addToBag: 0
+  reduceBoredom: 1
+--- !u!114 &7124494262829459337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e9e580a0a591d4986541d8dda17e60, type: 3}
+  m_Name: Loop
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 2e8ef4ba0bcde8b43b0a1573f07fa363
+  position: {x: 127, y: 322.85}
+  description: While not having ticket
+  child: {fileID: -1804588540052812182}
+  breakCondition: {fileID: 11400000, guid: 999c77114f1b9084baf5e06b20372b00, type: 2}
+--- !u!114 &8907828180578900750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 498f5ffd71aee0042aac94f20ccfc267, type: 3}
+  m_Name: IsBored
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 19c72c7f30684f5469c1c092feba66da
+  position: {x: -283, y: 311.85}
+  description: 
+  boredomThreshold: 50

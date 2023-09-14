@@ -6,7 +6,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 2
-    m_TransformParent: {fileID: 6640679527994790355}
+    m_TransformParent: {fileID: 1809494291028100689}
     m_Modifications:
     - target: {fileID: 193682, guid: aea27ca7a35042c419065833e8daf224, type: 3}
       propertyPath: m_Name
@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 455556, guid: aea27ca7a35042c419065833e8daf224, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 455556, guid: aea27ca7a35042c419065833e8daf224, type: 3}
       propertyPath: m_LocalPosition.x
@@ -34,15 +34,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 455556, guid: aea27ca7a35042c419065833e8daf224, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 455556, guid: aea27ca7a35042c419065833e8daf224, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 455556, guid: aea27ca7a35042c419065833e8daf224, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 455556, guid: aea27ca7a35042c419065833e8daf224, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -92,6 +92,10 @@ PrefabInstance:
       propertyPath: outlineColor.r
       value: 0.28235292
       objectReference: {fileID: 0}
+    - target: {fileID: 4626971338239269043, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 2.253
+      objectReference: {fileID: 0}
     - target: {fileID: 5588370116875199577, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -136,14 +140,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7878372992209165392, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
+      propertyPath: outlineColor.b
+      value: 0.8980392
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878372992209165392, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
+      propertyPath: outlineColor.g
+      value: 0.48844492
+      objectReference: {fileID: 0}
+    - target: {fileID: 7878372992209165392, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
+      propertyPath: outlineColor.r
+      value: 0.28235292
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 5588370116875199577, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 628554118365213659, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 14811260225397761}
   m_SourcePrefab: {fileID: 100100000, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
---- !u!4 &6640679527994790355 stripped
+--- !u!4 &1809494291028100689 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5588370116875199577, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
+  m_CorrespondingSourceObject: {fileID: 628554118365213659, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}
   m_PrefabInstance: {fileID: 1271580642787177866}
   m_PrefabAsset: {fileID: 0}
