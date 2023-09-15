@@ -43,7 +43,7 @@ namespace ArtGallery.BehaviourTree.Editor
 
                     if(controller != null)
                     {
-                        tree = controller.GetBehaviourTree();
+                        tree = controller.GetTree();
                     }
                 }
             }

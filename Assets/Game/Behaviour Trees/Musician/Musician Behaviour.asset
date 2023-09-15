@@ -1,5 +1,47 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7729825865888364496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f630b19d90db3674bbf228d072aa937b, type: 3}
+  m_Name: PlayAudio
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: cd0dc7162bf7ffd489df35b2f8b4132c
+  position: {x: -290.70755, y: 764.7654}
+  description: 
+  audioConfig:
+    clip: {fileID: 8300000, guid: aa7b5db75a9993f4f95b1df5c69e7f2b, type: 3}
+    volume: 0.2
+    loop: 1
+  stop: 0
+--- !u!114 &-7421908282681181653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f630b19d90db3674bbf228d072aa937b, type: 3}
+  m_Name: PlayAudio
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 6238f064b2fad0242905582354ff72e1
+  position: {x: -95.00007, y: 759.8401}
+  description: 
+  audioConfig:
+    clip: {fileID: 8300000, guid: 1571850354e25f848836f7a40f3c88aa, type: 3}
+    volume: 0.2
+    loop: 1
+  stop: 0
 --- !u!114 &-7050284814532519105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,7 +56,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 3c1ae2506a33ebd42acf9689934a94f8
-  position: {x: 351.00195, y: 185}
+  position: {x: 327, y: 181.5}
   description: Return to locomotion
   animationName: Locomotion
 --- !u!114 &-6616074726213950359
@@ -34,7 +76,7 @@ MonoBehaviour:
   position: {x: -33.999977, y: -234.64612}
   description: 
   child: {fileID: -706451846615315020}
---- !u!114 &-5710643398200121589
+--- !u!114 &-3927858140623504022
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,30 +85,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef8a96d571c70704eac64d65a93d8b0d, type: 3}
-  m_Name: WaitForSeconds
+  m_Script: {fileID: 11500000, guid: f630b19d90db3674bbf228d072aa937b, type: 3}
+  m_Name: PlayAudio
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: bd4ac2265a4e87a489f700a05dd3ed8d
-  position: {x: -783, y: 202}
+  uniqueID: c9fce03fb7c5a374a8ef6acfe2cdf324
+  position: {x: 167, y: 186.5}
   description: 
-  secondsToWait: 5
---- !u!114 &-3504145989352556562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2afbc2c6a7b99284dac9a3ca7b52ef9c, type: 3}
-  m_Name: StopMusic
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: 0f5b02aab3e851e4499050adb48dd41e
-  position: {x: 192, y: 193}
-  description: 
+  audioConfig:
+    clip: {fileID: 0}
+    volume: 0
+    loop: 0
+  stop: 1
 --- !u!114 &-3284338566968585200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 95f4791b54fafeb4f94e4bba190b2897
-  position: {x: -281.2525, y: 204.08348}
+  position: {x: -282.00006, y: 203.99994}
   description: Play Guitar animation
   animationName: Play Guitar
 --- !u!114 &-1357434151571954838
@@ -98,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 7d13793de1285c44e87ef58a43d46463
-  position: {x: 523.002, y: 185}
+  position: {x: 493, y: 181.5}
   description: Go to home
   speedFraction: 1
   location: 0
@@ -163,10 +193,30 @@ MonoBehaviour:
   - {fileID: -3284338566968585200}
   - {fileID: -7050284814532519105}
   - {fileID: 689486642798224039}
-  - {fileID: 7618926489522259155}
-  - {fileID: -3504145989352556562}
   - {fileID: 7161391675110240020}
-  - {fileID: -5710643398200121589}
+  - {fileID: -7421908282681181653}
+  - {fileID: -3927858140623504022}
+  - {fileID: -7729825865888364496}
+  - {fileID: 8957967316505494072}
+  - {fileID: 6555407097263590235}
+  - {fileID: 663014548723059142}
+--- !u!114 &663014548723059142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 201abbf7d61ac04489eee2edf64a533c, type: 3}
+  m_Name: Inverter
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 851688390c88b9446a37d8db4052fcb1
+  position: {x: -96.99988, y: 228.5}
+  description: 'Abort if not bored '
+  child: {fileID: 7161391675110240020}
 --- !u!114 &689486642798224039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,7 +234,7 @@ MonoBehaviour:
   position: {x: 302.002, y: 40.999996}
   description: Return to home
   children:
-  - {fileID: -3504145989352556562}
+  - {fileID: -3927858140623504022}
   - {fileID: -7050284814532519105}
   - {fileID: -1357434151571954838}
   dependencyTree: {fileID: 0}
@@ -205,6 +255,24 @@ MonoBehaviour:
   position: {x: -617, y: 196}
   description: 
   boredomThreshold: 50
+--- !u!114 &6555407097263590235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14e9e580a0a591d4986541d8dda17e60, type: 3}
+  m_Name: Loop
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: f3d311a416b36a642a59b42194fdbb68
+  position: {x: -104.999855, y: 480.2575}
+  description: Reduce boredom constantly
+  child: {fileID: 8957967316505494072}
+  breakCondition: {fileID: 11400000, guid: 1b1f960b44cb931499f87ca0d5b3c3f2, type: 2}
 --- !u!114 &7161391675110240020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,9 +287,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 600725b50bd706447b8a051df3ecc1b1
-  position: {x: -107.00001, y: 212.00003}
-  description: While bored
-  child: {fileID: 7618926489522259155}
+  position: {x: -104.999855, y: 361.22504}
+  description: While bored choose song
+  child: {fileID: 6555407097263590235}
   breakCondition: {fileID: 11400000, guid: d26491fa2967cd64f8bd5b66628a58ea, type: 2}
 --- !u!114 &7307633964917743983
 MonoBehaviour:
@@ -240,13 +308,12 @@ MonoBehaviour:
   position: {x: -349.2525, y: 33.083515}
   description: While gallery open
   children:
-  - {fileID: -5710643398200121589}
   - {fileID: 5297427708212407557}
   - {fileID: -1265393813028811295}
   - {fileID: -3284338566968585200}
-  - {fileID: 7161391675110240020}
+  - {fileID: 663014548723059142}
   dependencyTree: {fileID: 11400000, guid: 66b8f6e3cb6585f40927cd046c8bc362, type: 2}
---- !u!114 &7618926489522259155
+--- !u!114 &8957967316505494072
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -255,12 +322,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f630b19d90db3674bbf228d072aa937b, type: 3}
-  m_Name: PlayMusic
+  m_Script: {fileID: 11500000, guid: e1cfdac1bdf8fce43823869d60ab60c6, type: 3}
+  m_Name: Selector
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: 9d018407ce610e541b9e946b5b113275
-  position: {x: -99.00005, y: 347.05005}
-  description: 
-  musicIndex: 0
-  playRandom: 1
+  uniqueID: 1f32e0b22be3a6b4ea094c7b698e51ac
+  position: {x: -104.999855, y: 599.87}
+  description: Choose song to play
+  children:
+  - {fileID: -7729825865888364496}
+  - {fileID: -7421908282681181653}
+  selectionType: 3

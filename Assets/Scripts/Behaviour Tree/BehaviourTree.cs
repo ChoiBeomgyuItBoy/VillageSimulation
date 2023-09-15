@@ -11,9 +11,14 @@ namespace ArtGallery.BehaviourTree
         [SerializeField] RootNode rootNode = null;
         [SerializeField] List<Node> nodes = new List<Node>();
 
-        public Status Tick(TreeController controller)
+        public void Bind(TreeController controller)
         {
-            return rootNode.Tick(controller);
+            Traverse(rootNode, (node) => node.Bind(controller));
+        }
+
+        public Status Tick()
+        {
+            return rootNode.Tick();
         }
 
         public RootNode GetRoot()

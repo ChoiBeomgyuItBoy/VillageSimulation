@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 201abbf7d61ac04489eee2edf64a533c, type: 3}
   m_Name: Inverter
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 2
   uniqueID: 14a739282f4ca8347ae23392da853670
   position: {x: -86.99996, y: -186.99998}
-  description: 
+  description: Return failure if gallery is closed
   child: {fileID: 7751897007362623759}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -53,10 +53,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 78f78191c49da5242be96d3b81d13916
-  position: {x: 0, y: 0}
-  description: 
-  children: []
-  selectionType: 0
+  position: {x: 76.000046, y: -353.00012}
+  description: Choose behaviour
+  children:
+  - {fileID: -5582934941795811404}
+  - {fileID: 3611773872556534581}
+  selectionType: 1
 --- !u!114 &3611773872556534581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +92,7 @@ MonoBehaviour:
   priority: 0
   uniqueID: 27fccb049a93e0146850a064589a516e
   position: {x: -95, y: 76}
-  description: 
+  description: Choose action
   children:
   - {fileID: 8040104461005427946}
   - {fileID: 8358203292256376643}
@@ -109,9 +111,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 7a287492f9d834d4b92a0f344e457dcb
-  position: {x: 127.71256, y: -461.30176}
+  position: {x: 68.15009, y: -473.01016}
   description: 
-  child: {fileID: 0}
+  child: {fileID: 3111438910021674370}
 --- !u!114 &7751897007362623759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127,7 +129,7 @@ MonoBehaviour:
   priority: 0
   uniqueID: 6b914695414366148a7d57ca5f2f97a5
   position: {x: -87, y: -51.5}
-  description: 
+  description: While gallery opened
   child: {fileID: 5393753295549118282}
   breakCondition: {fileID: 11400000, guid: 66b8f6e3cb6585f40927cd046c8bc362, type: 2}
 --- !u!114 &8040104461005427946

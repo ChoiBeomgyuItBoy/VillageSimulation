@@ -8,7 +8,7 @@ namespace ArtGallery.BehaviourTree
 
         protected override Status OnTick()
         {
-            Status childStatus = GetChild().Tick(controller);
+            Status childStatus = GetChild().Tick();
 
             switch(childStatus)
             {

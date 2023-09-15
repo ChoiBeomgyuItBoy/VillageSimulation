@@ -6,7 +6,7 @@ namespace ArtGallery.BehaviourTree
     {
         [SerializeField] BehaviourTree tree = null;
 
-        public BehaviourTree GetBehaviourTree()
+        public BehaviourTree GetTree()
         {
             return tree;
         }
@@ -14,12 +14,12 @@ namespace ArtGallery.BehaviourTree
         void Start()
         {
             tree = tree.Clone();
+            tree.Bind(this);
         }
 
         void Update()
         {
-            tree.Tick(this);
+            tree.Tick();
         }
-
     }
 }

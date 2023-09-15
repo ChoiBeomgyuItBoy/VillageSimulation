@@ -7,7 +7,6 @@ namespace ArtGallery.Inventories
     public class GalleryItem : MonoBehaviour
     {
         [SerializeField] float price = 200;
-        [SerializeField] float interestLevel = 40;
         static Dictionary<string, GalleryItem> itemLookup = null;
 
         public static GalleryItem GetWithName(string name)
@@ -55,11 +54,6 @@ namespace ArtGallery.Inventories
         public float GetPrice()
         {
             return price;
-        }
-
-        public float GetInterestLevel()
-        {
-            return interestLevel;
         }
     }
 }

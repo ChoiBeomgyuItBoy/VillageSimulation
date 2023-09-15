@@ -32,7 +32,7 @@ namespace ArtGallery.BehaviourTree
                 return Status.Failure;
             }
             
-            return child.Tick(controller);
+            return child.Tick();
         }
 
         protected override void OnExit() { }

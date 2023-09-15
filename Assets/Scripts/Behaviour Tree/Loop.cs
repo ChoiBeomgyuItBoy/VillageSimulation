@@ -15,7 +15,7 @@ namespace ArtGallery.BehaviourTree
             {
                 CloneTree();
 
-                Status treeStatus = breakCondition.Tick(controller);
+                Status treeStatus = breakCondition.Tick();
 
                 if(treeStatus == Status.Failure)
                 {
@@ -23,7 +23,7 @@ namespace ArtGallery.BehaviourTree
                 }
             }
 
-            GetChild().Tick(controller);
+            GetChild().Tick();
 
             return Status.Running;
         }
@@ -35,6 +35,7 @@ namespace ArtGallery.BehaviourTree
             if(!cloned)
             {
                 breakCondition = breakCondition.Clone();
+                breakCondition.Bind(controller);
                 cloned = true;
             }  
         }

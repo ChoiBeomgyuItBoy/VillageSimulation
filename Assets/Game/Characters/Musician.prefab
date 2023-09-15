@@ -238,7 +238,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 40
   Pan2D: 0
@@ -375,28 +375,6 @@ MonoBehaviour:
   initialBoredom: 200
   maxBoredom: 200
   boredomIncreaseRate: 3
---- !u!114 &1602727890563054409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5742169567546024590}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1bb6b5311d2ddca4081c4d25c1577033, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  music:
-  - clip: {fileID: 8300000, guid: 1571850354e25f848836f7a40f3c88aa, type: 3}
-    volume: 0.2
-    loop: 1
-    boredomReduceRate: 5
-  - clip: {fileID: 8300000, guid: aa7b5db75a9993f4f95b1df5c69e7f2b, type: 3}
-    volume: 0.2
-    loop: 1
-    boredomReduceRate: 5
-  secondsToReduceBoredom: 1
 --- !u!4 &6430659547003634651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1719937769442149318, guid: aaaa5f0659f50e541ab47d53658701d7, type: 3}

@@ -59,13 +59,13 @@ namespace ArtGallery.BehaviourTree
             this.priority = priority;
         }
 
-        public Status Tick(TreeController controller)
+        public void Bind(TreeController controller)
         {
-            if(this.controller == null)
-            {
-                this.controller = controller;
-            }
+            this.controller = controller;
+        }
 
+        public Status Tick()
+        {
             if(!started)
             {
                 OnEnter();

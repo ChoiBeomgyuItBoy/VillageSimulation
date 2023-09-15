@@ -20,7 +20,7 @@ namespace ArtGallery.BehaviourTree
             {
                 CloneTree();
 
-                Status treeStatus = dependencyTree.Tick(controller);
+                Status treeStatus = dependencyTree.Tick();
 
                 if(treeStatus == Status.Failure)
                 {
@@ -28,7 +28,7 @@ namespace ArtGallery.BehaviourTree
                 }
             }
 
-            Status childStatus = GetChild(currentChild).Tick(controller);
+            Status childStatus = GetChild(currentChild).Tick();
 
             switch(childStatus)
             {
@@ -51,6 +51,7 @@ namespace ArtGallery.BehaviourTree
             if(!cloned)
             {
                 dependencyTree = dependencyTree.Clone();
+                dependencyTree.Bind(controller);
                 cloned = true;
             }  
         }
