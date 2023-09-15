@@ -1,5 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8183089137745882231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f618335ab1a756541b5e25352a34117d, type: 3}
+  m_Name: EquipPrefab
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 6baefc54199cb4942bcb9f511859cc8c
+  position: {x: -420, y: 215}
+  description: Equip guitar
+  equippedPrefab: {fileID: 2737617061617063349, guid: bbce2c18f13a35b4e9677235ad100750, type: 3}
+  isRightHanded: 1
+  unequip: 0
 --- !u!114 &-7729825865888364496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,7 +33,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: cd0dc7162bf7ffd489df35b2f8b4132c
-  position: {x: -290.70755, y: 764.7654}
+  position: {x: -274.99808, y: 771.4374}
   description: 
   audioConfig:
     clip: {fileID: 8300000, guid: aa7b5db75a9993f4f95b1df5c69e7f2b, type: 3}
@@ -35,7 +54,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 6238f064b2fad0242905582354ff72e1
-  position: {x: -95.00007, y: 759.8401}
+  position: {x: -112.0398, y: 776}
   description: 
   audioConfig:
     clip: {fileID: 8300000, guid: 1571850354e25f848836f7a40f3c88aa, type: 3}
@@ -56,7 +75,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 3c1ae2506a33ebd42acf9689934a94f8
-  position: {x: 327, y: 181.5}
+  position: {x: 526.44, y: 177}
   description: Return to locomotion
   animationName: Locomotion
 --- !u!114 &-6616074726213950359
@@ -90,8 +109,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: c9fce03fb7c5a374a8ef6acfe2cdf324
-  position: {x: 167, y: 186.5}
-  description: 
+  position: {x: 172, y: 169}
+  description: Stop playing music
   audioConfig:
     clip: {fileID: 0}
     volume: 0
@@ -111,7 +130,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 95f4791b54fafeb4f94e4bba190b2897
-  position: {x: -282.00006, y: 203.99994}
+  position: {x: -262, y: 222}
   description: Play Guitar animation
   animationName: Play Guitar
 --- !u!114 &-1357434151571954838
@@ -128,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 7d13793de1285c44e87ef58a43d46463
-  position: {x: 493, y: 181.5}
+  position: {x: 692.44, y: 177}
   description: Go to home
   speedFraction: 1
   location: 0
@@ -146,7 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 2e194a8bdffd8044ca3cadd754846649
-  position: {x: -447.2525, y: 194.08353}
+  position: {x: -580, y: 197}
   description: Go to play location
   speedFraction: 0.5
   location: 1
@@ -200,6 +219,8 @@ MonoBehaviour:
   - {fileID: 8957967316505494072}
   - {fileID: 6555407097263590235}
   - {fileID: 663014548723059142}
+  - {fileID: -8183089137745882231}
+  - {fileID: 5831208848455388374}
 --- !u!114 &663014548723059142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,9 +273,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 412b814d046abc0448a213ff0de64a3f
-  position: {x: -617, y: 196}
+  position: {x: -746, y: 189}
   description: 
   boredomThreshold: 50
+--- !u!114 &5831208848455388374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f618335ab1a756541b5e25352a34117d, type: 3}
+  m_Name: EquipPrefab
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: c733353743a125b4fab06a43e857ac67
+  position: {x: 0, y: 0}
+  description: 
+  equippedPrefab: {fileID: 0}
+  isRightHanded: 1
+  unequip: 0
 --- !u!114 &6555407097263590235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,6 +350,7 @@ MonoBehaviour:
   children:
   - {fileID: 5297427708212407557}
   - {fileID: -1265393813028811295}
+  - {fileID: -8183089137745882231}
   - {fileID: -3284338566968585200}
   - {fileID: 663014548723059142}
   dependencyTree: {fileID: 11400000, guid: 66b8f6e3cb6585f40927cd046c8bc362, type: 2}
@@ -328,7 +369,7 @@ MonoBehaviour:
   priority: 0
   uniqueID: 1f32e0b22be3a6b4ea094c7b698e51ac
   position: {x: -104.999855, y: 599.87}
-  description: Choose song to play
+  description: Choose random song to play
   children:
   - {fileID: -7729825865888364496}
   - {fileID: -7421908282681181653}

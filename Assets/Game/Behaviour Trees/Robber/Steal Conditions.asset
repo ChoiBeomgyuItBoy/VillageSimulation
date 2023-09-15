@@ -89,7 +89,7 @@ MonoBehaviour:
   uniqueID: 6bdc789fdf1bacd4096787db287c88df
   position: {x: 222.20001, y: 234.00006}
   description: Can see cop?
-  viewDistance: 10
+  viewDistance: 20
   maxViewAngle: 90
 --- !u!114 &11400000
 MonoBehaviour:

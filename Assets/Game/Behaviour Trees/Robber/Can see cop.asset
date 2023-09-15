@@ -1,23 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7060255206546521726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 201abbf7d61ac04489eee2edf64a533c, type: 3}
-  m_Name: Inverter
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: f9960b7dd9f2b454485307bf707b8480
-  position: {x: 16, y: 85}
-  description: Cant see robber
-  child: {fileID: 1062630970851453793}
---- !u!114 &-6244238190542247207
+--- !u!114 &-8759453435658452074
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30,10 +13,10 @@ MonoBehaviour:
   m_Name: RootNode
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: 7ec196894741f57469e86d522a3e2776
+  uniqueID: d0a33d91b2a2b714c87a819fc1850744
   position: {x: 0, y: 0}
   description: 
-  child: {fileID: -7060255206546521726}
+  child: {fileID: 7493392062760032357}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,14 +27,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 572ec67d91ae91446afefc4788241d7e, type: 3}
-  m_Name: Patrol Conditions
+  m_Name: Can see cop
   m_EditorClassIdentifier: 
-  rootNode: {fileID: -6244238190542247207}
+  rootNode: {fileID: -8759453435658452074}
   nodes:
-  - {fileID: -6244238190542247207}
-  - {fileID: 1062630970851453793}
-  - {fileID: -7060255206546521726}
---- !u!114 &1062630970851453793
+  - {fileID: -8759453435658452074}
+  - {fileID: 7493392062760032357}
+--- !u!114 &7493392062760032357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64,8 +46,8 @@ MonoBehaviour:
   m_Name: CanSeeTarget
   m_EditorClassIdentifier: 
   priority: 0
-  uniqueID: a2d1a36557dc68243b5f369c0ab34645
-  position: {x: 8, y: 200}
-  description: Can see robber
-  viewDistance: 20
-  maxViewAngle: 120
+  uniqueID: c6b3904871873b34dbbc81adc5f5c39c
+  position: {x: -10, y: 123}
+  description: Can see cop?
+  viewDistance: 10
+  maxViewAngle: 90

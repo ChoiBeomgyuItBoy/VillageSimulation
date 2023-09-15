@@ -247,7 +247,7 @@ MonoBehaviour:
   position: {x: 409, y: 639.5}
   description: Can see robber?
   viewDistance: 20
-  maxViewAngle: 90
+  maxViewAngle: 120
 --- !u!114 &8892523471439972254
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -149,6 +149,24 @@ MonoBehaviour:
   description: Go to left door
   speedFraction: 5
   doorName: Left Door
+--- !u!114 &-2391453468629533425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e00b46dda0f4e7418f35f5c20875e88, type: 3}
+  m_Name: CanSeeTarget
+  m_EditorClassIdentifier: 
+  priority: 0
+  uniqueID: 166741897d6fe2844b4774e7986c046c
+  position: {x: 914, y: 160}
+  description: 
+  viewDistance: 20
+  maxViewAngle: 360
 --- !u!114 &-1970752590921071163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,7 +203,7 @@ MonoBehaviour:
   children:
   - {fileID: 3091520934405132631}
   - {fileID: 6927666445814860295}
-  selectionType: 0
+  selectionType: 1
 --- !u!114 &-340037083134759375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,7 +241,6 @@ MonoBehaviour:
   nodes:
   - {fileID: -7724046242137277856}
   - {fileID: 6927666445814860295}
-  - {fileID: 4260222296732014994}
   - {fileID: 8337221696994383582}
   - {fileID: 3091520934405132631}
   - {fileID: 8784419869966488891}
@@ -242,6 +259,7 @@ MonoBehaviour:
   - {fileID: -4771290100615872081}
   - {fileID: -1970752590921071163}
   - {fileID: -7754813469563515974}
+  - {fileID: -2391453468629533425}
 --- !u!114 &3091405500895218980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
   m_Name: Sequence
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 1
   uniqueID: a94eb16cd78045a4b890f7a6447e2626
   position: {x: 171.5, y: 7.0999966}
   description: Steal if guard not on sight
@@ -284,24 +302,6 @@ MonoBehaviour:
   - {fileID: 6888968552723861523}
   - {fileID: -1970752590921071163}
   dependencyTree: {fileID: 11400000, guid: daff6889f33fefa4f8f0737535bb570a, type: 2}
---- !u!114 &4260222296732014994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e00b46dda0f4e7418f35f5c20875e88, type: 3}
-  m_Name: CanSeeTarget
-  m_EditorClassIdentifier: 
-  priority: 0
-  uniqueID: d726b532c0954b742af975d4f343265d
-  position: {x: 746.0001, y: 128.65002}
-  description: Can see cop?
-  viewDistance: 20
-  maxViewAngle: 90
 --- !u!114 &6888968552723861523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,12 +332,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93e360ad721097342b037ec2102476dd, type: 3}
   m_Name: Sequence
   m_EditorClassIdentifier: 
-  priority: 0
+  priority: 4
   uniqueID: b99435269b3e3ef49ac978b2ff78ec99
-  position: {x: 835.3, y: -7.699995}
+  position: {x: 984.9002, y: 17.500004}
   description: Run away
   children:
-  - {fileID: 4260222296732014994}
+  - {fileID: -2391453468629533425}
   - {fileID: 8337221696994383582}
   dependencyTree: {fileID: 0}
 --- !u!114 &7178931523168642257
@@ -374,9 +374,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 7df6ccc8d5b5a0e4398a8b44b81b1d1e
-  position: {x: 926.0002, y: 136.99997}
+  position: {x: 1092, y: 160}
   description: Flee from cop
-  speedFraction: 5
+  speedFraction: 1
   distance: 10
 --- !u!114 &8715098515298180231
 MonoBehaviour:

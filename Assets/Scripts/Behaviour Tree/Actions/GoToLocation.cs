@@ -6,11 +6,22 @@ namespace ArtGallery.BehaviourTree.Actions
     public class GoToLocation : GoToDestination
     {
         [SerializeField] Location location;
+        [SerializeField] int destinationIndex = 0;
+        [SerializeField] bool randomDestination = true;
         Vector3 locationPosition;
 
         protected override void OnEnter()
         {
-            locationPosition = controller.GetComponent<Villager>().GetLocation(location);
+            Villager villager = controller.GetComponent<Villager>();
+
+            if(randomDestination)
+            {
+                locationPosition = villager.GetRandomLocation(location);
+            }
+            else
+            {
+                locationPosition = villager.GetLocation(location, destinationIndex);
+            }
         }
 
         protected override Status OnTick()
