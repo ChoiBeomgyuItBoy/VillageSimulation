@@ -1,6 +1,6 @@
 # Medieval Village Simulation
 - Advanced AI Behaviours for a tiny village simulation.
-- Each villager has an occupation and attributes like boredeom or money, these attrbitues set thresholds for villagers to do actions like going to a museum, playing music, etc.
+- Each villager has an occupation and attributes like boredeom or money, these attributes set thresholds for villagers to do actions like going to a museum, playing music, etc.
 ## Current Behaviours:
  - Art Patron.
  - Musician.
