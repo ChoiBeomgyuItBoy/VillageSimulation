@@ -7,7 +7,6 @@
  - Ticket Seller.
  - Robber.
  - Guard.
- - 
 ## Approach:
 - Behaviour Tree API using Scriptable Objects.
 - Behaviour Tree Editor Window using UI Builder.
