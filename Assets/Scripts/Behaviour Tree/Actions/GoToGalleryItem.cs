@@ -1,5 +1,4 @@
 using ArtGallery.Inventories;
-using ArtGallery.Villagers;
 using UnityEngine;
 
 namespace ArtGallery.BehaviourTree.Actions

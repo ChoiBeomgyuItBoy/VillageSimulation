@@ -2,22 +2,17 @@ using UnityEngine;
 
 namespace ArtGallery.BehaviourTree
 {
-    public class Loop : DecoratorNode
+    public class Loop : DependencyDecorator
     {
-        [SerializeField] BehaviourTree breakCondition;
-        bool cloned = false;
-
         protected override void OnEnter() { } 
 
         protected override Status OnTick()
         {
-            if(breakCondition != null)
+            BehaviourTree dependency = GetDependencyTree();
+
+            if(dependency != null)
             {
-                CloneTree();
-
-                Status treeStatus = breakCondition.Tick();
-
-                if(treeStatus == Status.Failure)
+                if(GetDependencyTree().Tick() == Status.Failure)
                 {
                     return Status.Success;
                 }
@@ -29,15 +24,5 @@ namespace ArtGallery.BehaviourTree
         }
 
         protected override void OnExit() { }
-
-        private void CloneTree()
-        {
-            if(!cloned)
-            {
-                breakCondition = breakCondition.Clone();
-                breakCondition.Bind(controller);
-                cloned = true;
-            }  
-        }
     }
 }

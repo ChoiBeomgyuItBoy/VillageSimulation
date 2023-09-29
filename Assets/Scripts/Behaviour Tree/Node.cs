@@ -59,7 +59,7 @@ namespace ArtGallery.BehaviourTree
             this.priority = priority;
         }
 
-        public void Bind(TreeController controller)
+        public virtual void Bind(TreeController controller)
         {
             this.controller = controller;
         }

@@ -7,7 +7,7 @@ namespace ArtGallery.BehaviourTree
     {
         [SerializeField] List<Node> children = new List<Node>();
 
-        public IEnumerable<Node> GetChildren()
+        public List<Node> GetChildren()
         {
             return children;
         }
@@ -37,6 +37,11 @@ namespace ArtGallery.BehaviourTree
         protected Node GetChild(int index)
         {
             return children[index];
+        }
+
+        protected void SetChidren(IEnumerable<Node> children)
+        {
+            this.children = new List<Node>(children);
         }
 
         protected void SortChildrenByPriority()

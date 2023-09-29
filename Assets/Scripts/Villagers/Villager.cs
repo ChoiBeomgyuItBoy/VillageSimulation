@@ -9,7 +9,7 @@ namespace ArtGallery.Villagers
         [SerializeField] Occupation occupation;
         [SerializeField] Transform rightHandTransform;
         [SerializeField] Transform leftHandTransform;
-        // Dictionary<Location, Vector3> locationLookup;
+        [SerializeField] Transform spawnerTranform;
         Dictionary<Location, Dictionary<int, Vector3>> locationLookup;
 
         [System.Serializable]
@@ -17,6 +17,13 @@ namespace ArtGallery.Villagers
         {
             public Transform[] possibleDestinations;
             public Location locationName;
+        }
+
+        public enum EquipType
+        {
+            RightHand,
+            LeftHand,
+            InSpawner
         }
 
         public Vector3 GetLocation(Location locationName, int locationIndex)
@@ -47,15 +54,19 @@ namespace ArtGallery.Villagers
             return occupation;
         }
 
-        public void Equip(GameObject prefab, bool isRightHanded)
+        public void Equip(GameObject prefab, EquipType equipType)
         {
-            if(isRightHanded)
+            switch(equipType)
             {
-                Instantiate(prefab, rightHandTransform);
-            }
-            else
-            {
-                Instantiate(prefab, leftHandTransform);
+                case EquipType.RightHand:
+                    Instantiate(prefab, rightHandTransform);
+                    break;
+                case EquipType.LeftHand:
+                    Instantiate(prefab, leftHandTransform);
+                    break;
+                case EquipType.InSpawner:
+                    Instantiate(prefab, spawnerTranform);
+                    break;
             }
         }
 
@@ -66,6 +77,11 @@ namespace ArtGallery.Villagers
             if(oldObject == null)
             {
                 oldObject = leftHandTransform.Find(prefab.name + "(Clone)");
+            }
+
+            if(oldObject == null) 
+            {
+                oldObject = spawnerTranform.Find(prefab.name + "(Clone)");
             }
 
             if(oldObject == null) return;

@@ -1,12 +1,13 @@
 using ArtGallery.Villagers;
 using UnityEngine;
+using static ArtGallery.Villagers.Villager;
 
 namespace ArtGallery.BehaviourTree.Actions
 {
     public class EquipPrefab : ActionNode
     {
         [SerializeField] GameObject equippedPrefab;
-        [SerializeField] bool isRightHanded = true;
+        [SerializeField] EquipType equipType;
         [SerializeField] bool unequip = false;
 
         protected override void OnEnter()
@@ -19,7 +20,7 @@ namespace ArtGallery.BehaviourTree.Actions
             }
             else
             {
-                villager.Equip(equippedPrefab, isRightHanded);
+                villager.Equip(equippedPrefab, equipType);
             }
         }
 

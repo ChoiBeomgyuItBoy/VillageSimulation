@@ -3,11 +3,9 @@ using UnityEngine;
 
 namespace ArtGallery.BehaviourTree
 {
-    public class Sequence : CompositeNode
+    public class Sequence : DependencyComposite
     {
-        [SerializeField] BehaviourTree dependencyTree = null;
         int currentChild = 0;
-        bool cloned = false;
 
         protected override void OnEnter()
         {
@@ -16,13 +14,11 @@ namespace ArtGallery.BehaviourTree
 
         protected override Status OnTick()
         {
-            if(dependencyTree != null)
+            BehaviourTree dependency = GetDependencyTree();
+
+            if(dependency != null)
             {
-                CloneTree();
-
-                Status treeStatus = dependencyTree.Tick();
-
-                if(treeStatus == Status.Failure)
+                if(dependency.Tick() == Status.Failure)
                 {
                     return Status.Failure;
                 }
@@ -45,15 +41,5 @@ namespace ArtGallery.BehaviourTree
         }
 
         protected override void OnExit() { }
-
-        private void CloneTree()
-        {
-            if(!cloned)
-            {
-                dependencyTree = dependencyTree.Clone();
-                dependencyTree.Bind(controller);
-                cloned = true;
-            }  
-        }
     }
 }
