@@ -145,6 +145,7 @@ namespace ArtGallery.BehaviourTree
                 EditorUtility.SetDirty(composite);
             }
         }
+#endif
 
         public IEnumerable<Node> GetChildren(Node parent)
         {
@@ -191,6 +192,5 @@ namespace ArtGallery.BehaviourTree
                 nodes.ForEach((node) => Traverse(node, visiter));
             }
         }
-#endif
     }
 }

@@ -77,6 +77,8 @@ MonoBehaviour:
   description: Go to home
   speedFraction: 1
   location: 0
+  destinationIndex: 0
+  randomDestination: 1
 --- !u!114 &5393753295549118282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,7 +133,7 @@ MonoBehaviour:
   position: {x: -87, y: -51.5}
   description: While gallery opened
   child: {fileID: 5393753295549118282}
-  breakCondition: {fileID: 11400000, guid: 66b8f6e3cb6585f40927cd046c8bc362, type: 2}
+  dependencyTree: {fileID: 11400000, guid: 66b8f6e3cb6585f40927cd046c8bc362, type: 2}
 --- !u!114 &8040104461005427946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,3 +169,5 @@ MonoBehaviour:
   description: Go to tend
   speedFraction: 1
   location: 1
+  destinationIndex: 0
+  randomDestination: 1

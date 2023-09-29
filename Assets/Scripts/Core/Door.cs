@@ -13,12 +13,7 @@ namespace ArtGallery.Core
         {
             if(doorLookup == null)
             {
-                doorLookup = new Dictionary<string, Door>();
-
-                foreach(var door in FindObjectsOfType<Door>())
-                {
-                    doorLookup[door.name] = door;
-                }
+                BuildLookup();
             }
 
             return doorLookup[name];
@@ -35,6 +30,21 @@ namespace ArtGallery.Core
                 GetComponent<NavMeshObstacle>().enabled = false;
                 return true;
             }
+        }
+
+        private static void BuildLookup()
+        {
+            doorLookup = new Dictionary<string, Door>();
+
+            foreach (var door in FindObjectsOfType<Door>())
+            {
+                doorLookup[door.name] = door;
+            }
+        }
+
+        private void Start()
+        {
+            BuildLookup();
         }
     }
 }

@@ -34,6 +34,7 @@ MonoBehaviour:
   position: {x: 920, y: 785}
   description: 
   boredomReduce: 80
+  reduceEveryFrame: 0
 --- !u!114 &-2571799559215825757
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51,6 +52,7 @@ MonoBehaviour:
   position: {x: 754, y: 785}
   description: 
   boredomReduce: 60
+  reduceEveryFrame: 0
 --- !u!114 &-1804588540052812182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -122,6 +124,8 @@ MonoBehaviour:
   description: Go to home
   speedFraction: 0.6
   location: 0
+  destinationIndex: 0
+  randomDestination: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,7 +237,7 @@ MonoBehaviour:
   position: {x: 339.00003, y: 331.85}
   description: While bored
   child: {fileID: 185889697940710467}
-  breakCondition: {fileID: 11400000, guid: d26491fa2967cd64f8bd5b66628a58ea, type: 2}
+  dependencyTree: {fileID: 11400000, guid: d26491fa2967cd64f8bd5b66628a58ea, type: 2}
 --- !u!114 &1158048576814584696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,6 +255,7 @@ MonoBehaviour:
   position: {x: 588, y: 785}
   description: 
   boredomReduce: 30
+  reduceEveryFrame: 0
 --- !u!114 &1920992976102492274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,7 +375,7 @@ MonoBehaviour:
   position: {x: 127, y: 322.85}
   description: While not having ticket
   child: {fileID: -1804588540052812182}
-  breakCondition: {fileID: 11400000, guid: 999c77114f1b9084baf5e06b20372b00, type: 2}
+  dependencyTree: {fileID: 11400000, guid: 999c77114f1b9084baf5e06b20372b00, type: 2}
 --- !u!114 &8907828180578900750
 MonoBehaviour:
   m_ObjectHideFlags: 0

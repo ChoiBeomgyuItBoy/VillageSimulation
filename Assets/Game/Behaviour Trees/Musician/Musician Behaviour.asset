@@ -374,7 +374,7 @@ MonoBehaviour:
   position: {x: 475.99997, y: 699}
   description: While bored choose song
   child: {fileID: 6704431433858296308}
-  breakCondition: {fileID: 11400000, guid: d26491fa2967cd64f8bd5b66628a58ea, type: 2}
+  dependencyTree: {fileID: 11400000, guid: d26491fa2967cd64f8bd5b66628a58ea, type: 2}
 --- !u!114 &3871371709361369332
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -500,7 +500,7 @@ MonoBehaviour:
   position: {x: -120.99998, y: 808.00006}
   description: Reduce boredom constantly
   child: {fileID: 8957967316505494072}
-  breakCondition: {fileID: 11400000, guid: 1b1f960b44cb931499f87ca0d5b3c3f2, type: 2}
+  dependencyTree: {fileID: 11400000, guid: 1b1f960b44cb931499f87ca0d5b3c3f2, type: 2}
 --- !u!114 &6704431433858296308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +518,7 @@ MonoBehaviour:
   position: {x: 468.00006, y: 837.00006}
   description: Reduce boredom constantly
   child: {fileID: 4360114469822411986}
-  breakCondition: {fileID: 11400000, guid: 1b1f960b44cb931499f87ca0d5b3c3f2, type: 2}
+  dependencyTree: {fileID: 11400000, guid: 1b1f960b44cb931499f87ca0d5b3c3f2, type: 2}
 --- !u!114 &7161391675110240020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +536,7 @@ MonoBehaviour:
   position: {x: -128.8783, y: 690.7735}
   description: While bored choose song
   child: {fileID: 6555407097263590235}
-  breakCondition: {fileID: 11400000, guid: d26491fa2967cd64f8bd5b66628a58ea, type: 2}
+  dependencyTree: {fileID: 11400000, guid: d26491fa2967cd64f8bd5b66628a58ea, type: 2}
 --- !u!114 &7307633964917743983
 MonoBehaviour:
   m_ObjectHideFlags: 0

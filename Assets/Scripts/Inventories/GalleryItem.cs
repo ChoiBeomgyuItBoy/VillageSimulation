@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace ArtGallery.Inventories
@@ -29,6 +28,11 @@ namespace ArtGallery.Inventories
             return itemLookup[GetRandomItemName()];
         }
 
+        public float GetPrice()
+        {
+            return price;
+        }
+
         private static string GetRandomItemName()
         {
             if(itemLookup == null)
@@ -36,7 +40,7 @@ namespace ArtGallery.Inventories
                 BuildLookup();
             }
 
-            List<string> names = new List<string>(itemLookup.Keys.Where((name) => itemLookup[name].gameObject.activeSelf));
+            List<string> names = new List<string>(itemLookup.Keys);
 
             return names[new System.Random().Next(names.Count)];
         }
@@ -51,9 +55,9 @@ namespace ArtGallery.Inventories
             }
         }
 
-        public float GetPrice()
+        private void Start()
         {
-            return price;
+            BuildLookup();
         }
     }
 }

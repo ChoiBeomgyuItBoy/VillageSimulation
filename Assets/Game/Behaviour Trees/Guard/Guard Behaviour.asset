@@ -90,6 +90,8 @@ MonoBehaviour:
   description: Go to home
   speedFraction: 1
   location: 0
+  destinationIndex: 0
+  randomDestination: 1
 --- !u!114 &-611490757758196053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 06efb8d95a8e15446bc51034797e7eba
-  position: {x: 167, y: 60}
+  position: {x: 177, y: 63}
   description: While gallary is closed
   children:
   - {fileID: 2559720928398016868}
@@ -189,7 +191,7 @@ MonoBehaviour:
   position: {x: 317.0001, y: 207.00002}
   description: 
   child: {fileID: -3046970033671062070}
-  breakCondition: {fileID: 0}
+  dependencyTree: {fileID: 0}
 --- !u!114 &4793013338398849105
 MonoBehaviour:
   m_ObjectHideFlags: 0

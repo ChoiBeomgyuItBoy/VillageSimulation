@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace ArtGallery.Core
@@ -12,6 +13,11 @@ namespace ArtGallery.Core
         public float GetCurrentTime()
         {
             return currentTime;
+        }
+
+        public float GetTimeScale()
+        {
+            return timeScale;
         }
 
         void Start()

@@ -27,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2666825546495407548}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 6.6532097, y: 1.8585773, z: 23.698}
   m_LocalScale: {x: 1.7624954, y: 2.2560432, z: 1.3648995}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -116,7 +116,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   price: 100
-  interestLevel: 20
 --- !u!1 &2666825546516122549
 GameObject:
   m_ObjectHideFlags: 0

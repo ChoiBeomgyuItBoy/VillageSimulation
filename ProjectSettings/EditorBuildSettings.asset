@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Medieval Art Gallery.unity
+    guid: 94ef3daa9ef0fbe46892d112ee863c47
   m_configObjects: {}

@@ -75,6 +75,8 @@ MonoBehaviour:
   description: Go to home
   speedFraction: 1
   location: 0
+  destinationIndex: 0
+  randomDestination: 1
 --- !u!114 &-4771290100615872081
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,6 +95,8 @@ MonoBehaviour:
   description: Go to cart
   speedFraction: 1
   location: 1
+  destinationIndex: 0
+  randomDestination: 1
 --- !u!114 &-3817050175642794382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,10 +111,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   priority: 0
   uniqueID: 9851da39bd45610449c9e388466bee7a
-  position: {x: 657, y: -443.2001}
+  position: {x: 657, y: -436}
   description: While gallery closed
   child: {fileID: 3091405500895218980}
-  breakCondition: {fileID: 11400000, guid: 533a6bf213df2d642a60f7d3598200a3, type: 2}
+  dependencyTree: {fileID: 11400000, guid: 533a6bf213df2d642a60f7d3598200a3, type: 2}
 --- !u!114 &-2839352455146020223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +324,8 @@ MonoBehaviour:
   description: Go to cart
   speedFraction: 1
   location: 1
+  destinationIndex: 0
+  randomDestination: 1
 --- !u!114 &6927666445814860295
 MonoBehaviour:
   m_ObjectHideFlags: 0
